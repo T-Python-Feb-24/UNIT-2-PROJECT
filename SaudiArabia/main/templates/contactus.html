@@ -1,0 +1,35 @@
+{% extends "base.html" %} {% load static %}
+{% block css %} 
+<link rel="stylesheet" href="{% static "css/contact.css" %}"> 
+{% endblock css %} 
+    {% block title %}Contact Us{% endblock title %}
+  {% block email %}class="email"{% endblock email %}
+    {% block content %}
+    <div class="flex">
+      <div class="contact">
+      <h2>contact us</h2>
+      <br><br><br><br>
+      <h3>TELEPHONE: <a href="tel:+966 57263883764">+966 57263883764</a></h3>
+      <br>
+      <h3>EMAIL: <a href="mailto:info@tuwaiq.edu.sa">info@tuwaiq.edu.sa</a></h3>
+      <br>
+      <h3>Address</h3>
+        <br>
+      <p>Princess Nourah Bint Abdul Rahman University,Riyadh
+        <br>
+        Acdemic rd W,
+        <br>
+        Saudi Arabia
+
+      </p>
+      </div>
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14905.994755352898!2d46.71221190238342!3d24.849756314871918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efbd2d9c324c7%3A0x9124f530f1b56443!2sTuwaiq%20Academy!5e0!3m2!1sen!2ssa!4v1709587748553!5m2!1sen!2ssa" width="730" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </div>
+    
+
+
+
+    {% endblock content %}

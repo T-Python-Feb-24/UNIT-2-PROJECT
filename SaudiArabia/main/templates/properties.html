@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+  <!-- <link rel="stylesheet" href="{% static "css/proper.css" %}"> -->
+{% endblock css %}
+{% block title %}
+  Properties
+{% endblock title %}
+{% block content %}
+<section class="row cards-container">
+    {% for item in properties %}
+      <div class="card m-3 border-5">
+      <img src="https://i.stack.imgur.com/YKjki.png" class="card-img-top" width="auto" height="auto" alt="...">
+      <div class="card-body">
+      <h5 class="card-title">{{ item.title }}</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary align-self-end">Go somewhere</a>
+      </div>
+    </div>
+
+    {% endfor %}
+</section>
+{% endblock content %}

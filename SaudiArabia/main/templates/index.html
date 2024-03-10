@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+{% endblock css %}
+{% block title %}
+    Saudi Science
+{% endblock title %}
+{% block content %}  
+
+<section id="home" class="row">
+        <div class="row title">
+            <h1>Saudi Economy</h1>
+        </div>
+        <div class="row parg">
+            <p>
+                Our catalog Will surprise you. Rather, discover an unprecendented offers Of luxury properties. Our
+                catalog will surprise you. Rather. discover an unprecendented offers of luxury properties.
+            </p>
+        </div>
+        <div class="row button">
+            <a href="{% url "main:properties_page" %}">
+                <button>Expolore Properties</button>
+            </a>
+        </div>
+</section>   
+{% endblock content %}
