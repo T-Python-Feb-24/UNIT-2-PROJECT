@@ -1,0 +1,211 @@
+/*----------eachstate.html-------------*/
+body {
+    /* Set background color */
+  /* Light gray background */
+    /*background-image: url(/static/images/sejadSA.jpg);*/
+    background-color: rgba(198, 129, 38, 0.648); /* Adjust opacity as needed */
+    backdrop-filter: blur(10px); /* Adjust the blur radius */
+    /* Set background image 
+    background-image: url('background-image.jpg'); /* Replace 'background-image.jpg' with the path to your image */
+
+    /* Specify background image size */
+    background-size: cover; /* Cover the entire viewport */
+
+    /* Specify background image position */
+    background-position: center; /* Center the background image horizontally and vertically */
+
+    /* Specify background image repeat */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+
+    /* Add a background gradient */
+    /*background: linear-gradient(to bottom, #f0f0f0, #ffffff);*/ /* Uncomment this line to add a gradient background */
+
+    /* Add other background properties as needed */
+}
+.main{
+    margin: 50px; 
+
+}
+
+header{
+    border-radius: 25px;
+    position:sticky;
+    top: 1px;
+    border-radius: 25px;
+    z-index: 1 ;   
+}
+.navbar{
+    border-radius: 25px;
+   
+}
+
+.carousel-slide{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.carousel-item{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.main-box1{
+    border: 5px solid black;
+    width: 1200px;
+    height: 500px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.main-box{
+
+    box-shadow: 50px; ;
+    width: 100%;
+    height: 725px;
+    margin: 0px auto;
+    position: relative;
+    margin-bottom: 100px;
+}
+.box2{
+    height: 725px;
+    width: 100%;
+    background-color: blueviolet;
+    position: relative;
+    margin: 100px auto;
+    overflow: hidden;
+
+}
+.main-boxB{
+    border: 5px solid rgb(201, 139, 23);
+    box-shadow: 0 0 20px rgba(215, 215, 215, 0.5);
+
+    background-image: url(/static/images/sejadSA-side.jpg);
+    width: 1500px;
+    height:fit-content;
+    margin: 20px auto;
+    position: relative;
+    z-index: -1;
+}
+
+
+.main-box1{
+
+    border: 5px solid rgb(255, 255, 255);
+    width: 1200px;
+    height: 500px;
+    margin: 50px auto;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.main-box1:hover ,.main-box2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(215, 215, 215, 0.5);
+}
+.main-box2{
+    border: 5px solid rgb(247, 247, 247);
+    width: 1200px;
+    height: 500px;
+    padding-left: 100px;
+    margin: 50px auto;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+.center{
+    background-color: bisque;
+}
+
+.para1{
+  font-family: Arial, sans-serif;   /* Sets the font family */
+  font-size: 14px;            /* Sets the font size */
+  font-weight: bold;          /* Sets the font weight */
+  text-align: left;
+  margin: 10px 20px 0px 20px;
+}
+
+/*here is the card i made */
+.card{
+    width: 400px;
+    aspect-ratio: 1/0.7;
+    border-radius: 8px;
+    position: relative;
+}
+.card .image-box{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+}
+.card::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+.card:hover img{
+    filter:
+    grayscale(1)
+    brightness(0.4) ;
+}
+.card:hover::after{
+opacity: 1;
+inset: 20px;
+}
+.card:hover .content h2{
+    scale: 1;
+    opacity: 1;
+}
+.card:hover .content p{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*end card*/
+/*------------------------*/
+/* here is the when i hover become beside */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust the height as needed */
+    overflow: hidden;
+  }
+  
+  .stacked-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+    filter: grayscale(100%); /* Apply grayscale filter */
+    object-fit: contain;
+    transform-origin: left center; /* Set the transform origin to the left center */
+  }
+  
+  .image-container:hover .stacked-image {
+    transform: scale(1.2); /* Increase the size when hovered */
+    filter: grayscale(0%); /* Remove grayscale filter */
+  }
+/* end */
+
+.footer1 {
+    position:absolute;
+    bottom:0%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    color: white;
+    width:100%;
+    font-family: 'ubuntu', sans-serif;
+}

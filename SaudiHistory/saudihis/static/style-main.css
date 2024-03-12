@@ -1,0 +1,206 @@
+body {
+    /* Set background color */
+  /* Light gray background */
+    /*background-image: url(/static/images/sejadSA.jpg);*/
+    background-color: rgba(198, 129, 38, 0.648); /* Adjust opacity as needed */
+    backdrop-filter: blur(10px); /* Adjust the blur radius */
+    /* Set background image 
+    background-image: url('background-image.jpg'); /* Replace 'background-image.jpg' with the path to your image */
+
+    /* Specify background image size */
+    background-size: cover; /* Cover the entire viewport */
+
+    /* Specify background image position */
+    background-position: center; /* Center the background image horizontally and vertically */
+
+    /* Specify background image repeat */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+
+    /* Add a background gradient */
+    /*background: linear-gradient(to bottom, #f0f0f0, #ffffff);*/ /* Uncomment this line to add a gradient background */
+
+    /* Add other background properties as needed */
+}
+.main{
+    margin: 50px; 
+
+}
+
+header{
+    border-radius: 25px;
+    position:sticky;
+    top: 1px;
+    border-radius: 25px;
+    z-index: 1 ;   
+}
+.navbar{
+    border-radius: 25px;
+   
+}
+
+.carousel-slide{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.carousel-item{
+  opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.main-box1{
+    border: 5px solid black;
+    width: 1200px;
+    height: 500px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.main-box{
+
+  box-shadow: 50px; ;
+  width: 100%;
+  height: 725px;
+  margin: 0px auto;
+  position: relative;
+  margin-bottom: 50px;
+}
+.box2{
+  height: 725px;
+  width: 100%;
+  background-color: blueviolet;
+  position: relative;
+  margin: 0px auto;
+  overflow: hidden;
+
+}
+.main-boxB{
+  border: 5px solid rgb(201, 139, 23);
+  box-shadow: 0 0 20px rgba(215, 215, 215, 0.5);
+
+  background-image: url(/static/images/sejadSA-side.jpg);
+  width: 1500px;
+  height:fit-content;
+  margin: 20px auto;
+  position: relative;
+  z-index: -1;
+  
+}
+
+.main-boxB{
+    border: 5px solid black;
+    background-image: url(/static/images/sejadSA-eh2.jpg);
+    width: 1500px;
+    height:fit-content;
+    margin: 20px auto;
+    position: relative;
+    z-index: -1;
+}
+
+
+.main-box1:hover ,.main-box2:hover,.main-box3:hover,.main-box4:hover,.main-box5:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(215, 215, 215, 0.5);
+}
+
+.container-all {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .main-box1 {
+    border: 5px solid rgb(255, 255, 255);
+    width: 250px;
+    height: 500px;
+    margin: 20px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-image: url(/static/images/middle.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .main-box2 {
+    border: 5px solid rgb(255, 255, 255);
+    width: 250px;
+    height: 500px;
+    margin: 20px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-image: url(/static/images/northen.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .main-box3 {
+    border: 5px solid rgb(255, 255, 255);
+    width: 250px;
+    height: 500px;
+    margin: 20px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-image: url(/static/images/east.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .main-box4 {
+    border: 5px solid rgb(255, 255, 255);
+    width: 250px;
+    height: 500px;
+    margin: 20px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-image: url(/static/images/west.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .main-box5 {
+    border: 5px solid rgb(255, 255, 255);
+    width: 250px;
+    height: 500px;
+    margin: 20px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-image: url(/static/images/south.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+
+  .center{
+    background-color: bisque;
+}
+.para1{
+  font-family: Arial, sans-serif;   /* Sets the font family */
+  font-size: 18px;            /* Sets the font size */
+  font-weight: bold;          /* Sets the font weight */
+  text-align: left;
+  margin: 10px 20px 0px 20px;
+}
+
+
+.footer1 {
+    position:absolute;
+    bottom:0%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    color: white;
+    width:100%;
+    font-family: 'ubuntu', sans-serif;
+}
