@@ -1,0 +1,37 @@
+{% extends 'main/base.html'%}
+{% load static %}
+
+{% block title %} Home {% endblock %}
+
+{% block styles %}
+
+<style>
+    body{
+        background-image: url("{% static 'images/image.jpg' %}");
+        height: 50px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+</style>
+{% if request.COOKIES.DarkMode == "True" %}
+<style>
+    body{
+        background-image: url("{% static 'images/star.jpg' %}");
+}
+
+</style>
+{% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="text-container">
+    <div class="text">
+        <h1 class="animate__animated animate__flipInX">CULTURE & HERITAGES</h1>
+        <h1 class="animate__animated animate__flipInX">IN SAUDI ARABIA</h1>
+    </div>
+</div>
+
+{% endblock %}

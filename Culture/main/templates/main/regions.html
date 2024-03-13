@@ -1,0 +1,471 @@
+{% extends 'main/base.html'%}
+{% load static %}
+
+{% block title %} Regions {% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/region.css' %}">
+
+<style>
+    body{
+        background:rgb(168, 135, 94);
+    }
+    .hero-image  img{
+        filter: opacity(0.5);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        }
+
+    .tab-content .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color:burlywood;
+    }
+
+    .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+    }
+
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+        color: black;
+    }
+
+    .flip-card-back {
+        background-color: #dbe2e7;
+        transform: rotateY(180deg);
+    }
+    .flip-card-back li{
+      margin-top: 30px;
+      text-align: start;
+    }
+    
+</style>
+
+{% if request.COOKIES.DarkMode == "True" %}
+<style>
+    body{
+        background:rgb(0, 1, 59);
+    }
+    .tab-content .hero-text h1{
+        color:whitesmoke;
+    }
+
+</style>
+{% endif %}
+
+{% endblock %}
+
+{% block content %}
+  <!-- Nav tabs -->
+<ul class="nav nav-pills justify-content-center p-4 mt-5" id="myPill" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="central-tab" data-bs-toggle="tab" data-bs-target="#central" type="button" role="pill" aria-controls="central" aria-selected="true">Central</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="north-tab" data-bs-toggle="tab" data-bs-target="#north" type="button" role="pill" aria-controls="north" aria-selected="false">North</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="east-tab" data-bs-toggle="tab" data-bs-target="#east" type="button" role="pill" aria-controls="east" aria-selected="false">East</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="west-tab" data-bs-toggle="tab" data-bs-target="#west" type="button" role="pill" aria-controls="west" aria-selected="false">West</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="south-tab" data-bs-toggle="tab" data-bs-target="#south" type="button" role="pill" aria-controls="south" aria-selected="false">South</button>
+      </li>
+  </ul>
+  <div class="hero-image">
+    <img src="{% static 'images/KSA.jpg' %}" alt="Palm Tree" style="width: 98.5vw; height: 300px;">
+  </div>
+  
+  <!-- Tab panes -->
+<div class="tab-content">
+
+    <div class="tab-pane active" id="central" role="tabpanel" aria-labelledby="central-tab" tabindex="0">
+        <div class="hero-text">
+            <h1 class="animate__animated animate__flipInX" style="font-size: 60px;">CENTRAL REGION</h1>
+          </div>
+          <div class="card-container">
+            <div class="list">
+                <div class="item">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="{% static 'images/Riyadh.jpeg'%}" alt="الرياض" style="width:300px;height:300px;">
+                        </div>
+                          <div class="flip-card-back">
+                            <h1>Riyadh</h1> 
+                            <h4>
+                              <ul>
+                                <li><strong>Province:</strong> Riyadh</li>
+                                <li><strong>Population:</strong> 7.677 million</li>
+                              </ul>
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                </div> <!-- END item 1-->
+
+                <div class="item">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="{% static 'images/القصيم.jpg'%}" alt="القصيم" style="width:300px;height:300px;">
+                        </div>
+                          <div class="flip-card-back">
+                            <h1>Buraydah</h1> 
+                            <h4>
+                              <ul>
+                                <li><strong>Province:</strong> Al Qassim</li>
+                                <li><strong>Population:</strong> 570.000</li>
+                              </ul>
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                </div> <!-- END item 2-->
+
+                <div class="item">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="{% static 'images/المجمعه.jpg'%}" alt="المجمعه" style="width:300px;height:300px;">
+                        </div>
+                          <div class="flip-card-back">
+                            <h1>Al-Majma'ah</h1> 
+                            <h4>
+                              <ul>
+                                <li><strong>Province:</strong> Riyadh</li>
+                                <li><strong>Population:</strong> 151.877</li>
+                              </ul>
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                </div> <!-- END item 3-->
+
+            </div> <!-- END list -->
+
+        </div> <!-- END Container--> 
+    </div> <!-- END Central tab -->
+    <!-- central tap -->
+
+    <div class="tab-pane" id="north" role="tabpanel" aria-labelledby="north-tab" tabindex="0">
+        <div class="hero-text">
+            <h1 class="animate__animated animate__flipInX" style="font-size: 60px;">NORTH REGION</h1>
+          </div>
+          <div class="card-container">
+            <div class="list">
+                <div class="item">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="{% static 'images/Hail.webp'%}" alt="حائل" style="width:300px;height:300px;">
+                        </div>
+                          <div class="flip-card-back">
+                            <h1>Hail</h1> 
+                            <h4>
+                              <ul>
+                                <li><strong>Province:</strong> Hail</li>
+                                <li><strong>Population:</strong> 498.575</li>
+                              </ul>
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                </div> <!-- END item 1-->
+
+                <div class="item">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="{% static 'images/تبوك.jpeg'%}" alt="تبوك" style="width:300px;height:300px;">
+                        </div>
+                          <div class="flip-card-back">
+                            <h1>Tabuk</h1> 
+                            <h4>
+                              <ul>
+                                <li><strong>Province:</strong> Tabuk</li>
+                                <li><strong>Population:</strong> 594.350</li>
+                              </ul>
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                </div> <!-- END item 2-->
+
+                <div class="item">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="{% static 'images/الجوف.jpg'%}" alt="الجوف" style="width:300px;height:300px;">
+                        </div>
+                          <div class="flip-card-back">
+                            <h1>Al-Jowf</h1> 
+                            <h4>
+                              <ul>
+                                <li><strong>Province:</strong> Al-jowf</li>
+                                <li><strong>Population:</strong> 508.475</li>
+                              </ul>
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                </div> <!-- END item 3-->
+
+            </div> <!-- END list -->
+        </div> <!-- END Container--> 
+    </div>
+    <!-- North Tab -->
+
+    <div class="tab-pane" id="east" role="tabpanel" aria-labelledby="east-tab" tabindex="0">
+        <div class="hero-text">
+            <h1 class="animate__animated animate__flipInX" style="font-size: 60px;">EAST REGION</h1>
+          </div>
+          <div class="card-container">
+            <div class="list">
+                <div class="item">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="{% static 'images/Ad-Dammam.JPG'%}" alt="الدمام" style="width:300px;height:300px;">
+                        </div>
+                          <div class="flip-card-back">
+                            <h1>Ad-Dammam</h1>
+                            <h4>
+                              <ul>
+                                <li><strong>Province:</strong> Eastern</li>
+                                <li><strong>Population:</strong> 1.532.300 million</li>
+                              </ul>
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                </div> <!-- END item 1-->
+
+                <div class="item">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="{% static 'images/الجبيل.jpg'%}" alt="الجبيل" style="width:300px;height:300px;">
+                        </div>
+                          <div class="flip-card-back">
+                            <h1>Al-Jubail</h1> 
+                            <h4>
+                              <ul>
+                                <li><strong>Province:</strong> Eastern</li>
+                                <li><strong>Population:</strong> 474.679</li>
+                              </ul>
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                </div> <!-- END item 2-->
+
+                <div class="item">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="{% static 'images/راس-تنورة.jpg'%}" alt="رأس تنورة" style="width:300px;height:300px;">
+                        </div>
+                          <div class="flip-card-back">
+                            <h1>Ras Tanura</h1> 
+                            <h4>
+                              <ul>
+                                <li><strong>Province:</strong> Eastern</li>
+                                <li><strong>Population:</strong> 3.200</li>
+                              </ul>
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                </div> <!-- END item 3-->
+
+            </div> <!-- END list -->
+        </div> <!-- END Container--> 
+    </div>
+    <!-- East Tab -->
+
+    <div class="tab-pane" id="west" role="tabpanel" aria-labelledby="west-tab" tabindex="0">
+        <div class="hero-text">
+            <h1 class="animate__animated animate__flipInX" style="font-size: 60px;">WEST REGION</h1>
+          </div>
+        <div class="card-container">
+            <div class="list">
+                <div class="item">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="{% static 'images/جده.jpg'%}" alt="جدة" style="width:300px;height:300px;">
+                        </div>
+                          <div class="flip-card-back">
+                            <h1>Jeddah</h1>
+                            <h4>
+                              <ul>
+                                <li><strong>Province:</strong> Makkah</li>
+                                <li><strong>Population:</strong> 3.976 million</li>
+                              </ul>
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                </div> <!-- END item 1-->
+
+                <div class="item">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="{% static 'images/مكه.jpg'%}" alt="مكه" style="width:300px;height:300px;">
+                        </div>
+                          <div class="flip-card-back">
+                            <h1>Makkah</h1>
+                            <h4>
+                              <ul>
+                                <li><strong>Province:</strong> Makkah</li>
+                                <li><strong>Population:</strong> 1.579 million</li>
+                              </ul>
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                </div> <!-- END item 2-->
+
+                <div class="item">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="{% static 'images/العلا.jpg'%}" alt="العلا" style="width:300px;height:300px;">
+                        </div>
+                          <div class="flip-card-back">
+                            <h1>Al-Ula</h1> 
+                            <h4>
+                              <ul>
+                                <li><strong>Province:</strong> Medina</li>
+                                <li><strong>Population:</strong> 40.760</li>
+                              </ul>
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                </div> <!-- END item 3-->
+
+            </div> <!-- END list -->
+        </div> <!-- END Container--> 
+    </div>
+    <!-- West Tab -->
+
+    <div class="tab-pane" id="south" role="tabpanel" aria-labelledby="south-tab" tabindex="0">
+        <div class="hero-text">
+            <h1 class="animate__animated animate__flipInX" style="font-size: 60px;">SOUTH REGION</h1>
+          </div>
+        <div class="card-container">
+            <div class="list">
+                <div class="item">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="{% static 'images/Abha.webp'%}" alt="أبها" style="width:300px;height:300px;">
+                        </div>
+                          <div class="flip-card-back">
+                            <h1>Abha</h1>
+                            <h4>
+                              <ul>
+                                <li><strong>Province:</strong> Asir</li>
+                                <li><strong>Population:</strong> 371.047</li>
+                              </ul>
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                </div> <!-- END item 1-->
+
+                <div class="item">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="{% static 'images/النماص.jpg'%}" alt="النماص" style="width:300px;height:300px;">
+                        </div>
+                          <div class="flip-card-back">
+                            <h1>Al-Namas</h1>
+                            <h4>
+                              <ul>
+                                <li><strong>Province:</strong> Asir</li>
+                                <li><strong>Population:</strong> 22.541</li>
+                              </ul>
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                </div> <!-- END item 2-->
+
+                <div class="item">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="{% static 'images/خميس-مشيط.jpeg'%}" alt="خميس مشيط" style="width:300px;height:300px;">
+                        </div>
+                          <div class="flip-card-back">
+                            <h1>Khamis Mushait</h1>
+                            <h4>
+                              <ul>
+                                <li><strong>Province:</strong> Asir</li>
+                                <li><strong>Population:</strong> 1.353 million</li>
+                              </ul>
+                            </h4>
+                          </div>
+                        </div>
+                      </div>
+                </div> <!-- END item 3-->
+
+            </div> <!-- END list -->
+        </div> <!-- END Container--> 
+    </div>
+    <!-- South Tab -->
+  </div>
+
+  <footer class="text-dark pt-4 pb-2" style="background-color: bisque;">
+    <div class="container text-center ">
+        <hr class="mb-4">
+          <div class="row d-flex justify-content-center">
+            <div class="text-center">
+              <div>
+                <p>
+                Copyright © 2024. Designed By 
+                <strong>Nawal Alrashed</strong>
+              </p>
+              </div>
+            </div>
+          </div> <!-- row -->
+    </div> <!-- container -->
+  </footer>
+{% endblock %}

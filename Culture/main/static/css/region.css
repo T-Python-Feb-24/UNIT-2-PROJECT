@@ -1,0 +1,71 @@
+/* Nav-Pills */
+.nav-pills .nav-link.active {
+    background-color: rgba(34, 128, 5, 0.473);
+}
+
+.nav-pills .nav-link {
+    color: rgba(34, 128, 5, 0.473);
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-pills .nav-link:hover {
+    color: burlywood;
+}
+
+/* Cards-Box */
+.card-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .list {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    column-gap: 15px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    animation: fade-out 0.8s ease-in;
+  }
+  @keyframes fade-out {
+
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0, 0px);
+    }
+}
+  .item {
+    display: flex;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+    align-items: center;
+    flex-direction: column;
+    }
+    
+    .item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+    
+    .item h1 {
+      padding: 15px;
+      border-radius: 0 0 5px 5px;
+      margin: 0;
+    }
+
