@@ -1,0 +1,123 @@
+{% extends 'development/base.html' %}
+{% load static %}
+{% block title %} Home {% endblock %}
+
+{% block content %}
+
+<!-- Main section -->
+
+<section class="main">
+    <div>
+      <h2>Where<span><br>Dreams Become Achievements! <br> </span></h2>
+      <a href="#section2" class="main-btn">Explore Projects</a>
+    </div>
+  </section>
+
+
+
+<!-- About section  -->
+
+<section id="section1">
+    <h2 class="title">About Saudi vision 2030<br><br><br> </h2>
+    <p><span>Saudi Arabia</span> ...The heart of the Arab and Islamic worlds, the investment powerhouse, and the hub connecting three continents. <br>
+
+        The Kingdom of Saudi Arabia is blessed with many rich resources. Its geographic, cultural, social, demographic and economic advantages have enabled The Kingdom of Saudi Arabia to take a leading position in the world. <br>
+        
+        To build a progressive future for the country, the Kingdom of Saudi Arabia's has developed a vision based on three pillars that highlight its unique competitive advantages (listed below). The Kingdom of Saudi Arabia regional status and stature enables it to take a leading role as the “heart” of Arab and Islamic nations, the Kingdom will use its investment power to create a more diverse and sustainable economy, and finally, The Kingdom will use its strategic location to connect the three continents of Africa, Asia and Europe together. <br>
+        
+        Our vision is based on the following three pillars: a vital society, a thriving economy, and an ambitious nation. These pillars are integrated to achieve the objectives of the Kingdom.</p>
+
+  </section>
+
+
+
+<!-- Project's cards  -->
+
+  <section class="card-color" id="section2" >
+    <h2 class="title" >Projects <br><br><br> </h2>
+    <div class="card mb-3" style="max-width: 20000px;background-color:#F4F2EE">
+      <div class="row g-0">
+        <div class="col-md-6">
+          <img src="static/images/neom/neom2.jpeg" class="img-fluid rounded-start" alt="..." style="width:1000px;">
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <img src="static/images/neom/neom.png" alt="" style="width:100px; padding-left:13px ;" class="pl-5">
+            <h5 class="card-title mt-2 px-3" style="font-size:30px; color:rgb(92, 90, 38)">NEOM</h5><hr>
+            <p class="card-text px-3 py-3">NEOM is evolving as a groundbreaking living laboratory, pioneering entrepreneurship and innovation to shape a transformative future. <br><br>
+
+              Encompassing 26,500 square kilometers, NEOM will operate entirely on renewable energy, fostering a diverse and talented community that delivers globally impactful solutions. <br><br>
+              
+              In alignment with Vision 2030, NEOM's circular economy, zero-carbon approach, and innovative design will redefine urban living, promoting sustainability and improving overall quality of life.</p>
+            <a href="{% url 'development:neom' %} "><button class="see px-3" style="margin-left:13px;">See More</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-3" style="max-width: 20000px;background-color:#F4F2EE">
+      <div class="row g-0">
+        <div class="col-md-6">
+          <img src="static/images/qiddiya/qiddiya.jpeg" class="img-fluid rounded-start" alt="..." style="width:1000px;">
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <img src="static/images/qiddiya/qiddiyalogo.png" alt="" style="width:80px; padding-left:19px ;" class="pl-5">
+            <h5 class="card-title mt-2 px-3" style="font-size:30px; color:rgb(92, 90, 38)">Qiddiya</h5><hr>
+            <p class="card-text px-3 py-3">Led by the Qiddiya Investment Company (QIC), and established in 2018, this transformative giga-project is shaping a cultural, sports, and entertainment landmark. <br><br>
+
+              Qiddiya is poised to redefine destination cities globally, offering the most innovative and immersive experiences. <br><br>
+              
+              Qiddiya is a 376-square-kilometer site that serves a dual economic and social purpose, unlocking inventive professional pathways and enriching the lives of Saudi Arabia's dynamic youth.</p>
+            <a href="{% url 'development:qiddiya' %} "><button class="see px-3" style="margin-left:13px;">See More</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card mb-3" style="max-width: 20000px;background-color:#F4F2EE">
+      <div class="row g-0">
+        <div class="col-md-6">
+          <img src="static/images/redseaglobal/theredsea.jpeg" class="img-fluid rounded-start" alt="..." style="width:1000px;">
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <img src="static/images/redseaglobal/redsealogo.png" alt="" style="width:180px; padding-left:13px ;" class="pl-5">
+            <h5 class="card-title mt-2 px-3" style="font-size:30px; color:rgb(92, 90, 38)">RED SEA GLOBAL</h5><hr>
+            <p class="card-text px-3 py-3">Established in 2018, Red Sea Global (RSG), developer of two of the world’s most ambitious regenerative tourism projects, The Red Sea and Amaala, is putting people and the planet first. <br><br>
+
+              The Red Sea, covering 28,000 square kilometers, is surrounded by the world's fourth-largest barrier reef system. By 2030, the number of visitors will be capped at one million annually. <br><br>
+              
+              A cornerstone of Vision 2030, RSG's mission is to diversify the Saudi economy by providing employment opportunities in tourism and hospitality while enhancing the country’s rich cultural heritage.</p>
+            <a href="{% url 'development:red_sea' %}"><button class="see px-3" style="margin-left:13px;">See More</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="card mb-3" style="max-width: 20000px;background-color:#F4F2EE">
+      <div class="row g-0">
+        <div class="col-md-6">
+          <img src="static/images/roshn/roshnimg.jpeg" class="img-fluid rounded-start" alt="..." style="width:1000px;">
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <img src="static/images/roshn/roshn.png" alt="" style="width:100px; padding-left:13px ;" class="pl-5">
+            <h5 class="card-title mt-2 px-3" style="font-size:30px; color:rgb(92, 90, 38)">ROSHN</h5><hr>
+            <p class="card-text px-3 py-3">A national real estate developer launched in 2018, ROSHN is committed to delivering modern and aspirational communities for the citizens of Saudi Arabia.  <br><br>
+
+              ROSHN actively contributes to the national goal of achieving a 70% homeownership rate in Saudi Arabia and supports various aspects of Vision 2030. <br><br>
+              
+              Through the development of beautifully designed homes, complemented by mosques, retail and F&B outlets, parks, schools, and leisure and entertainment facilities, ROSHN is heralding a new way of community living.</p>
+            <a href="{% url 'development:roshn' %}"><button class="see px-3" style="margin-left:13px;">See More</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+{% endblock %}

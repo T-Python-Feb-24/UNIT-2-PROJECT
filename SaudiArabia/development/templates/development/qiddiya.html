@@ -1,0 +1,122 @@
+{% extends 'development/base.html' %}
+{% load static %}
+{% block title %} QIDDIYA {% endblock %}
+
+{% block content %}
+
+<!-- Qiddiya Main Section  -->
+
+<section class="qiddiya_main">
+    <h2><span>Qiddiya</span><br>The capital of entertainment,<br>sports and the arts.</h2>
+ </section>
+ 
+ <!-- Neom Progress Section  -->
+ 
+ <section class="progress_section">
+     <h2 class="qiddiya_progress">Qiddiya’s offering will be based on five cornerstones:<br><br><br> </h2>
+     <div class="container">
+         <div class="row">
+             <div class="col justify-content-center">
+                    Parks and attractions <br><br>
+ 
+                    Sports and wellness<br><br>
+ 
+                    Arts and culture <br><br>
+             </div>
+             <div class="col justify-content-center">
+                    Motion and mobility <br><br>
+ 
+                    Nature and environment
+             </div>
+         </div>
+     </div>
+ 
+ <!-- Carousel Images  -->
+ 
+ </section>
+ <div id="carouselExampleFade" class="carousel slide carousel-fade">
+     <div class="carousel-inner">
+       <div class="carousel-item active">
+         <img src="{% static 'images/qiddiya/qiddiya1.jpeg' %}"  class="d-block w-100" alt="...">
+       </div>
+       <div class="carousel-item active">
+         <img src="{% static 'images/qiddiya/qiddiya.webp' %}"  class="d-block w-100" alt="...">
+       </div>
+       <div class="carousel-item active">
+         <img src="{% static 'images/qiddiya/qiddiya2.jpeg' %}"  class="d-block w-100" alt="...">
+       </div>
+       <div class="carousel-item">
+         <img src="{% static 'images/qiddiya/qiddiya3.webp' %}" class="d-block w-100" alt="...">
+       </div>
+       <div class="carousel-item">
+         <img src="{% static 'images/qiddiya/qiddiya4.jpeg' %}" class="d-block w-100" alt="...">
+       </div>
+     </div>
+     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+       <span class="visually-hidden">Previous</span>
+     </button>
+     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+       <span class="carousel-control-next-icon" aria-hidden="true"></span>
+       <span class="visually-hidden">Next</span>
+     </button>
+   </div>
+ 
+ 
+ <section> 
+     <div class="card mb-3" style="max-width: 20000px;background-color:#F4F2EE">
+         <div class="row g-0">
+           <div class="col-md-6">
+             <video class="vid" controls autoplay muted loop width="100%" height="500">
+                 <source src="{% static 'videos/elevated.MP4' %}" type="video/mp4">
+             </video>             
+           </div>
+         <div class="col-md-6">
+             <div class="card-body">
+               <img src="static/images/qiddiya/qiddiyalogo.png" alt="" style="width:80px; padding-left:19px ;" class="pl-5">
+               <h5 class="card-title mt-2 px-3 text-center" style="font-size:30px; color:rgb(92, 90, 38)">A place of inspiration, discovery and fun</h5><hr>
+               <p class="card-text px-3 py-3 " style="font-size:22px;" >Qiddiya’s masterplan is carefully crafted to respect and enhance the site’s natural geography</p>
+             </div>
+           </div>
+         </div>
+       </div>
+ </section>
+ 
+ 
+ <!-- Video Section  -->
+ 
+ <!-- <section>
+     <video class="vid" controls muted loop width="100%" height="500">
+         <source src="{% static 'videos/neom.MP4' %}" type="video/mp4">
+     </video>
+ </section> -->
+ 
+ 
+
+<section>
+ <div class="card mb-3" style="max-width: 20000px;background-color:#F4F2EE">
+    <div class="row g-0">
+
+      <div class="col-md-6">
+        <div class="card-body">
+          <h5 class="card-title mt-2 px-3 " style="font-size:30px; color:rgb(92, 90, 38)">Facts about this initiative:</h5><hr>
+          <p class="card-text px-3 py-3">• Qiddiya is located southwest of Riyadh on a site that spans 376 square kilometers.<br><br>
+
+            • It is being developed by the Qiddiya Investment Company (QIC), which was incorporated in 2018 and is wholly owned by PIF. <br><br>
+            
+            • The giga-project is creating a cultural, sports and entertainment destination to improve the quality of life for Saudi Arabia’s residents and elevate its capital to become one of the world’s top 10 city economies​.<br><br>
+
+            • The Six Flags Qiddiya theme park will be home to Falcon’s Flight – the world’s longest, tallest and fastest coaster.<br><br>
+
+            • In 2022, Qiddiya awarded an SAR 2.8 billion contract to develop the region’s biggest water park and the first within Saudi Arabia.</p>
+
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img src="{% static 'images/qiddiya/qiddiya.jpeg' %}" class="img-fluid rounded-start" alt="..." style="width:1000px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

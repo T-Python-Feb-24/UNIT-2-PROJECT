@@ -1,0 +1,134 @@
+{% extends 'development/base.html' %}
+{% load static %}
+{% block title %} NEOM {% endblock %}
+
+{% block content %}
+
+<!-- Neom Main Section  -->
+
+<section class="neom_main">
+   <h2><span>NEOM</span><br><br>is an audacious dream<br> vision of what a new future might look like</h2>
+</section>
+
+<!-- Neom Progress Section  -->
+
+<section class="progress_section">
+    <h2 class="neom_progress">Development of NEOM is progressing rapidly:<br><br><br> </h2>
+    <div class="container">
+        <div class="row neom_p">
+            <div class="col justify-content-center">
+                NEOM opened its first airport in 2019 <br><br>
+
+                It is building the world’s largest green hydrogen plant <br><br>
+
+                Work is underway on THE LINE, a 170-kilometer city <br><br>
+            </div>
+            <div class="col justify-content-center">
+                OXAGON will be its reimagined industrial city <br><br>
+
+                Trojena will be NEOM’s skiing destination
+            </div>
+        </div>
+    </div>
+
+<!-- Carsoul Images  -->
+
+</section>
+<div id="carouselExampleFade" class="carousel slide carousel-fade">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'images/neom/neom4.jpeg' %}"  class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item active">
+        <img src="{% static 'images/neom/neom4.webp' %}"  class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item active">
+        <img src="{% static 'images/neom/neom5.jpeg' %}"  class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/neom/neom2.webp' %}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/neom/neom1.webp' %}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/neom/neom1.jpeg' %}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/neom/neom3.jpeg' %}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/neom/neom3.webp' %}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/neom/neom1.jpeg' %}" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+<section> 
+    <div class="card mb-3" style="max-width: 20000px;background-color:#F4F2EE">
+        <div class="row g-0">
+          <div class="col-md-6">
+            <video class="vid" controls autoplay muted loop width="100%" height="500">
+                <source src="{% static 'videos/neom.MP4' %}" type="video/mp4">
+            </video>             
+          </div>
+        <div class="col-md-6">
+            <div class="card-body">
+              <img src="static/images/qiddiya/qiddiyalogo.png" alt="" style="width:80px; padding-left:19px ;" class="pl-5">
+              <h5 class="card-title mt-2 px-3 text-center" style="font-size:30px; color:rgb(92, 90, 38)">A project unique in scale</h5><hr>
+              <p class="card-text px-3 py-3 " style="font-size:22px;" >The realization of the masterplan for NEOM 
+                <br>the future of work, living and sustainability <br>is advancing every day..</p>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+
+
+
+
+<section>
+    <div class="card mb-3" style="max-width: 20000px;background-color:#F4F2EE">
+       <div class="row g-0">
+   
+         <div class="col-md-6">
+           <div class="card-body">
+             <h5 class="card-title mt-2 px-3 " style="font-size:30px; color:rgb(92, 90, 38)">Facts about this initiative:</h5><hr>
+             <p class="card-text px-3 py-3">• Located on the coastline of the Red Sea in northwest Saudi Arabia, NEOM is being built as a living laboratory, a place where entrepreneurship and innovation will chart the course for a new future.<br><br>
+   
+               • NEOM will be a destination, a home for people who dream big and want to be part of building a new model for sustainable living, working and prospering. <br><br>
+               
+               • NEOM will provide a plethora of unique development opportunities, as its strategic coastal Red Sea location is notable for its proximity to international markets and trade routes.<br><br>
+   
+               • NEOM will cover 26,500 square kilometers and will be powered by 100% renewable energy.<br><br></p>
+   
+           </div>
+         </div>
+         <div class="col-md-6">
+           <img src="{% static 'images/qiddiya/qiddiya.jpeg' %}" class="img-fluid rounded-start" alt="..." style="width:1000px;">
+         </div>
+       </div>
+     </div>
+   </section>
+
+<!-- Video Section  -->
+
+<!-- <section>
+    <video class="vid" controls muted loop width="100%" height="500">
+        <source src="{% static 'videos/neom.MP4' %}" type="video/mp4">
+    </video>
+</section> -->
+
+
+{% endblock %}

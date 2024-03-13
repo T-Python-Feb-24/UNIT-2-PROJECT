@@ -1,0 +1,119 @@
+{% extends 'development/base.html' %}
+{% load static %}
+{% block title %} RED SEA GLOBAL {% endblock %}
+
+{% block content %}
+
+<!-- Neom Main Section  -->
+
+<section class="redsea_main">
+   <h2><span>Red Sea Global</span><br><br>The world’s most ambitious regenerative tourism project</h2>
+</section>
+
+<!-- Neom Progress Section  -->
+
+<section class="progress_section">
+    <h2 class="redsea_progress">The Red Sea giga-project will span 28,000 square kilometers, and include:<br><br><br> </h2>
+    <div class="container">
+        <div class="row">
+            <div class="col justify-content-center">
+                90 untouched islands<br><br>
+
+                50 hotels <br><br>
+
+                Up to 8,000 rooms<br><br>
+            </div>
+            <div class="col justify-content-center">
+                1,300 luxury residences <br><br>
+
+                An international airport
+            </div>
+        </div>
+    </div>
+
+<!-- Carsoul Images  -->
+
+</section>
+<div id="carouselExampleFade" class="carousel slide carousel-fade">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'images/redseaglobal/red.jpeg' %}"  class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item active">
+        <img src="{% static 'images/redseaglobal/red.png' %}"  class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item active">
+        <img src="{% static 'images/redseaglobal/red1.jpeg' %}"  class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/redseaglobal/red2.jpeg' %}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/redseaglobal/red1.png' %}" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+<section> 
+    <div class="card mb-3" style="max-width: 20000px;background-color:#F4F2EE">
+        <div class="row g-0">
+          <div class="col-md-6">
+            <video class="vid" controls autoplay muted loop width="100%" height="500">
+                <source src="{% static 'videos/redseaglobal.MP4' %}" type="video/mp4">
+            </video>             
+          </div>
+        <div class="col-md-6">
+            <div class="card-body">
+              <img src="static/images/qiddiya/qiddiyalogo.png" alt="" style="width:80px; padding-left:19px ;" class="pl-5">
+              <h5 class="card-title mt-2 px-3 text-center" style="font-size:30px; color:rgb(92, 90, 38)">Destinations like nothing the world has ever seen</h5><hr>
+              <p class="card-text px-3 py-3 " style="font-size:22px;" >Red Sea Global’s tourism<br>developments will enhance the well-being of both people and planet</p>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+
+
+
+
+<section>
+    <div class="card mb-3" style="max-width: 20000px;background-color:#F4F2EE">
+       <div class="row g-0">
+   
+         <div class="col-md-6">
+           <div class="card-body">
+             <h5 class="card-title mt-2 px-3 " style="font-size:30px; color:rgb(92, 90, 38)">Facts about this initiative:</h5><hr>
+             <p class="card-text px-3 py-3">• As home to many endemic species, The Red Sea’s variety of islands and coastline offer rare opportunities to enjoy the natural world, together with the highest-quality personalized accommodation and service that will set new standards in luxury travel and position Saudi Arabia on the global tourism map..<br><br>
+   
+               • The Red Sea is preserving 75% of the natural archipelago for conservation. The 22 islands and six inland locations to be developed will offer up to 8,000 hotel rooms and 1,300 luxury hotel-branded residences, with the number of visitors capped at one million annually by 2030.<br><br>
+               
+               • The project aims to achieve a 30% net positive conservation benefit by 2040, achieved by enhancing key habitats that help biodiversity to flourish.<br><br></p>
+   
+           </div>
+         </div>
+         <div class="col-md-6">
+           <img src="{% static 'images/redseaglobal/red1.jpeg' %}" class="img-fluid rounded-start" alt="..." style="width:1000px;">
+         </div>
+       </div>
+     </div>
+   </section>
+
+<!-- Video Section  -->
+
+<!-- <section>
+    <video class="vid" controls muted loop width="100%" height="500">
+        <source src="{% static 'videos/neom.MP4' %}" type="video/mp4">
+    </video>
+</section> -->
+
+
+{% endblock %}

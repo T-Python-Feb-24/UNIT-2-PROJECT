@@ -1,0 +1,451 @@
+*{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* nav bar  */
+.navbar{
+    display: flex;
+    background-color:#F4F2EE;
+    /* background: linear-gradient(to right, #9887d1, #6d5b09); */
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 20px 100px; */
+    padding: 100px;
+
+}
+
+.nav-item a:hover{
+    color: orange;
+}
+
+
+.material-symbols-outlined {
+    text-decoration: none;
+    color: #30302a;
+}
+
+.material-symbols-outlined:hover{
+    color: orange;
+}
+.left-bar a{
+    text-decoration: none;
+    color: orange;
+    justify-content: center;
+} 
+
+.left-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: row; 
+}
+
+.left-bar span{
+    color: #d75c23;
+    font-weight: bold;
+}
+
+.favicon{
+    width: 40px;
+    height: 34px;
+    text-align: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.logo{
+    text-align: center;
+    font-size: 25px;
+    /* padding-left: 70px;
+    padding-right: 30px; */
+}
+
+
+#section1 p span{
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(20, 140, 100);
+    text-align: center;
+}
+
+.title{
+    text-align: center;
+}
+
+.collapse{
+    justify-content: center;
+    align-items: center;
+    padding-left: 50%;
+    color: #F4F2EE;
+}
+
+/* main section  */
+
+section{
+    padding: 100px 100px;
+} 
+
+.main{
+    display: flex;
+    align-items: center;
+    background-color:#F4F2EE;
+    font-family: "Londrina Outline", sans-serif;
+    background: url(../images/mainmap.jpeg) no-repeat;
+    /* width:100%; */
+    background-size: cover;
+    background-position: center;
+    /* effect for the main section image to be fixid  */
+    background-attachment: fixed;
+}
+
+.main h2{
+    color: rgb(33, 33, 25);
+    /* color: #f1f0da; */
+    /* font-size: 1.4em; */
+    font-family: "Londrina Outline", sans-serif;
+    font-size: 30px;
+    font-weight: 500 ;
+}
+
+.main h2 span{
+    margin-top: 50px;
+    color: #30302a;
+    /* color: #f1f0da; */
+
+    /* responsive size  */
+    font-size: 8vw;
+    font-weight: 600;
+}
+
+.main-btn{
+    color: #f1f0da;
+    background-color: brown;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 15px 40px;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    transition: 0.3s smooth;
+}
+
+.main-btn:hover{
+    background-color: rgb(91, 23, 23);
+    /* to get a bigger buttun view  */
+    transform: scale(1.1);
+}
+
+
+
+/* About section  */
+
+.vision {
+    background-color: beige;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    color: #3C3C3C;
+    font-weight: 800;
+    margin-top: 0px;
+}
+
+
+
+/* Projects section  */
+
+.project{
+    background-color: rgb(255, 255, 255);
+    /* width: 21.25em; */
+    /* box-shadow: 0 5px 25px rgba(81, 70, 15, 15); */
+}
+
+.neom-icon{
+    width: 100px;
+}
+
+.project-name{
+    color: brown;
+    /* font-size: 1vw; */
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    margin-top: 20px;
+}
+/* 
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+} */
+
+.info{
+    padding: 40px;
+}
+
+.see{
+    display: flex;
+    justify-content: center;
+    color: #3f3f39;
+    border-color: orange;
+    background-color: orange;
+    text-decoration: none;
+    /* font-size: 2vw; */
+    font-size: 14px;
+    font-weight: 200;
+    display: inline-block;
+    padding: 5px 10px;
+    /* letter-spacing: 1px; */
+    border-radius: 15px;
+    /* margin-top: 20px; */
+    margin-bottom: 20px;
+    transition: 0.3s smooth;
+}
+
+.see:hover{
+    background-color: rgb(234, 205, 155);
+    /* to get a bigger buttun view  */
+    transform: scale(1);
+}
+
+body{
+    color: #F4F2EE;
+}
+
+/* Dark and Light mode  */
+.darkmode{
+    color: antiquewhite;
+    background-color: #3C3C3C;
+}
+
+.darkmode ..progress_section{
+    color: #F4F2EE;
+}
+.darkmode .navbar{
+    background-color: #3C3C3C;
+}
+
+.darkmode .title{
+    color: #F4F2EE;
+}
+
+/* neom page  */
+.main{
+    display: flex;
+    align-items: center;
+    background-color:#F4F2EE;
+    font-family: "Londrina Outline", sans-serif;
+    background: url(../images/mainmap.jpeg) no-repeat;
+    /* width:100%; */
+    background-size: cover;
+    background-position: center;
+    /* effect for the main section image to be fixid  */
+    background-attachment: fixed;
+}
+
+.neom_main{
+    /* padding: 100px 100px; */
+    display: flex;
+    align-items: center;
+    background-color:#F4F2EE;
+    background: url(../images/neom/neom6.jpeg) no-repeat;
+    /* width:100%; */
+    background-size: cover;
+    background-position: center;
+    /* effect for the main section image to be fixid  */
+    background-attachment: fixed;
+}
+
+.qiddiya_main{
+    /* padding: 100px 100px; */
+    /* margin: ; */
+    display: flex;
+    align-items: center;
+    background-color:#F4F2EE;
+    background: url(../images/qiddiya/main.jpeg) no-repeat;
+    /* width:100%; */
+    background-size: cover;
+    background-position: center;
+    /* effect for the main section image to be fixid  */
+    background-attachment: fixed;
+}
+
+.redsea_main{
+    /* padding: 100px 100px; */
+    /* margin: ; */
+    display: flex;
+    align-items: center;
+    background-color:#F4F2EE;
+    background: url(../images/redseaglobal/main.png) no-repeat;
+    /* width:100%; */
+    background-size: cover;
+    background-position: center;
+    /* effect for the main section image to be fixid  */
+    background-attachment: fixed;
+}
+
+.roshn_main{
+    /* padding: 100px 100px; */
+    /* margin: ; */
+    display: flex;
+    align-items: center;
+    background-color:#F4F2EE;
+    background: url(../images/roshn/main.png) no-repeat;
+    /* width:100%; */
+    background-size: cover;
+    background-position: center;
+    /* effect for the main section image to be fixid  */
+    background-attachment: fixed;
+}
+
+.roshn_main h2{
+    margin-top: 40px;
+    color: #F4F2EE;
+    /* color: #f1f0da; */
+    /* font-size: 1.4em; */
+    font-family: "Londrina Outline", sans-serif;
+    font-size: 30px;
+    font-weight: 500 ;  
+}
+
+.roshn_main h2 span{
+    margin-top: 50px;
+    color: rgb(33, 33, 25);
+    /* color: #f1f0da; */
+    /* responsive size  */
+    font-size: 8vw;
+    font-weight: 600;
+}
+
+.qiddiya_main h2{
+    margin-top: 40px;
+    color: #F4F2EE;
+    /* color: #f1f0da; */
+    /* font-size: 1.4em; */
+    font-family: "Londrina Outline", sans-serif;
+    font-size: 30px;
+    font-weight: 500 ;
+}
+
+.neom_main h2{
+    color: #F4F2EE;
+    /* color: #f1f0da; */
+    /* font-size: 1.4em; */
+    font-family: "Londrina Outline", sans-serif;
+    font-size: 30px;
+    font-weight: 500 ;
+}
+
+.redsea_main h2{
+    color: rgb(33, 33, 25);
+    /* color: #f1f0da; */
+    /* font-size: 1.4em; */
+    font-family: "Londrina Outline", sans-serif;
+    font-size: 30px;
+    font-weight: 500 ;
+}
+
+.neom_main h2 span{
+    margin-top: 50px;
+    color: #F4F2EE;
+    /* color: #f1f0da; */
+    /* responsive size  */
+    font-size: 8vw;
+    font-weight: 600;
+}
+
+.qiddiya_main h2 span{
+    margin-top: 50px;
+    color: #F4F2EE;
+    /* color: #f1f0da; */
+    /* responsive size  */
+    font-size: 8vw;
+    font-weight: 600;
+}
+
+.redsea_main h2 span{
+    margin-top: 50px;
+    color: rgb(33, 33, 25);
+    /* color: #f1f0da; */
+    /* responsive size  */
+    font-size: 8vw;
+    font-weight: 600; 
+}
+
+.neom_progress{
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    color: rgb(33, 33, 25);
+    font-weight: 800;
+    margin-top: 0px;
+}
+
+.progress_section{
+    display: flex;
+    flex-direction: row;
+    color: rgb(33, 33, 25);
+    column-gap: 20px;
+}
+
+.qiddiya_progress{
+    color: rgb(33, 33, 25);
+}
+
+.carousel{
+    display: flex;
+    /* width: 900px; */
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item{
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+}
+
+.carousel-inner{
+    /* display: flex; */
+    /* justify-content: center; */
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* footer section  */
+
+.footer-icon{
+    border-radius: 30px;
+}
+
+.footer-info a{
+    text-decoration: none;
+    padding-top: 20px;
+}
+
+
+.vid{
+    border-radius: 50px;
+}
+

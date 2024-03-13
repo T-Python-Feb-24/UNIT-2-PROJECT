@@ -1,0 +1,120 @@
+{% extends 'development/base.html' %}
+{% load static %}
+{% block title %} ROSHN {% endblock %}
+
+{% block content %}
+
+<!-- Qiddiya Main Section  -->
+
+<section class="roshn_main">
+    <h2><span>ROSHN</span><br>Saudi Arabia’s most trusted multi-asset-class<br>real estate developer</h2>
+ </section>
+ 
+ <!-- Neom Progress Section  -->
+ 
+ <section class="progress_section">
+     <h2 class="roshn_progress">ROSHN’s five objectives for future cities:<br><br><br> </h2>
+     <div class="container">
+         <div class="row">
+             <div class="col justify-content-center">
+                    Improving the quality of life <br><br>
+ 
+                    Enhancing access to housingSports and wellnes<br><br>
+ 
+                    Contributing to housing needs <br><br>
+             </div>
+             <div class="col justify-content-center">
+                    Contributing to GDP and supply chains<br><br>
+ 
+                    Providing attractive investment opportunities
+             </div>
+         </div>
+     </div>
+ 
+ <!-- Carousel Images  -->
+ 
+ </section>
+ <div id="carouselExampleFade" class="carousel slide carousel-fade">
+     <div class="carousel-inner">
+       <div class="carousel-item active">
+         <img src="{% static 'images/roshn/roshn1.jpeg' %}"  class="d-block w-100" alt="...">
+       </div>
+       <div class="carousel-item active">
+         <img src="{% static 'images/roshn/roshn4.jpeg' %}"  class="d-block w-100" alt="...">
+       </div>
+       <div class="carousel-item active">
+         <img src="{% static 'images/roshn/roshn3.jpeg' %}"  class="d-block w-100" alt="...">
+       </div>
+       <div class="carousel-item">
+         <img src="{% static 'images/roshn/roshn2.jpeg' %}" class="d-block w-100" alt="...">
+       </div>
+       <div class="carousel-item">
+         <img src="{% static 'images/roshn/roshn.jpeg' %}" class="d-block w-100" alt="...">
+       </div>
+     </div>
+     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+       <span class="visually-hidden">Previous</span>
+     </button>
+     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+       <span class="carousel-control-next-icon" aria-hidden="true"></span>
+       <span class="visually-hidden">Next</span>
+     </button>
+   </div>
+ 
+ 
+ <section> 
+     <div class="card mb-3" style="max-width: 20000px;background-color:#F4F2EE">
+         <div class="row g-0">
+           <div class="col-md-6">
+             <video class="vid" controls autoplay muted loop width="100%" height="500">
+                 <source src="{% static 'videos/ROSHN.MP4' %}" type="video/mp4">
+             </video>             
+           </div>
+         <div class="col-md-6">
+             <div class="card-body">
+               <img src="static/images/roshn/roshn1.jpeg" alt="" style="width:80px; padding-left:19px ;" class="pl-5">
+               <h5 class="card-title mt-2 px-3 text-center" style="font-size:30px; color:rgb(92, 90, 38)">A new way of living</h5><hr>
+               <p class="card-text px-3 py-3 " style="font-size:22px;" >ROSHN is dedicated to developing modern and aspirational communities for the people of Saudi Arabia</p>
+             </div>
+           </div>
+         </div>
+       </div>
+ </section>
+ 
+ 
+ <!-- Video Section  -->
+ 
+ <!-- <section>
+     <video class="vid" controls muted loop width="100%" height="500">
+         <source src="{% static 'videos/neom.MP4' %}" type="video/mp4">
+     </video>
+ </section> -->
+ 
+ 
+
+<section>
+ <div class="card mb-3" style="max-width: 20000px;background-color:#F4F2EE">
+    <div class="row g-0">
+
+      <div class="col-md-6">
+        <div class="card-body">
+          <h5 class="card-title mt-2 px-3 " style="font-size:30px; color:rgb(92, 90, 38)">Facts about this initiative:</h5><hr>
+          <p class="card-text px-3 py-3">• ROSHN launched SEDRA, a 20 million square meter community in Riyadh, in 2021 and has delivered homes ahead of schedule.<br><br>
+
+            • In 2022, it launched the ALAROUS community in Jeddah, spanning 4 million square meters and which will include over 18,000 residential units. <br><br>
+            
+            • Announcements in 2023 include WAREFA in Riyadh, spanning 1.4 million square meters and including more than 2,000 residential units, and ALFULWA in the Eastern Province, on 10.8 million square meters of land and including 18,000+ units.<br><br>
+
+            • The PIF giga-project is also behind MARAFY, a mixed-use development north of Jeddah that will accommodate over 130,000 residents and include a 11-kilometre-long manmade canal at its center<br><br></p>
+
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img src="{% static 'images/roshn/roshnimg.jpeg' %}" class="img-fluid rounded-start" alt="..." style="width:1000px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
