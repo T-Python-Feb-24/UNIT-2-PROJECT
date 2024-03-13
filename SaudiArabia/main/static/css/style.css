@@ -1,8 +1,23 @@
+#home{
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+}
+#home h1{
+  margin-top: 0;
+  font-weight: 400;
+  font-size: 7rem;
+  animation: bounceInLeft 2s ease-in-out;
+}
+
 .title,.parg{
   display: grid;
-  grid-template-columns: 60%;
-  margin: 0 4rem;
-  line-height: 6rem;
+  grid-template-columns: 50%;
+  line-height: 2rem;
+  margin-left: 0;
+  width: 97%;
+  
 }
 
 .parg{
@@ -12,19 +27,30 @@
 }
 
 .button{
+  display: grid;
+  grid-template-columns: 30%;
   margin-top: 2rem;
   margin-left: 4rem;
   border-radius: 4px;
+  justify-content: end;
+  
+}
+.button a{
+  left: 8rem;
 }
 .button button{
   border-radius: 50px;
-  padding: 4px 1.3rem ; 
-  background-color: black;
+  padding: 4px 2.3rem ; 
+  background-color: rgba(8, 116, 19,.6);
   color: white;
+  border: 1px solid rgb(10, 60, 15);
   font-size: 10pt;
+  
 }
+.button button:hover{
+  scale: 1.2;
 
-
+}
 
 @keyframes bounceInLeft {
   from,

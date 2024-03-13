@@ -1,14 +1,19 @@
 *{
-    font-family:system-ui, -apple-system, BlinkMacSystemFont , Impact;
+    font-family:"Almarai", -apple-system, BlinkMacSystemFont , Impact;
 }
 body {
   padding: 0;
-  width: 100vw;
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
-
-  overflow-x: hidden;
+  
+}
+svg{
+  transform: scale(.9);
+  fill: aliceblue;
+  max-height: 35px;
+  width: auto;
+  stroke-width: 10;
 }
 main{
   min-height: 88.7vh ;
@@ -21,59 +26,161 @@ main{
 .d-flex{
   background-size: cover;
   margin-bottom: 1.1rem;
+  margin-right: 2rem;
   
 }
+
 .nav-bg-color{
   position: relative;
-  background-color: #1e6711;
+  background-color: rgba(30, 103, 17,.6);
   background-image: linear-gradient(315deg, #236a17 0%, #3ba14732 74%);
   z-index: 10;
-
+  margin-right: 0;
+  
 }
-#myVideo {
+
+
+.theme{
+  display: flex;
+  gap: 20px;
+  
+}
+.theme a{
+  text-decoration: none;
+  font-size: 12px;
+  color: unset;
+}
+.theme a:not([class='active']){
+  opacity: .6;
+}
+.theme .active >span{
+  opacity: 1;
+}
+
+p{
+  line-height: 1.3rem;
+}
+.myVideo {
  width: 100%;
  opacity: .5;
   height: 100vh;
   object-fit: cover;
   position: fixed;
-  left: 0;
   right: 0;
   top: 0;
-  bottom: 0;
+  
   z-index: -1;
 }
-#home >*{
-  justify-content: start;
-  overflow-x: hidden;
-}
-#home h1{
-  margin-top: 0;
-  font-weight: 450;
-  font-size: 10rem;
-  animation: bounceInLeft 2s ease-in-out; ;
-}
+
 .cards-container {
-  margin:4% 0 2% 0;
+  margin-top: 4%;
+  
   justify-content: center;
+  right: 40;
+  --bs-gutter-x : 0
   
 }
+html[data-bs-theme=dark] .card{
+  --bs-card-bg:rgba(31, 31, 31,.7);
+}
+.card:hover{
+  transform: scale(1.1);
+}
+
+
 .cards-container >.card{
-  width: 18rem;
+  --bs-card-spacer-y:0;
+  --bs-card-spacer-x:0;
+  --bs-card-title-spacer-y:0;
+  --bs-card-bg:rgba(41, 249, 58, 0.05);
+  width: 19rem;
+  border: 1pt solid #1e6711;
+  border-radius: 15px;
+  transition: transform .5s ease-in-out;
+  margin: 2.5rem;
+
+}
+.card-top{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 12rem;
+  justify-content: center;
+
+}
+.card-top img{
+  position: absolute;
+  height: 100%;
+  opacity: .6;
+  z-index: 0;
+  
+  
+}
+.card-top .card-title{
+  position: static;
+  text-align: center;
+  justify-self: center;
+  align-self: center;
+  color: aliceblue;
+  text-shadow: -2px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  z-index: 1;
+}
+.card >img{
+  border-top-right-radius: 9px;
+  border-top-left-radius: 9px;
+}
+.card-body{
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.card-bref{
+  position: relative;
+  padding: 1.5rem;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  margin: 0;
+}
+.card-bref p{
+  font-size: .9rem;
+}
+
+
+.btn-more{
+  bottom: 0;
+  display: flex;
+  justify-content: end;
+  align-content: center;
+}
+.btn-more a{
+  background-color: #2e881e;
+  width: 30%;
+  margin: auto 10px 10px 10px;
+}
+.card-body a:hover{
+ background-color: #146805;
+}
+
+.btn-primary{
+  background-color: #25a10f;
 }
 .footer-end{
-  position: relative;
+  position: relative; 
 }
 footer {
   position: absolute;
-  
-  background-color: #1e6711;
+  background-color: rgba(30, 103, 17,.7);
   background-image: linear-gradient(315deg, #2e881e 0%, #75f68432 74%);
   display: flex;
   font-size: 14px;
   text-decoration: none;
   justify-content: center;
-  
 }
+
+
 footer p {
   position: relative;
   font-size: 15px;
