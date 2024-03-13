@@ -67,7 +67,17 @@ header{
 .carousel-item {
   text-align: center;
 }*/
-
+nav.navbar {
+    background-color: rgb(222, 201, 178) !important;
+  }
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .display-mode {
+    margin-left: auto;
+  }
 .carousel-slide{
     position: absolute;
     bottom: 0;
