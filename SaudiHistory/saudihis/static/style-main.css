@@ -1,8 +1,8 @@
 body {
     /* Set background color */
   /* Light gray background */
-    /*background-image: url(/static/images/background1.jpg);*/
-    background-color: #DEC9B2; /* Adjust opacity as needed */
+    background-image: url(/static/images/background.jpg);
+    background-color: rgb(222, 201, 178); /* Adjust opacity as needed */
     backdrop-filter: blur(10px); /* Adjust the blur radius */
     /* Set background image 
     background-image: url('background-image.jpg'); /* Replace 'background-image.jpg' with the path to your image */
@@ -34,7 +34,11 @@ header{
 }
 .navbar{
     border-radius: 25px;
+    background-color: rgb(222, 201, 178) !important;
    
+}
+nav.navbar {
+  background-color: rgb(222, 201, 178) !important;
 }
 
 .carousel-slide{
@@ -77,8 +81,8 @@ header{
   overflow: hidden;
 
 }
-.main-boxB{
-  border: 5px solid rgb(201, 139, 23);
+/*.main-boxB{
+  border: 5px solid rgb(222, 201, 178);
   box-shadow: 0 0 20px rgba(215, 215, 215, 0.5);
   background-image: url(/static/images/sejadSA-side.jpg);
   width: 1500px;
@@ -87,10 +91,10 @@ header{
   position: relative;
   z-index: -1;
   
-}
+}*/
 
 .main-boxB{
-    border: 5px solid black;
+    border: 5px solid rgb(202, 173, 151);
     background-image: url(/static/images/sejadSA-eh2.jpg);
     width: 1500px;
     height:fit-content;

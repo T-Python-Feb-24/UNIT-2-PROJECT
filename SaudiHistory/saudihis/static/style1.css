@@ -1,4 +1,9 @@
 /*----------eachstate.html-------------*/
+.dark body{
+    background-image: url(/static/images/background3-dark.jpg);
+    background-color: rgb(210, 158, 102) ; /* Adjust opacity as needed */
+
+}
 body {
     /* Set background color */
   /* Light gray background */
@@ -36,8 +41,32 @@ header{
 }
 .navbar{
     border-radius: 25px;
+
    
 }
+/*
+.main-box {
+  padding: 20px;
+  background-color: #f1f1f1; /* Set your desired background color 
+}
+
+.box2 {
+  margin-top: 20px;
+}
+
+.carousel-item img {
+  height: auto;
+  max-width: 100%;
+}
+
+.carousel-inner {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carousel-item {
+  text-align: center;
+}*/
 
 .carousel-slide{
     position: absolute;
@@ -47,6 +76,16 @@ header{
     object-fit: cover;
     object-position: center;
 }
+.carousel-item img {
+    height: auto;
+    max-width: 100%;
+  }
+  
+  .carousel-inner {
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+  }
 .carousel-item{
     width: 100%;
     height: 100%;
@@ -65,13 +104,12 @@ header{
 
     box-shadow: 50px; ;
     width: 100%;
-    height: 725px;
-    margin: 0px auto;
+    height: 100%;
+    margin: 10px auto;
     position: relative;
-    margin-bottom: 100px;
 }
 .box2{
-    height: 725px;
+    height: 100%;
     width: 100%;
     background-color: blueviolet;
     position: relative;
@@ -79,9 +117,12 @@ header{
     overflow: hidden;
 
 }
+.dark .main-boxB{
+
+}
 .main-boxB{
-    border: 5px solid rgb(201, 139, 23);
-    box-shadow: 0 0 20px rgba(215, 215, 215, 0.5);
+    border: 5px solid rgba(222, 201, 178, 0); /* Sets the border to transparent */
+    /*box-shadow: 0 0 20px rgba(215, 215, 215, 0.5);
     /*background-image: url(/static/images/background1.jpg);
     backdrop-filter: blur(10px); /* Adjust the blur radius */
 
@@ -106,6 +147,7 @@ header{
 .main-box1:hover ,.main-box2:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(215, 215, 215, 0.5);
+    background-color: rgb(222, 201, 178);
 }
 .main-box2{
     border: 5px solid rgb(247, 247, 247);
@@ -122,13 +164,13 @@ header{
     background-color: bisque;
 }
 
-.para1{
-  font-family: Arial, sans-serif;   /* Sets the font family */
-  font-size: 14px;            /* Sets the font size */
-  font-weight: bold;          /* Sets the font weight */
-  text-align: left;
-  margin: 10px 20px 0px 20px;
-}
+.para1 {
+    font-family: Arial, sans-serif; /* Sets the font family */
+    font-size: 16px; /* Sets the font size */
+    font-weight: bold; /* Sets the font weight */
+    text-align: left;
+    margin: 10px 0;
+  }
 
 /*here is the card i made */
 .card{
@@ -172,7 +214,7 @@ inset: 20px;
 
 /*end card*/
 /*------------------------*/
-/* here is the when i hover become beside */
+/* here is the when i hover become bigger */
 .main-box2 {
     padding: 20px;
   }
@@ -208,7 +250,8 @@ inset: 20px;
     margin-left: -15px;
     margin-right: -15px;
   }
-  
+  .col-4
+  {  transition: background-color 0.5s ease-in-out;}
   .col-8,
   .col-4 {
     padding-left: 15px;
