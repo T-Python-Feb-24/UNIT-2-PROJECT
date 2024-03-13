@@ -10,8 +10,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
-
 /* nav bar  */
 .navbar{
     display: flex;
@@ -238,7 +236,7 @@ body{
     background-color: #3C3C3C;
 }
 
-.darkmode ..progress_section{
+.darkmode .progress_section{
     color: #F4F2EE;
 }
 .darkmode .navbar{
