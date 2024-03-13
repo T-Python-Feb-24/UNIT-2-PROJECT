@@ -1,5 +1,4 @@
 {% load static %}
-{% url 'home_page' as home %}
 <!DOCTYPE html>
 <html dir="rtl"
       lang="ar"
@@ -25,7 +24,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
-          <link rel="stylesheet" href="{% static "css/base.css" %}">
+          <link rel="stylesheet" href="{% static "css/stayles.css" %}">
     {% block css %}
     {% endblock css %}
     <title>
@@ -53,7 +52,7 @@
               <ul class="navbar-nav">
                 {% url 'main:home_page' as home %}
                 {% url 'main:properties_page' as properties_url %}
-                {% url 'main:personal' as personal %}
+                {% url 'main:contactus_page' as contactus %}
                 <li class="nav-item">
                   <a class="nav-link {% if request.path == home %}active{% endif %}"
                      aria-current="page"
@@ -61,13 +60,14 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link {% if request.path == properties_url %}active{% endif %}"
-                     href="{{ properties_url }}">الشركات</a>
+                     href="{{ properties_url }}">الإقتصاد والاعمال</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">معرض</a>
+                  <a class="nav-link" href="#"> معرض صور</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">حول</a>
+                  <a class="nav-link {% if request.path == contactus %}active{% endif %}" 
+                  href="{{ contactus }}">حول</a>
                 </li>
               </ul>
             </div>
@@ -82,13 +82,12 @@
       </div>
     </header>
     <main class="contaner">
-      <div class="d-flex align-items-start">
         <video autoplay muted loop class="myVideo">
           <source src="{% static "vidoes/saudi-flag-background.mp4" %}" type="video/mp4">
         </video>
         {% block content %}
         {% endblock content %}
-      </div>
+      
     </main>
     <div class="footer-end">
       <footer class="container-fluid">

@@ -1,7 +1,5 @@
 {% extends "base.html" %}
 {% load static %}
-{% block css %}
-{% endblock css %}
 {% block title %}
   Properties
 {% endblock title %}
@@ -10,13 +8,15 @@
     {% for item in properties %}
       <div class="card border-5">
         <div class="card-top">
+        <!-- djlint:off -->
         <img src="{% static "images/" %}{{ item.image.0 }}" class="card-img-top" alt="...">
+        <!-- djlint:on -->
         <h2 class="card-title">{{ item.name }}</h2>
         </div>
         <div class="card-body">
           <div class="card-bref">
             {% autoescape on %}
-            {{ item.bref | linebreaks }}
+            {{ item.description | linebreaks }}
             {% endautoescape %}
 
           </div>
