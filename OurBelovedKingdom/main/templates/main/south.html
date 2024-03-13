@@ -1,0 +1,155 @@
+{% extends 'main/base.html' %}
+{% block title %} South Region {% endblock %}
+{% load static %}
+{%block dropdown%}
+<!--
+<div class="About">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      About
+    </button>
+    <ul class="dropdown-menu">
+      <li><a href="#"></a><button class="dropdown-item" type="button">Traditional attire</button></a></li>
+      <li><button class="dropdown-item" type="button">Traditional food</button></li>
+      <li><button class="dropdown-item" type="button">Heritage sites</button></li>
+      <li><button class="dropdown-item" type="button">Flok dance</button></li>
+    </ul>
+  </div>-->
+  <nav class="navbar  fixed-top">
+  
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">The Southern Region</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+          <a class="nav-link" href="#Traditional attire">Traditional Attire</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Traditional food">Traditional Food</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Heritage sites">Heritage Site</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#flock dance">Flock Dance</a>
+        </li>
+       
+      </div>
+    </div>
+  </div>
+</nav>
+  {% endblock %}
+{% block content %}
+<!--
+    هنا المحتوى 
+-->
+<div class="container col-12">
+  <div class="row">
+      <div class="col-12">
+          <h1>The Southern Region</h1> 
+          <img class="map" src="{% static 'images/south.png'%}" width="350px" height="300px">
+
+      </div>
+       <div class="col">
+            <h2>Before the Saudi rule, the conditions in the regions</h2>
+        </div>
+       
+                  <div class="row mt-5">
+                      <div class="col-12">
+                          <b> Southern Saudi Arabia:</b>
+                          <p>The situation in the southwest region of the country encompassed Asir, Jazan (Al-Makhlaf Al-Sulaimani), and Najran. The influence of the nobility extended from Al-Ula in the north to Al Qunfudhah in the south, covering the Tihama of Asir and its surroundings. Their influence was more pronounced in Tihama due to the ease of military movement along its coastal parts. In Sarat, some tribes were allied with the nobility, while others pledged allegiance to local leaders.
+
+                            The economic life in Asir relied on agriculture, fishing, and livestock, influenced by political circumstances and natural factors. Generally, economic conditions were not dire due to seasonal rainfall. Jazan, also known as Al-Makhlaf Al-Sulaimani, was named after Sulaiman bin Tariq Al-Hukmi, who unified the region in 373 Hijri (983 CE). His emirate ended with the rise of Hussein bin Salamah, transforming Al-Makhlaf into multiple emirates led by nobles until the mid-twelfth century Hijri, when Sharif Ahmed bin Mohammed bin Khayrat successfully unified the region under his leadership. Economic activities in Al-Makhlaf relied on agriculture, trade, livestock, and fishing, with active trade ports and fertile lands.
+                            
+                            In Najran, the majority of its inhabitants were from the Yam tribes, renowned for their military activity, which was a significant source of income. Often, the leaders of Al-Makhlaf Al-Sulaimani sought their assistance in wars. The Makkaramahs were the religious leaders of Najran until it came under the rule of the Al Sauds.</p>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col"id="Traditional attire">
+                          <h2>Traditional attire</h2>
+                          <h3>Man And Woman</h3>
+                          <div class="man-container col-12">
+                              <!-- ملابس الرجال القديمة -->
+                                {% for mw in manwomanSouth %}
+                                        <div class="man-card col-4">
+                                            <img src="/static/images/{{ mw.image }}" />
+                                            <div class="man-body">
+                                                <h2>{{ mw.title }}</h2>
+                                            </div>
+                                        </div>
+                                 {% endfor %}
+                          </div>
+                       </div>
+                  </div>
+                  
+                  <div class="row">
+                      <div class="col-12">
+                          <h3>Children</h3>
+                            <div class="child-container">
+                              <!-- الاطفال -->
+                              {% for child in childSouth %}
+                                <div class="child-card">
+                                  <img src="/static/images/{{ child.image }}" />
+                                  <div class="child-body">
+                                      <h2>{{ child.title }}</h2>
+                                  </div>
+                                </div>
+                              {% endfor %}
+                            </div>
+                       </div>
+                  </div> 
+                   
+                  
+                  <!--  فوق الملابس التقليدية -->
+                  <div class="row">
+                      <div class="col" id="Traditional food">
+                          <h2>Traditional food</h2>
+                          <div class="food-container col-12">
+                              <!-- الاكلات الشعبية -->
+                              {% for f in foodSouth %}
+                              <div class="food-card col-4">
+                                  <img src="/static/images/{{ f.image }}" />
+                                  <div class="food-body">
+                                      <h2>{{ f.title }}</h2>
+                                  </div>
+                              </div>
+                           
+                             {% endfor %}
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Traditional food section -->
+                  <div class="row">
+                      <div class="col" id="Heritage sites">
+                          <h2>Heritage sites</h2>
+                          <div class="site-container col-12">
+                              <!-- المناطق التراثية -->
+                              {% for s in siteSouth %}
+                              <div class="site-card col-4">
+                                <img src="/static/images/{{ s.image }}" />
+                                <div class="site-body">
+                                    <h2>{{ s.title }}</h2>
+                                </div>
+                              </div>
+
+                              {% endfor%}
+                       </div>
+                     </div>
+                  </div>
+             
+                  <div clas="row">
+                    <div class="col" id="flock dance">
+                      <h1>Flock dance</h1>
+                      <h2>القزوعي</h2>
+                      <video controls autoplay  loop id="njd" width="500" height="300">
+                        <source src="{% static 'video/janop.mp4'%}" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+              </div>
+{% endblock%}

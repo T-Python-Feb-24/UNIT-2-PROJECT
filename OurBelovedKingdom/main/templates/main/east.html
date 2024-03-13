@@ -1,0 +1,146 @@
+{% extends 'main/base.html' %}
+{% block title %} East Region {% endblock %}
+{% load static %}
+{% block dropdown %}
+
+<nav class="navbar  fixed-top">
+  
+  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">The Eastern Region</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <li class="nav-item">
+          <a class="nav-link" href="#Traditional attire">Traditional Attire</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Traditional food">Traditional Food</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Heritage sites">Heritage Site</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#flock dance">Flock Dance</a>
+          </li>
+       
+    </div>
+  </div>
+</div>
+</nav>
+{% endblock %}
+{% block content %}
+<!--
+    هنا المحتوى 
+-->
+<div class="container col-12">
+  <div class="row">
+      <div class="col-12">
+          <h1>The Eastern Region</h1>
+          <img class="map" src="{% static 'images/east.png'%}" width="350px" height="300px">
+      </div>
+       <div class="col">
+            <h2>Before the Saudi rule, the conditions in the regions</h2>
+        </div>
+       
+                  <div class="row mt-5">
+                      <div class="col-12">
+                          <b>Eastern Saudi Arabia:</b>
+                          <p>"The eastern part of the country was once referred to as 'Al Bahrain,' which included Al-Ahsa and Al-Qatif. The first Friday prayer outside the Prophet's Mosque was held at the Jowatha Mosque in that region. The area was inhabited by the Abdul Qais tribe, one of the earliest tribes to embrace Islam.
+
+                            The region was under the rule of the Qarmatians until Abdullah bin Ali Al-Ayouni from the tribe of Abdul Qais managed to overthrow the Qarmatian state with military assistance from the Abbasid state. The Al-Ayouni family continued to rule the eastern region until the middle of the seventh century Hijri, when the rule was seized from them by the Banu Amir tribe led by Asfur bin Rashid. They continued to rule the country until their rule was ended by Said bin Mughamis. Then the rule in the region was regained by the Banu Amir until the year 820 Hijri/1417 CE.
+                            
+                            The region then went through various ruling dynasties of the Banu Amir until it came under Ottoman rule for about 120 years. Eventually, the Al-Hameed leaders of the Bani Khalid succeeded in controlling the eastern region and taking over its rule. The Bani Khalid continued to rule until the region came under the rule of the first Saudi state.
+                            
+                            The economic life in the region depended on agriculture, trade, fishing, and pearl diving. The inhabitants of the region enjoyed more economic prosperity than other areas, as many people forced by living conditions in Najd migrated there."</p>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col" id="Traditional attire">
+                          <h2>Traditional attire</h2>
+                          <h3>Man And Woman</h3>
+                          <div class="man-container col-12">
+                              <!-- ملابس الرجال القديمة -->
+                                {% for mw in manwomanEast %}
+                                        <div class="man-card col-4">
+                                            <img src="/static/images/{{ mw.image }}" />
+                                            <div class="man-body">
+                                                <h2>{{ mw.title }}</h2>
+                                            </div>
+                                        </div>
+                                 {% endfor %}
+                          </div>
+                       </div>
+                  </div>
+                  
+                  <div class="row">
+                      <div class="col-12">
+                          <h3>Children</h3>
+                            <div class="child-container">
+                              <!-- الاطفال -->
+                              {% for childe in childEast %}
+                                <div class="child-card">
+                                  <img src="/static/images/{{ childe.image }}" />
+                                  <div class="child-body">
+                                      <h2>{{ childe.title }}</h2>
+                                  </div>
+                                </div>
+                              {% endfor %}
+                            </div>
+                       </div>
+                  </div> 
+                   
+                  
+                  <!--  فوق الملابس التقليدية -->
+                  <div class="row">
+                      <div class="col" id="Traditional food">
+                          <h2>Traditional food</h2>
+                          <div class="food-container col-12">
+                              <!-- الاكلات الشعبية -->
+                              {% for f in foodEast %}
+                              <div class="food-card col-4">
+                                  <img src="/static/images/{{ f.image }}" />
+                                  <div class="food-body">
+                                      <h2>{{ f.title }}</h2>
+                                  </div>
+                              </div>
+                           
+                             {% endfor %}
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Traditional food section -->
+                  <div class="row">
+                      <div class="col" id="Heritage sites">
+                          <h2>Heritage sites</h2>
+                          <div class="site-container col-12">
+                              <!-- المناطق التراثية -->
+                              {% for s in siteEast %}
+                              <div class="site-card col-4">
+                                <img src="/static/images/{{ s.image }}" />
+                                <div class="site-body">
+                                    <h2>{{ s.title }}</h2>
+                                </div>
+                              </div>
+
+                              {% endfor%}
+                       </div>
+                     </div>
+                  </div>
+             
+                  <div clas="row">
+                    <div class="col" id="flock dance">
+                      <h1>Flock dance</h1>
+                      <h2>عرضة الحصاد</h2>
+                      <video controls autoplay  loop id="njd" width="500" height="300">
+                        <source src="{% static 'video/east.mp4'%}" type="video/mp4">
+                      </video>
+                    </div>
+                  </div>
+              </div>
+
+{% endblock%}

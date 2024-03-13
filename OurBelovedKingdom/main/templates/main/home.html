@@ -1,0 +1,57 @@
+{% extends 'main/base.html' %}
+{% block title %} Old Saudi {% endblock %}
+{% load static %}
+{% block content %}
+<style>
+    .light{
+        background-image: url("/static/images/bg-1.jpg"); 
+        background-size: cover;
+    }
+    .dark{
+        background-image: url("/static/images/bg3.jpg");
+        background-size: cover;
+        color: black;
+    }
+</style>
+
+
+{% block dropdown %}
+<nav class="navbar  fixed-top">
+  
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link"> Mode </a>
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Mode</button>
+                <ul class="dropdown-menu">
+                  <li><a href="{% url 'main:light_mode_view' %}"><button class="dropdown-item" type="button"><span class="material-symbols-outlined">light_mode</span></button></a></li>
+                  <li><a href="{% url 'main:dark_mode_view' %}"><button class="dropdown-item" type="button"><span class="material-symbols-outlined">dark_mode</span></a></button></a></li>
+                </ul>
+            </div> 
+          </li>
+  </div>
+</nav>
+{% endblock %}
+
+<div class="home">
+
+<img src="{% static 'images/cam.png'  %}" class="base1"/>
+
+<h1>EXPLORE  SAUDI ARABIA</h1>
+
+<img src="{% static 'images/cam2.png'  %}" class="base2"/>
+</div>
+{% endblock %}
+{% block footer%}
+<footer>
+    <div class="content">
+      <h4>Saudi Arabia has a rich history that dates back thousands of years, witnessing various civilizations and kingdoms throughout time. The modern Kingdom was founded in 1932 by King Abdulaziz Al Saud.</h4>
+  </div>
+</footer>
+
+{% endblock %}
