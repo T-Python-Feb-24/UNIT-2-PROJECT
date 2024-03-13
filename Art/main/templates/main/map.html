@@ -1,0 +1,104 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+
+ {% block content %}
+
+ <div class=" box row mt-5">
+<div class=" col col-md-12 order-3 order-md-2 justify-content-center ">
+
+ <div id="map"></div>
+
+
+</div>
+</div>
+
+<script> 
+
+   const map = L.map('map');
+   map.setView([22.958,45.571],7.4);
+
+
+   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    
+}).addTo(map);
+
+
+const data ={
+    galone:{
+        coords:[26.6375,37.9058],
+        title:"ATHR Gallery - AlUla",
+        address:"Al Rabwa Street,",
+        directions:"https://maps.app.goo.gl/KEkQXdfkTX5ZpPbj8",
+        img:'{% static 'images/gallery1.png'%}',
+
+    },
+    galtow:{
+        coords:[24.78411,46.60393],
+        title:"Alajlan Art Gallery",
+        address:"Prince Muhammad bin Saad bin Abdulaziz Road",
+        directions:"https://maps.app.goo.gl/o8PnhjeNtgGUmHS76",
+        img:'{% static 'images/gallery2.png'%}',
+
+    },
+    galthree:{
+        coords:[24.68697,46.69011],
+        title:"SHARQIA ARTS",
+        address:"6737 Abdullah bin Salamah Street, Olaya, Riyadh ",
+        directions:"https://maps.app.goo.gl/7cHnzJkA5eFJkLqp8",
+        img:'{% static 'images/gallery3.png'%}',
+
+    },
+    galfour:{
+        coords:[21.55929,39.18367],
+        title:"Athar ",
+        address:"5th Floor, Office Tower Serafi Mega Mall Street،",
+        directions:"https://maps.app.goo.gl/a9CNuRSVBc7CNqVk9",
+        img:'{% static 'images/gallery4.png'%}',
+
+    },
+    galfive:{
+        coords:[21.51778,39.18264],
+        title:"Medad Art",
+        address:"Alsharafeya, Jeddah 23216",
+        directions:"https://maps.app.goo.gl/1iB59MQAiC4XNPpr9",
+        img:'{% static 'images/gallery5.png'%}',
+
+    },
+    galsix:{
+        coords:[24.71136,46.67442],
+        title:"Hewar Gallery",
+        address:"2239 Al Orouba Road, Olaya, Riyadh",
+        directions:"https://maps.app.goo.gl/SK7HTXe5yvPES3dm6",
+        img:'{% static 'images/gallery6.png'%}',
+
+    },
+}
+
+const customIcon = L.icon({
+    iconUrl:'{% static 'images/artbin.png'%}',
+    iconSize:[100,100],
+})
+
+for (let key in data ){
+
+    const gallery = data[key];
+
+    L.marker(gallery.coords , {
+    icon: customIcon,
+    title:gallery.title,
+    address:gallery.address,
+     }).addTo(map).bindPopup(`<span class="pop"><img src= "${gallery.img}" style="width:150px" ><br>${gallery.title}<br>${gallery.address}<br><a href="${gallery.directions}" target="_blank" >Directions</a></span>`);
+}
+
+</script>
+
+
+
+{% endblock %}
+
+
+

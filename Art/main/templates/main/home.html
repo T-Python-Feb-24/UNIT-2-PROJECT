@@ -1,0 +1,44 @@
+
+{% extends 'main/base.html' %}
+
+
+
+
+ {% block content %}
+<div class="row mt-5">
+<div class="col col-md-7 order-1 order-md-2">
+
+ <img class="home-img" src=" static/images/home_about.png" />
+ </div>
+
+<div class="col col-md-4 order-2 order-md-1">
+<div class="d-flex flex-column  h-100 justify-content-center">
+ <dive class="about">
+ 
+ <h2>Saudi Art</h2>
+ <p><br><br>Exhibition of fine arts by Saudi artists<br><br></p>
+ <a href="{% url 'main:about_page' %}"><button class="home_button" type="button">Learn more </button><a>
+ 
+ 
+ </div>
+ </div>
+ </div>
+
+ <div class="row mt-4  ">
+ <br><br><br><br><hr></hr>
+<div class="col col-md-4 order-1 order-md-2">
+ <img class="quote" src=" static/images/quote.png" />
+</div>
+</div>
+
+ <div class="row mt-4  ">
+<div class="col col-md-12 order-2 order-md-2">
+<div class="quote-p ">
+<h1>I love art and I believe that anyone with good taste should love art and be appreciated</h1>
+<p><br>Prince Mohammed bin Salman<br></p><span><a href="{% url 'main:gallery_page' %}"><button class="home_button" type="button">Expolore Gallery </button><a></span>
+</div>
+ </div>
+ </div>
+
+
+{% endblock %}

@@ -1,0 +1,88 @@
+
+{% extends 'main/base.html' %}
+{% load static %}
+
+
+
+
+ {% block content %}
+
+
+  <div class="row mt-5">
+<div class="color-continer col col-md-6 order-3 order-md-2 justify-content-center">
+
+  <img class="color-img" src=" {% static 'images/flowers.jpg'%}" />
+ </div>
+</div>
+
+ <div class="row mt-5">
+ <div class="col col-md-6 order-2 order-md-2 justify-content-center flex-column d-flex  ">
+  <dive class="overly">
+  <p class="title">Saudi Fine art </p>
+  <p class="about-ab">Exhibition of fine arts by Saudi artists</p>
+<div class="more">
+<p class="learn-more">Learn more</p>
+  <a href="#row2"><div class="scroll-down"></div></a>
+    </div>
+  </div>
+  </div>
+ 
+ </div>
+
+<div class="row mt-5" id="row2">
+<div class="col3 col-md-8 order-1 order-md-1 flex-column ">
+
+  <video class="vid" controls autoplay muted loop id="myVideo">
+  <source src="../static/videos/vid.MP4" type="video/mp4">
+</video>
+ </div>
+<div class="col col-md-4 order-2 order-md-2 justify-content-center flex-column d-flex  ">
+  <dive class="about-art">
+ 
+ <h2>Saudi Fine Art</h2>
+ <p class="p">The history of Saudi plastic art<br> began at the beginning of time<br> in 1928, and since ancient times, the Arabs<br> have been known for creating various <br>artistic sculptures, expressive paintings,<br> and creatively woven embroideries,
+  which<br> told the story of history and civilization.</p>
+
+ 
+ </div>
+ 
+ </div>
+ 
+ </div>
+ 
+
+
+
+ <div class="row ">
+<div class="col3 col-md-4 order-1 order-md-1 flex-column ">
+   <img class="saudi-about-img" src=" {% static 'images/aboutimg.webp'%}" />
+ </div>
+<div class="col col-md-7 order-2 order-md-2 justify-content-center flex-column d-flex  ">
+  <dive class="about-saudi-art">
+ <p>Types of international and Saudi fine art: 
+drawing and coloring,Sculptures,Photography,Mosaic,Writing in Arabic script,Collage,Architectural Design and Design by Illustrator.
+</p>
+ </div>
+ </div>
+ </div>
+
+
+ <div class="row mt-2">
+<div class="col col-md-10 order-3 order-md-2 justify-content-center">
+
+ <p class="about-paragraph">
+<br><br><br>Art has always developed with the development of the technological platforms provided to it. Many modern artists have moved away from traditional media, such as: drawing with charcoal, oil, acrylic, and watercolor, and are focusing on contemporary fine art using various modern 
+computer programs such as: Photoshop, Illustrator, Tool Paint Sai, and Motion Video Maker.
+<br><br>
+</p>
+
+<p class="about-paragraph"><b>The most important schools of fine art:</b><br>
+The artistic rules depend on the schools that the artist studies and whose rules the artist applies. The rules of the different schools of fine art form the boundaries that the artist may adhere to in order to completely reverse them, or break them to create a new artistic school and rules that are completely different from 
+the previous one. In this way, art has developed throughout the ages.<br><br></p>
+
+</div>
+ </div>
+
+
+
+{% endblock %}
