@@ -1,8 +1,8 @@
 body {
     /* Set background color */
   /* Light gray background */
-    /*background-image: url(/static/images/sejadSA.jpg);*/
-    background-color: rgba(198, 129, 38, 0.648); /* Adjust opacity as needed */
+    /*background-image: url(/static/images/background1.jpg);*/
+    background-color: #DEC9B2; /* Adjust opacity as needed */
     backdrop-filter: blur(10px); /* Adjust the blur radius */
     /* Set background image 
     background-image: url('background-image.jpg'); /* Replace 'background-image.jpg' with the path to your image */
@@ -23,7 +23,6 @@ body {
 }
 .main{
     margin: 50px; 
-
 }
 
 header{
@@ -73,7 +72,6 @@ header{
 .box2{
   height: 725px;
   width: 100%;
-  background-color: blueviolet;
   position: relative;
   margin: 0px auto;
   overflow: hidden;
@@ -82,7 +80,6 @@ header{
 .main-boxB{
   border: 5px solid rgb(201, 139, 23);
   box-shadow: 0 0 20px rgba(215, 215, 215, 0.5);
-
   background-image: url(/static/images/sejadSA-side.jpg);
   width: 1500px;
   height:fit-content;
