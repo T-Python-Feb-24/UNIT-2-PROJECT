@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  صنع في السعودية
+{% endblock title %}
+{% block content %}
+  <div class="pages made">
+    <!-- djlint:off -->
+                            <img src="{% static "images/page-5/made-in-saudi.png" %}" alt="">
+    <!-- djlint:on -->
+    <div class="info">
+      <div class="info-text">
+        <p>
+          يحفز برنامج "صنع في السعودية" الشركات المحلية على توسيع نطاق أعمالها، والاستفادة من مزايا البرنامج لتسويق منتجاتها إلى عدد أكبر من العملاء، والتواصل مع المستهلكين المهتمين بالمنتجات والشركات السعودية.
+          انطلق "صنع في السعودية" في عام 2021، عبر برنامج تطوير الصناعة الوطنية والخدمات اللوجستية، وهيئة تنمية الصادرات السعودية، لتشجيع المواهب والابتكارات المحلية والمنتج الوطني، وتعزيز قدرة الشركات المحلية على توسيع نطاق وصولها، والترويج لمنتجاتها محليًّا وعالميًّا، ودعم الاقتصاد الوطني، وريادة الأعمال في المملكة.
+          يدعم البرنامج المنتجات والخدمات السعودية لتكون الخيار المفضل للمستهلكين المحليين والدوليين، ولا يقتصر الأمر على تشجيع المواطنين على شراء المنتجات المصنوعة محليًّا، ولكنه يعزز مكانة المملكة كوجهة صناعية عالمية جاذبة  للاستثمارات، ويشارك في زيادة الصادرات غير النفطية إلى 50% من الناتج المحلي الإجمالي غير النفطي بحلول عام 2030.
+          يمكّن البرنامج الشركات المتعاونة معه، من استخدام شعار "صنع في السعودية" وإبراز صورة إيجابية للمملكة في جميع أنحاء العالم.
+        </p>
+      </div>
+      <h2>الأهداف</h2>
+      <section class="row cards-container">
+        {% for card in cards %}
+          <div class="card border-3">
+            <div class="card-top">
+              <!-- djlint:off -->
+                              <img src="{% static "images/page-5/" %}{{card.img }}" class="card-img-top" alt="...">
+              <!-- djlint:on -->
+            </div>
+            <div class="card-body">
+              {% autoescape on %}
+                <h2 class="card-title">{{ card.name | linebreaks }}</h2>
+              {% endautoescape %}
+              <div class="card-bref">
+                {% autoescape on %}
+                  {{ card.description | linebreaks }}
+                {% endautoescape %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </section>
+    </div>
+  </div>
+{% endblock content %}

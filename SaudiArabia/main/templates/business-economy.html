@@ -1,28 +1,27 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}
-  Properties
+  business-economy
 {% endblock title %}
 {% block content %}
   <section class="row cards-container">
-    {% for item in properties %}
+    {% for card in cards %}
       <div class="card border-5">
         <div class="card-top">
-        <!-- djlint:off -->
-        <img src="{% static "images/" %}{{ item.image.0 }}" class="card-img-top" alt="...">
-        <!-- djlint:on -->
-        <h2 class="card-title">{{ item.name }}</h2>
+          <!-- djlint:off -->
+                            <img src="{% static "images/" %}{{ card.image.0 }}" class="card-img-top" alt="...">
+          <!-- djlint:on -->
+          <h2 class="card-title">{{ card.name }}</h2>
         </div>
         <div class="card-body">
           <div class="card-bref">
             {% autoescape on %}
-            {{ item.description | linebreaks }}
+              {{ card.description | linebreaks }}
             {% endautoescape %}
-
           </div>
-          <div class="btn-more"><a href="{{ item.url }}" class="btn btn-primary">المزيد</a></div>
-
-          
+          <div class="btn-more">
+            <a href="{{ card.url }}" class="btn btn-primary">المزيد</a>
+          </div>
         </div>
       </div>
     {% endfor %}

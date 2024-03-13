@@ -36,9 +36,9 @@
     <header class="container-fluid">
       <div class="row">
         <nav class="navbar navbar-dark navbar-expand-lg navbar-brand nav-bg-color">
-          <div class="container-fluid">
+          <div class="container-fluid header">
             
-            <a id="emblem" class="navbar-brand col-4 pe-lg-5" href="{% url "main:home_page" %}"><svg><use xlink:href='{%static "icon/Emblem_Saudi_Arabia.svg" %}#img'></use></svg></a>
+            <a id="emblem" href="{% url "main:home_page" %}"><svg><use xlink:href='{%static "icon/Emblem_Saudi_Arabia.svg" %}#img'></use></svg></a>
             <button class="navbar-toggler"
                     type="button"
                     data-bs-toggle="collapse"
@@ -48,10 +48,10 @@
                     aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse col" id="navbarColor01">
+            <div class="collapse navbar-collapse" id="navbarColor01">
               <ul class="navbar-nav">
                 {% url 'main:home_page' as home %}
-                {% url 'main:properties_page' as properties_url %}
+                {% url 'main:business_economy_page' as business_economy_url %}
                 {% url 'main:contactus_page' as contactus %}
                 <li class="nav-item">
                   <a class="nav-link {% if request.path == home %}active{% endif %}"
@@ -59,19 +59,17 @@
                      href="{{ home }}">الرئيسة</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link {% if request.path == properties_url %}active{% endif %}"
-                     href="{{ properties_url }}">الإقتصاد والاعمال</a>
+                  <a class="nav-link {% if request.path == business_economy_url %}active{% endif %}"
+                     href="{{ business_economy_url }}">الإقتصاد والاعمال</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"> معرض صور</a>
-                </li>
+              
                 <li class="nav-item">
                   <a class="nav-link {% if request.path == contactus %}active{% endif %}" 
                   href="{{ contactus }}">حول</a>
                 </li>
               </ul>
             </div>
-            <div class="theme col">
+            <div class="theme">
               {% url 'main:mode_light' as light %}
               {% url 'main:mode_dark' as dark %}
               <a href="{{light}}" class="{% if request.COOKIES.mode == "False" %}active{% endif %}">فاتح<span class="material-symbols-outlined">light_mode</span></a>

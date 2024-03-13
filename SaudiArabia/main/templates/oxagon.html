@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  أوكساچون
+{% endblock title %}
+{% block content %}
+  <div class="pages oxagon">
+    <!-- djlint:off -->
+          <img src="{% static "images/page-3/oxagon.png" %}" alt="">
+    <!-- djlint:on -->
+    <div class="info">
+      <div class="info-text">
+        <p>
+          أطلق صاحب السمو الملكي الأمير محمد بن سلمان ولي العهد
+          رئيس مجلس الوزراء رئيس مجلس إدارة نيوم، مدينة "أوكساچون"
+          عام 2021، لتكون مدينة صناعية عائمة في القسم الجنوبي الغربي من منطقة نيوم،
+          تراعي متطلبات الاقتصاد الدائري، حيث تتمتع بموقع استراتيجي على ساحل البحر الأحمر،
+          الذي يمر عبره 13% من تجارة العالم، وتضم ميناء متكاملاً ومركزاً لوجستياً
+          على مفترق طرق 3 قارات، ما يتيح لها خاصية الربط المباشر
+          بالأسواق العالمية، كما ستقدم تجربة فريدة تجتمع فيها
+          المعيشة مع الأعمال والتقنيات في تناغم وانسجام تام مع الطبيعة.
+        </p>
+      </div>
+      <h2>الأهداف</h2>
+      <section class="row cards-container">
+        {% for card in cards %}
+          <div class="card border-5 no-img">
+            <div class="card-top">
+              <svg>
+                <use xlink:href="{% static "images/page-3/" %}{{ card.img }}.svg#{{ card.img }}">
+                </use>
+              </svg>
+              <h2 class="card-title">{{ card.name }}</h2>
+            </div>
+            <div class="card-body">
+              <div class="card-bref">
+                {% autoescape on %}
+                  {{ card.description | linebreaks }}
+                {% endautoescape %}
+              </div>
+              <div class="btn-more">
+                <a href="{{ card.url }}" class="btn btn-primary">المزيد</a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </section>
+    </div>
+  </div>
+{% endblock content %}

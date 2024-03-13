@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  نيوم
+{% endblock title %}
+{% block content %}
+  <div class="pages neom">
+    <!-- djlint:off -->
+        <img src="{% static "images/page-2/neom.png" %}" alt="">
+    <!-- djlint:on -->
+    <div class="info">
+      <div class="info-text">
+        <p>
+         في عام 2017 أطلق صاحب السمو الملكي الأمير محمد بن سلمان بن عبدالعزيز<br>
+          ولي العهد رئيس مجلس الوزراء مشروع نيوم الجريءالذي يقوده صندوق الاستثمارات العامة،
+           ليحول الصحراء
+          إلى مدينة مستقبلية مبتكرة في شمال غرب المملكة، تعمل بنسبة 100% بالطاقة المتجددة،
+          لتكون نموذجًا جديدًا للحياة المستدامة والعمل والازدهار،
+          حيث يمكن البشرية من التقدم دون المساس بصحة كوكب الأرض.
+        </p>
+      </div>
+      <h2>الأهداف</h2>
+      <section class="row cards-container">
+        {% for item in items %}
+          <div class="card border-3 no-img">
+            <div class="card-body">
+              <div class="card-bref">
+                {% autoescape on %}
+                  {{ item.description | linebreaks }}
+                {% endautoescape %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </section>
+    </div>
+  </div>
+{% endblock content %}
