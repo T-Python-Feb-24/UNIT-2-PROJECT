@@ -1,0 +1,44 @@
+{% extends 'main/base.html' %}
+
+{% block title %}الرئيسية{% endblock %}
+
+{% block content %}
+{% if request.COOKIES.dark_mode == "True" %}
+<div class="video-container">
+  <video src="https://firebasestorage.googleapis.com/v0/b/unit-2-project-8c87f.appspot.com/o/bg_vid.mp4?alt=media&token=55cab1d2-596f-403e-b667-63fc234334cd"  autoplay muted loop></video>
+</div>
+{% else %}
+<div class="video-container-light">
+  <video src="https://firebasestorage.googleapis.com/v0/b/unit-2-project-8c87f.appspot.com/o/production_id_5192149%20(1080p).mp4?alt=media&token=4957198b-64b0-4f6b-9b37-b395797f5a26"  autoplay muted loop></video>
+</div>
+{% endif %}
+<div class="container-fluid mt-5">
+    <div class="row justify-content-center">
+      
+       {% if request.COOKIES.dark_mode == "True" %}<div class="col-sm-4 mx-auto col1">{% else %}<div class="col-sm-4 mx-auto col1-light">{% endif %}
+        <!-- Content for the first column -->
+        <a href="{% url 'main:old_view' %}">
+          <h2>كورتنا زمان</h2>
+          <img src="https://firebasestorage.googleapis.com/v0/b/unit-2-project-8c87f.appspot.com/o/live-sports.png?alt=media&token=5fe52db8-613e-4509-a4e8-9f9ad5764702" class="img-fluid" alt="before logo">
+        </a>
+      </div>
+
+      {% if request.COOKIES.dark_mode == "True" %}<div class="col-sm-4 mx-auto col1">{% else %}<div class="col-sm-4 mx-auto col1-light">{% endif %}
+        <!-- Content for the second column -->
+        <a href="{% url 'main:now_view' %}">
+          <h2>كورتنا الحين</h2>
+        <img src="https://firebasestorage.googleapis.com/v0/b/unit-2-project-8c87f.appspot.com/o/soccer.png?alt=media&token=22b8367d-6fd3-4ca5-94b6-0e7e61db08ca" class="img-fluid" alt="now logo">
+        </a>
+      </div>
+
+      {% if request.COOKIES.dark_mode == "True" %}<div class="col-sm-4 mx-auto col1">{% else %}<div class="col-sm-4 mx-auto col1-light">{% endif %}
+        <!-- Content for the third column -->
+        <a href="{% url 'main:future_view' %}">
+          <h2>كورتنا مستقبلا</h2>
+        <img src="https://firebasestorage.googleapis.com/v0/b/unit-2-project-8c87f.appspot.com/o/soccer-ball.png?alt=media&token=4dcb2d67-7c5d-4637-9751-c043bc71b530" class="img-fluid" alt="after logo">
+        </a>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}

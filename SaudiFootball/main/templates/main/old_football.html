@@ -1,0 +1,78 @@
+{% extends 'main/base.html' %}
+
+{% block title %}كورتنا زمان{% endblock %}
+
+{% block content %}
+
+ {% if request.COOKIES.dark_mode == "True" %}<div class="old-cards mt-4">{% else %}<div class="old-cards-light mt-4">{% endif %}
+    <div class="row mb-5">
+      <div class="col-md-4 d-flex">
+        <div class="card">
+          <img src="https://firebasestorage.googleapis.com/v0/b/unit-2-project-8c87f.appspot.com/o/union_saudi_logo.png?alt=media&token=475851be-4d8b-496d-83c8-81a934035b61" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title">نشأة الرياضة السعودية</h5>
+            <p class="card-text"> .تأسس الاتحاد السعودي لكرة القدم في عام 1956، وفي نفس العام انضم إلى الاتحاد الدولي لكرة القدم والاتحاد الآسيوي لكرة القدم. منذ ذلك الحين، بدأت مسيرة تنظيم بطولات كرة القدم المحلية والمشاركات الخارجية التي حققت العديد من الإنجازات الكبيرة. أهم هذه الإنجازات هو تحقيق بطولة كأس الأمم الآسيوية عدة مرات</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex">
+        <div class="card">
+          <img src="https://firebasestorage.googleapis.com/v0/b/unit-2-project-8c87f.appspot.com/o/national_team.jpg?alt=media&token=dd1f15e2-e65a-4c92-b6bc-41c2e9f36af6" class="card-img-top" alt="Image 2">
+          <div class="card-body">
+            <h5 class="card-title">تأسيس المنتخب السعودي</h5>
+            <p class="card-text">تأسس المنتخب السعودي لكرة القدم رسميًا في عام 1956، وانضم إلى الاتحاد الدولي لكرة القدم والاتحاد الآسيوي لكرة القدم في عام 19741. يلقب المنتخب السعودي بـ “الصقور” أو “الأخضر”، وحقق نجاحات ملحوظة في بطولات كأس العالم وكأس آسيا.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex">
+        <div class="card">
+          <img src="https://firebasestorage.googleapis.com/v0/b/unit-2-project-8c87f.appspot.com/o/itti_logo.png?alt=media&token=6045cabb-19c7-490d-a23a-809a234d75cd" class="card-img-top" alt="Image 3">
+          <div class="card-body">
+            <h5 class="card-title">أول نادي سعودي</h5>
+            <p class="card-text">أول نادٍ سعودي لكرة القدم هو نادي الاتحاد، الذي تأسس في عام 1927م في مدينة جدة. يُعتبر الاتحاد من أندية كرة القدم الرائدة في المملكة العربية السعودية. ومنذ ظهوره قبل 97 عامًا، أصبحت كرة القدم جزءًا لا يتجزأ من الثقافة الرياضية السعودية.
+
+                نادي الاتحاد يلعب في دوري روشن السعوديّ، وقد حقق العديد من الإنجازات على المستوى المحلي والخارجي. يُلقب الفريق بـ “العميد”، وهو واحد من أكثر الأندية شعبيةً في المملكة. يتميز بجماهيره الوفية وتاريخه العريق في عالم كرة القدم.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 d-flex">
+          <div class="card">
+            <img src="https://firebasestorage.googleapis.com/v0/b/unit-2-project-8c87f.appspot.com/o/first_match.jpg?alt=media&token=7d1a61c6-c972-4614-bac6-185440cef6d7" class="card-img-top" alt="Image 1">
+            <div class="card-body">
+              <h5 class="card-title">الظهور الأول للأخضر</h5>
+              <p class="card-text">أول مباراة دولية: في عام 1957، خاض المنتخب السعودي أول مباراة دولية ضد المنتخب السوري، وحقق فوزًا تاريخيًا بنتيجة 3-1</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-4 d-flex">
+          <div class="card">
+            <img src="https://firebasestorage.googleapis.com/v0/b/unit-2-project-8c87f.appspot.com/o/world_cup.jpg?alt=media&token=8ea75d7e-350f-4ba9-ab82-85fc65007d76" class="card-img-top" alt="Image 2">
+            <div class="card-body">
+              <h5 class="card-title">كأس العالم 1994</h5>
+              <p class="card-text">المنتخب السعودي شارك لأول مرة في كأس العالم FIFA في عام 1994.
+                تواجد في مجموعة تضمت هولندا والمغرب وبلجيكا.
+                في 20 يونيو 1994، خاض أول مباراة في واشنطن ضد هولندا وانتهت بالهزيمة 1-2.</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-4 d-flex">
+          <div class="card">
+            <img src="https://firebasestorage.googleapis.com/v0/b/unit-2-project-8c87f.appspot.com/o/asia_cup.jpg?alt=media&token=3591f031-fba0-4e82-b880-8425895dcee7" class="card-img-top" alt="Image 3">
+            <div class="card-body">
+              <h5 class="card-title">كأس آسيا</h5>
+              <p class="card-text">المنتخب السعودي حقق إنجازًا تاريخيًا في أول 5 مشاركات له في كأس آسيا.
+                ظهوره الأول كان في نسخة 1984 في سنغافورة، وانتهى بفوزه باللقب بعد تغلبه على الصين 2-0.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+{% endblock %}

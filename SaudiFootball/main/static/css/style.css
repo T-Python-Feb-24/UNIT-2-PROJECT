@@ -1,0 +1,258 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Noto Kufi Arabic", sans-serif;
+}
+.dark_mode{
+    background-color: #000;
+    color: white;
+    }
+
+.light_mode{
+    color: black;
+    background-color: rgb(71, 87, 88);
+}
+.light_mode .nav-container div{
+    background-color: white;
+}
+.light_mode .nav-container a{
+    color: black;
+}
+body{
+    overflow-x: hidden;
+}
+
+.nav-container div{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 25rem;
+    margin-right: 25rem;
+    margin-top: 10px;
+    padding-top: 2px;
+    border-radius: 25px;
+}
+.nav-container button{
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 0 15px;
+    cursor: pointer;
+    height:32px;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+    opacity: 0.5;
+}
+.nav-container button:hover{
+    opacity: 1;
+}
+.nav-container div a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    margin-top: 6px;
+}
+.light-dark-mode{
+    opacity: 0.5;
+}
+.light-dark-mode:hover{
+    opacity: 1;
+}
+/*----- for base,html -----*/
+.video-container {
+    position: fixed;
+    left:0px;
+    top:0px;
+    z-index: -100;
+}
+.video-container-light{
+    position: fixed;
+    left:0px;
+    top:0px;
+    z-index: -100;
+}
+.video-container-light video{
+    width: 100vw;
+}
+.video-container video {
+    width: 100vw;
+}
+.col1{
+    height: 80vh;
+    opacity: 0.5;
+    padding-top: 5px;
+}
+.col1 h2{
+    color: white;
+}
+.col1:hover{
+    opacity: 1;
+    border: 1px solid white;
+    border-radius: 5px;
+    animation: glowing 2s infinite;
+}
+.col1 a{
+    text-decoration: none;
+}
+.col1-light{
+    height: 80vh;
+    opacity: 0.5;
+    padding-top: 5px;
+}
+.col1-light h2{
+    color: black;
+}
+.col1-light:hover{
+    opacity: 1;
+    background-color: rgba(202, 202, 202, 0.5);
+    border-radius: 5px;
+    animation: glowing 2s infinite;
+}
+.col1-light a{
+    text-decoration: none;
+}
+@keyframes glowing {
+    0% {
+      border-color: #ffffff;
+      box-shadow: 0 0 10px #ffffff;
+    }
+    50% {
+      border-color: #f0f0f0;
+      box-shadow: 0 0 20px #f0f0f0;
+    }
+    100% {
+      border-color: #ffffff;
+      box-shadow: 0 0 10px #ffffff;
+    }
+  }
+/* end for index.html */
+.old-cards img{
+    height: 250px;
+}
+.card {
+    transition: transform 0.4s;
+    width: 20rem;
+  }
+
+  .card:hover {
+    transform: scale(1.1);
+  }
+
+  .card-text {
+    font-size: 0%;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+  }
+
+  .card:hover .card-text {
+    font-size: 1rem;
+    opacity: 1;
+  }
+  .old-cards-light .card{
+    background-color: rgba(202, 202, 202, 0.5);
+  }
+/* end for old_football.html*/
+
+.season-events img {
+    height: 200px;
+    object-fit: cover;
+}
+.Jeddah-world-club-cup img{
+    height: 200px;
+    object-fit: cover;
+}
+/* end for now_football.html */
+.custom-list li{
+    list-style: none;
+}
+.custom-list li:before{
+    content: "-";
+    margin-left: 10px;
+}
+
+.staduims{
+    transition: transform 0.4s;
+}
+.staduims:hover{
+    transform: scale(1.1);
+    background-color: rgba(202, 202, 202, 0.5);
+}
+.staduims-text{
+    font-size: 0%;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+.staduims:hover .staduims-text{
+    font-size: 1rem;
+    opacity: 1;
+}
+.saudi-league{
+    transition: transform 0.4s;
+}
+.saudi-league:hover{
+    transform: scale(1.1);
+    background-color: rgba(202, 202, 202, 0.5);
+}
+.saudi-league-text{
+    font-size: 0%;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+.saudi-league:hover .saudi-league-text{
+    font-size: 1rem;
+    opacity: 1;
+}
+.tech-saudi{
+    transition: transform 0.4s;
+}
+.tech-saudi:hover{
+    transform: scale(1.1);
+    background-color: rgba(202, 202, 202, 0.5);
+}
+.tech-saudi-text{
+    font-size: 0%;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+.tech-saudi:hover .tech-saudi-text{
+    font-size: 1rem;
+    opacity: 1;
+}
+.eco-play{
+    transition: transform 0.4s;
+}
+.eco-play:hover{
+    transform: scale(1.1);
+    background-color: rgba(202, 202, 202, 0.5);
+}
+.eco-play-text{
+    font-size: 0%;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+.eco-play:hover .eco-play-text{
+    font-size: 1rem;
+    opacity: 1;
+}
+/* end for future_football.html */
+.club-img{
+    height:15rem;
+}
+.club{
+    column-gap: 25px;
+}
+.img-button{
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 0 15px;
+    cursor: pointer;
+    height:32px;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+    opacity: 0.5;
+}
+.img-button:hover{
+    opacity: 1;
+}
