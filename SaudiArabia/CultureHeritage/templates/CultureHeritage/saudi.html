@@ -1,0 +1,123 @@
+{% extends 'CultureHeritage/base.html' %}
+{% load static %}
+{% block title %}  {% endblock %}
+
+{% block style %}
+{% if request.COOKIES.mode == "dark"%}
+
+<style>
+    body{
+        background-color: #505050;
+    }
+
+</style>
+{% endif %}
+{% endblock%}
+
+   
+{% block content %}
+<div class="container border-bottom mt-10">
+    <div class="row ">
+        <div class="col-md-12  header-row">
+            <div class="header text-center pb-5 ">
+                <h1 class="haader1">More about Saudi Arabia</h1>
+                <p class="header-texet">There is a great package of efforts being made in Saudi Arabia.Refer to the links below for a deeper understanding <br>of the Kingdom's work,
+                as well as the means by which its people and government change the future of Saudi Arabia while preserving its long past </p>
+            </div>
+        </div>
+    </div>
+    <div class="row border-bottom">
+        <div class="col-lg-4 col-md-12 col-12 gap-5 mt-5 mb-5">
+            <div class="img">
+                <img src="/static/image/2030.png" class="img-fluid rounded-5 w-40"  width="200px" height="200px">
+            </div>
+        </div>
+        
+        <div class="col-lg-8 col-md-12 ps-lg-5 mt-md-5">
+            <div class="text">
+                <h2 class="website-h">Vision 2030 </h2>
+                <p>Vision 2030 set in 2016, a strategic roadmap for a kingdom divided into three: an ambitious homeland, a thriving economy, and an encouraging society. Through Vision 2030, many reforms have been achieved to diversify the Saudi economy, 
+                create new investment opportunities, and enable businesses to fully unleash their potential.<a class="website" href="https://www.vision2030.gov.sa/"><br>Visit website</a></p>
+
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-4 col-md-12 col-12 mt-5">
+                <div class="img">
+                    <img src="/static/image/tourism.png" class="img-fluid rounded-5 w-40" width="200px" height="200px">
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12 ps-lg-5 mt-md-5 w-40">
+                <div class="text">
+                    <h2 class="website-h">Visit Saudi Arabia</h2>
+                    <p>The Visit Saudi Arabia website and slogan seek to work with relevant partners to make the Kingdom of Saudi Arabia a world-class tourist destination, facilitate obtaining visas and share traditional Arab hospitality with the global community. 
+                    It is a center for visitors to plan trips, discover new adventures and see all that Saudi Arabia has to offer.<a class="website" href="https://www.visitsaudi.com/en"><br>Visit website</a></p>
+    
+                </div>
+            </div>
+        <hr>
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-12 w-40 mt-1 ">
+                    <div class="img">
+                        <img src="/static/image/mask.png" class="img-fluid rounded-5"  width="200px" height="200px">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 ps-lg-5 mt-md-5">
+                    <div class="text">
+                        <h2 class="website-h">Misk Foundation</h2>
+                        <p>Founded by His Royal Highness Crown Prince Mohammed bin Salman, the Misk Foundation is a non-profit organization dedicated to developing young talent while encouraging learning and leadership. 
+                            The Misk Foundation focuses on empowering youth and developing their capabilities through education, entrepreneurship, culture, creative arts, science and technology.<a class="website" href="https://misk.org.sa/en/"><br>Visit website</a></p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row border-bottom">
+                    <div class="col-lg-4 col-md-12 col-12 w-40 mt-5">
+                        <div class="img">
+                            <img src="/static/image/education.png" class="img-fluid rounded-5"  width="200px" height="200px">
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-12 ps-lg-5 mt-md-5">
+                        <div class="text">
+                            <h2 class="website-h">Ministry of education</h2>
+                            <p>Preparing the future generation of thinkers and influencers, the Saudi Ministry of Education is committed to ensuring that future generations have all the tools at their disposal to achieve their dreams. Through oversight of primary, secondary, and tertiary education, 
+                            the Ministry ensures that all of today's students are prepared for the jobs of tomorrow.<a class="website" href="https://moe.gov.sa/en/Pages/default.aspx"><br>Visit website</a></p>
+    
+                        </div>
+                    </div></p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 col-12 w-40 mt-5">
+                            <div class="img">
+                                <img src="/static/image/sports.png" class="img-fluid rounded-5"  width="200px" height="200px">
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-12 ps-lg-5 mt-md-5">
+                            <div class="text">
+                                <h2 class="website-h">General Authority for Sports (Ministry of Sports)</h2>
+                                <p>Established in 1974, the General Sports Authority aims to encourage sports and physical activity for every citizen and resident in the Kingdom, making sports accessible to all while promoting new sporting events within the Kingdom. It manages all 153 multi-sport clubs within the country, 
+                                as well as the Saudi Olympic Committee and all 30 Saudi sports federations, and represents Saudi sports at the international level.<a class="website" href="https://www.mos.gov.sa/en/Pages/default.aspx"><br>Visit website</a></p>
+                            </p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 col-12 w-40 mt-5">
+                                <div class="img">
+                                    <img src="/static/image/diriyah.png" class="img-fluid rounded-5"  width="200px" height="200px">
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-12 ps-lg-5 mt-md-5">
+                                <div class="text">
+                                    <h2 class="website-h">Diriyah Gate Development Authority (DGDA)</h2>
+                                    <p>The Diriyah Gate Development Authority is tasked with preserving and celebrating the iconic Diriyah landmark and developing it into a world-class attraction that all Saudis can be proud of, using a three-pronged approach: preserving the quaint World Heritage site, 
+                                    transforming Diriyah into a global gathering site, and ultimately empowering the surrounding community.<a class="website" href="https://www.dgda.gov.sa/our-company/our-vision-impact.aspx"><br>Visit website</a></p>
+                                </p>
+                                </div>
+                            </div>
+    </div>
+</div>
+
+{% endblock %}

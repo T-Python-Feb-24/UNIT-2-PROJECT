@@ -1,0 +1,230 @@
+{% extends 'CultureHeritage/base.html' %}
+{% load static %}
+{% block title %}  {% endblock %}
+
+{% block style %}
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center; 
+    width: 100vw;
+    height: 100vh;
+    background: #f5f5f5;
+    box-shadow: 0 30px 50px #dbdbdb;
+}
+
+.container .slide .item{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #505050;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.slide .item:nth-child(3){
+    left: 50%;
+}
+.slide .item:nth-child(4){
+    left: calc(50% + 220px);
+}
+.slide .item:nth-child(5){
+    left: calc(50% + 440px);
+}
+
+/* here n = 0, 1, 2, 3,... */
+.slide .item:nth-child(n + 6){
+    left: calc(50% + 660px);
+    opacity: 0;
+}
+
+
+
+.item .content{
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    color: #eee;
+    transform: translate(0, -50%);
+    font-family: system-ui;
+    display: none;
+}
+
+
+.slide .item:nth-child(2) .content{
+    display: block;
+}
+
+
+.content .name{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+}
+
+.content .des{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content button{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+
+@keyframes animate {
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+
+
+.button{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.button button{
+    width: 40px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+   
+    transition: 0.3s;
+}
+
+.button button:hover{
+    background: #ababab;
+    color: #fff;
+}
+
+.js{
+    width: 1000px;
+    height: 500px;
+}
+</style>
+    {% if request.COOKIES.mode == "dark"%}
+
+<style>
+    body{
+        background-color: #505050;
+    }
+
+</style>   
+ {% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="container js">
+
+        <div class="slide">
+    
+            <div class="item" style="background-image: url('/static/image/Inscriptions_of_Al-Mauaqea_mountain2.jpg');">
+                <div class="content">
+                    <div class="name">Culture Hema area </div>
+                    <div class="des">Hema is located in an arid mountainous region in the southwest of the Kingdom of Saudi Arabia, and on one of the oldest ancient caravan routes that crossed the Arabian Peninsula. The Hima cultural area includes a large collection of images engraved on rocks that depict hunting, animals, plants, and lifestyles of a culture that spanned 7,000 years. without interruption</div>
+                    
+                </div>
+            </div>
+            <!-- "background-color: rgb(200, 218, 191);" -->
+            <div class="item" style="background: linear-gradient(135deg, #324c38, #c0f9c0);">
+                <div class="content">
+                    <h1 class="name">Saudi Arabia</h1>
+                    <h2 class="des">Culture & Heritage</h2>
+                    
+                </div>
+            </div>
+            <div class="item" style="background-image: url('/static/image/imags.jpg');">
+                <div class="content">
+                    <div class="name">Al-Ahsa Oasis</div>
+                    <div class="des">Al-Ahsa Oasis is located in the eastern part of the Arabian Peninsula, and it is a group of GPS, gardens, freshwater springs, irrigation canals in addition to the Yellow Lake, and buildings representing the settlement of humans in the Gulf region from the Neolithic era to the present day.</div>
+                    
+                </div>
+            </div>
+            <div class="item" style="background-image: url('/static/image/site_1329_0027-750-750-20230113124527.jpg');">
+                <div class="content">
+                    <div class="name">Turaif neighborhood, Ad-Diriyah</div>
+                    <div class="des">Al-Turaif neighborhood is located in the heart of the Arabian Peninsula, northwest of Riyadh, and this place constitutes the first capital of the Al Saud family.
+                        Al-Turaif neighborhood bears traces of the Najdi architectural style that is unique to the center of the Arabian Peninsula. The neighborhood was founded in the fifteenth century.</div>
+                    
+                </div>
+            </div>
+            <div class="item" style="background-image: url('/static/image/1-1-qks2u8jmui7gf1ejg6i7ndhin0ogeb49yxz6dpktmo.png');">
+                <div class="content">
+                    <div class="name">Rock art in the Hail region</div>
+                    <div class="des">This serial property consists of two desert sites, including Mount Umm Senman (Jabba) and the mountains of Al-Manjoor and Rata (Al-Shuwaimis).</div>
+                    
+                </div>
+            </div>
+            <div class="item" style="background-image: url('/static/image/jed.jpg');">
+                <div class="content">
+                    <div class="name">Historic Jeddah</div>
+                    <div class="des">Old Jeddah, or Jeddah al-Balad, is located on the eastern shore of the Red Sea ,It was established in the seventh century AD as a major port for the Indian Ocean trade routes, which transported goods to Mecca, It was also a gateway for Muslim pilgrims to Mecca, who arrived by sea</div>
+                    
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    
+    
+
+    {% endblock %}
+
+    {% block js %}
+    <script src="/static/style/slider.js"></script>
+
+    
+    {% endblock %}
+    

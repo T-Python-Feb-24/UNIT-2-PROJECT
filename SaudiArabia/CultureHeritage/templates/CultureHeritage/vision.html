@@ -1,0 +1,108 @@
+{% extends 'CultureHeritage/base.html' %}
+{% load static %}
+{% block title %}  {% endblock %}
+
+
+{% block style %}
+<style>
+     body {
+    animation: background-color 20s;
+    min-height: 100vh;
+}
+</style>
+{% if request.COOKIES.mode == "dark"%}
+
+<style>
+    body{
+        background-color: #505050;
+    }
+
+</style>
+{% endif %}
+{% endblock%}  
+{% block content %}
+<div class="container mx-0 p-0">
+    <video autoplay muted loop id="myVideo">
+        <source src="\static\video\Untitled video - Made with Clipchamp.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <header class="masthead">
+        <div class="container h-100 mt-3">
+          <div class="row h-100 align-items-center ">
+            <div class="col-12 text-center">
+              <h1 class="fw-light text-white mb-0 text-2">Vision 2030</h1>
+              <p class="lead text-white mt-4"></p>
+            </div>
+          </div>
+        </div>
+      </header>
+        
+    </div>
+    <div class="container cards">
+
+        <div class="row vision">
+            <div class="header text-center pb-5 mar mt-100 ">
+                <h1 class="text-2">Goals Vision 2023</h1>
+            </div>
+            <div class="col-lg-4 dd">
+                <div class="card">
+                    <div class="face front-face">
+                        <img src="/static/image/image-website-04-m.webp"
+                            alt="" class="profile">
+                        <div class="pt-3 text-uppercase names">
+                            Vibrant community
+                        </div>
+                        <div class="designation"></div>
+                    </div>
+                    <div class="face back-face">
+                        <div class="testimonial">
+                            Saudi Vision 2030 is becoming a reality in a vibrant society.
+                            A cohesive, happy society is the most important foundation for the economic prosperity of a responsible citizen society,
+                            with solid roots based on the tolerant values of Islam and pride in the homeland, with pride in Saudi heritage and culture.
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 dd">
+                <div class="card">
+                    <div class="face front-face">
+                        <img src="/static/image/image-website-03-m.webp"
+                            alt="" class="profile">
+                        <div class="pt-3 text-uppercase names">
+                            Prosperous economy
+                        </div>
+                        <div class="designation"></div>
+                    </div>
+                    <div class="face back-face">
+                        <div class="testimonial">
+                            Saudi Vision 2030 aims to achieve a vibrant society and a prosperous economy, by providing an appropriate environment for growth, creating job opportunities for citizens, nurturing talent and developing investments, and seizing the great potential that the nation enjoys.
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 dd">
+                <div class="card">
+                    <div class="face front-face">
+                        <img src="/static/image/image-website-01-m.webp"
+                            alt="" class="profile">
+                        <div class="pt-3 text-uppercase names">
+                            Ambitious Country
+                        </div>
+                        <div class="designation"></div>
+                    </div>
+                    <div class="face back-face">
+                        <div class="testimonial">
+                            The ambitious Saudi Vision 2030 promotes the presence of an effective government that operates transparently and responsibly<br>,stimulates citizenship, and encourages all segments of society,including citizens,the private sector,and the non-profit sector,to play their role and take the <br>initiative to explore opportunities and invest them to advance the nation and contribute to shaping the future.
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+ 

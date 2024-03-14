@@ -1,0 +1,90 @@
+{% extends 'CultureHeritage/base.html' %}
+{% load static %}
+{% block title %}  {% endblock %}
+
+{% block style %}
+{% if request.COOKIES.mode == "dark"%}
+
+<style>
+    body{
+        background-color: #505050;
+    }
+
+</style>   
+ {% endif %}
+{% endblock %}
+
+
+
+{% block content %}
+<div class="container">
+    <div class="row ">
+        <div class="col-md-12  header-row">
+            <div class="header text-center pb-5 ">
+                <h1 class="haader1">Heritage</h1>
+                <p class="header-texet">Heritage is the sum of values, beliefs, literature, arts, and knowledge, all of man’s material and moral activity. It is the result of the accumulation of society’s experiences, and it is a witness to the nation’s history and conditions. It is characterized by being composed of interconnected structures, complete parts, and overlapping many times, some of which are fixed and some of which are variable.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row-card row p-4 mt-5"  >
+        <div class="row-card col-12 col-md-7 order-2 order-md-1">
+            <div class="header text-laft pb-5 mt-5">
+                <h1 class="">Tangible Heritage</h1>
+                <p class=""> It is everything that is tangible and has a material presence, in addition to those monuments that are important for the study of human history because they provide a tangible basis. The types of tangible cultural heritage are divided into two parts: movable tangible heritage (such as antiques and antiquities), and immovable tangible heritage such as buildings.</p>
+            </div>
+        </div>
+   
+    <div class="col col-md-5 order-1 order-md-2">
+        <div class="img-card">
+            <img src="/static/image/296041-1602448157.jpg" class="img-fluid rounded-5 w-40 " width="100%" height="90%" >
+        </div>
+    </div>   
+    </div> <!--row 1-->
+   
+    <div class="row-card row p-4 mt-5">
+        <div class="col-12 col-md-7 order-2 order-md-1">
+            <div class="header text-laft align-center pb-5 mt-5 ">
+                <h1 class="main-h1">Intangible Heritage</h1>
+                <p class="">It is a heritage that does not have a tangible presence, as it includes customs and traditions, or living expressions inherited from ancestors and passed on to descendants, such as: oral traditions, performing arts, popular and social practices, in addition to the rituals of religious celebrations, and the skills of producing traditional crafts, music, dance, and literature. As for the method of protecting intangible heritage, it lies with the members of society. This is because it is what gives societies their own identity.</p>
+            </div>
+        </div>
+   
+    <div class="col col-md-5 order-1 order-md-2 mt-5">
+        <div class="img">
+            <img src="/static/image/al-sadu-heritage-1.jpg" class="img-fluid rounded-5 w-40" width="100%" height="90%">
+        </div>
+    </div>   
+    </div>
+    <div class="row-card row p-4 mt-5">
+        <div class="col-12 col-md-7 order-2 order-md-1">
+            <div class="header text-laft pb-5 mt-5">
+                <h1 class="">Registering heritage sites with UNESCO</h1>
+                <p class="">Some government agencies in Saudi Arabia have been designated to develop governorates that have archaeological or heritage sites of high importance, including the Royal Commission for Al-Ula Governorate, which was established in 2017, and includes the Hegra site “Mada’in Saleh,” which is the first Saudi site to be registered on the UNESCO World Heritage List in 2008, and this was It deserves due to the archaeological burials, rock art, and ancient writings it contains</p>
+            </div>
+        </div>
+    <div class="col col-md-5 order-1 order-md-2 mt-5">
+        <div class="img">
+            <img src="/static/image/296051-423243206.jpg" class="img-fluid rounded-5 w-40" width="100%" height="90%">
+        </div>
+    </div>   
+    </div>
+    <div class="row-card row p-4 mt-5">
+        <div class="col-12 col-md-7 order-2 order-md-1">
+            <div class="header text-laft pb-5 mt-5">
+                <h1 class="">Heritage documentation</h1>
+                <p class="">The General Authority for Tourism and National Heritage (currently the Ministry of Tourism) worked to document the elements of intangible heritage with UNESCO, and then the General Authority for Culture (before the establishment of the Ministry of Culture) in 2018 issued a guide to collecting intangible cultural heritage in Saudi Arabia, which was implemented by the Saudi Society for the Preservation of National Heritage. Heritage through a specialized committee of academics, specialists and experts accredited to UNESCO.</p>
+            </div>
+        </div>
+   
+    <div class="col col-md-5 order-1 order-md-2 mt-5">
+        <div class="img">
+            <img src="/static/image/Pic231-1685816665.webp" class="img-fluid rounded-5 w-40" width="100%" height="90%">
+        </div>
+    </div>  
+    </div>
+    
+
+
+</div>
+
+{% endblock %}

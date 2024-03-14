@@ -1,0 +1,112 @@
+{% extends 'CultureHeritage/base.html' %}
+{% load static %}
+{% block title %}  {% endblock %}
+{% block style %}
+<style>
+    
+  body{
+   
+    font-family: 'Montserrat', sans-serif;
+  }
+</style>
+{% if request.COOKIES.mode == "dark"%}
+
+<style>
+    body{
+        background-color: #505050;
+    }
+
+</style>
+{% endif %}
+{% endblock%}
+{% block content %}
+
+<div class="container">
+    <div class="row ">
+        <div class="col-md-12  header-row">
+            <div class="header text-center pb-5 ">
+                <h1 class="haader1">Culture</h1>
+                <p class="header-texet">Our national identity is an integral part of many cultural aspects, such as the food we eat and the clothes we wear. However, there are more than 34 million people, and there are 13 different regions with different Arabic language,
+                    each with a different language and unique customs and traditions.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row-card row p-4 mt-5"  >
+        <div class="row-card col-12 col-md-7 order-2 order-md-1">
+            <div class="header text-laft pb-5 mt-5">
+                <h1 class="">Common greeting</h1>
+                <p class="">In the Kingdom, we greet each other by saying, “aslam alykom,” which is a prayer for the other to be well. It is usually followed by a handshake if the meeting is formal, or a kiss on the cheek, especially if the other person is a family member or a close friend. </p>
+            </div>
+        </div>
+   
+    <div class="col col-md-5 order-1 order-md-2">
+        <div class="img-card">
+            <img src="/static/image/arab-businessman-shaking-hand-on-600nw-649010521.webp" class="img-fluid rounded-5 w-40 " width="100%" height="90%" >
+        </div>
+    </div>   
+    </div> <!--row 1-->
+   
+    <div class="row-card row p-4 mt-5">
+        <div class="col-12 col-md-7 order-2 order-md-1">
+            <div class="header text-laft align-center pb-5 mt-5 ">
+                <h1 class="main-h1">Popular Art Review</h1>
+                <p class="">The artistic show is very popular among Saudis. The sword display known as the “Ardha” is considered a national dance, and is an ancient tradition with its roots in the central region known as Najd. It is a group of men carrying swords and a poet (or narrator); Men holding swords stand in two rows facing each other or in a circle with a poet chanting in their midst.</p>
+            </div>
+        </div>
+   
+    <div class="col col-md-5 order-1 order-md-2">
+        <div class="img">
+            <img src="/static/image/2022-12-21_181948.png" class="img-fluid rounded-5 w-40" width="100%" height="90%">
+        </div>
+    </div>   
+    </div>
+    <div class="row-card row p-4 mt-5">
+        <div class="col-12 col-md-7 order-2 order-md-1">
+            <div class="header text-laft pb-5 mt-5">
+                <h1 class="">Social values</h1>
+                <p class="">The people of the Kingdom adopt social values that follow Islamic teachings and preserve their noble Arab traditions. These values include: courage, generosity, hospitality, and family ties. These customs are considered a great honor according to Bedouin culture. One of the simplest expressions of hospitality is serving coffee with dates and sweets. Also, burning incense (oud) to lighten the atmosphere is considered a type of hospitality.</p>
+            </div>
+        </div>
+    <div class="col col-md-5 order-1 order-md-2">
+        <div class="img">
+            <img src="/static/image/Screenshot 2024-03-13 124058.png" class="img-fluid rounded-5 w-40" width="100%" height="90%">
+        </div>
+    </div>   
+    </div>
+    <div class="row-card row p-4 mt-5">
+        <div class="col-12 col-md-7 order-2 order-md-1">
+            <div class="header text-laft pb-5 mt-5">
+                <h1 class="">Annual celebrations</h1>
+                <p class="">The two most prominent events of the year are the holy month of Ramadan and the Hajj season. The holy month of Ramadan, during which Muslims fast from dawn to sunset, ends with the Eid al-Fitr holiday. It is customary to buy gifts for children and visit friends and relatives.
+                    As for the Hajj season, millions of Muslim pilgrims from all over the world come to Mecca, and this season concludes with the blessed Eid al-Adha holiday, during which the Muslim family strives to offer a sacrifice, and this is one of the rituals of Islam through which the Muslim draws closer to his Lord, Glory be to Him.
+                    The Kingdom also celebrates two other annual national holidays: Founding Day (February 22) and Saudi National Day (September 23).</p>
+            </div>
+        </div>
+   
+    <div class="col col-md-5 order-1 order-md-2 mt-5">
+        <div class="img">
+            <img src="/static/image/19-09-23-440705412.jpg" class="img-fluid rounded-5 w-40" width="100%" height="90%">
+        </div>
+    </div>  
+    </div>
+    <div class="row-card row p-4 mt-5">
+        <div class="col-12 col-md-7 order-2 order-md-1">
+            <div class="header text-laft pb-5 mt-5">
+                <h1 class="">Arabic calligraphy</h1>
+                <p class="">Because the primary subject of Arabic calligraphy is the Holy Qur’an, it is a form of Islamic art, and today it dominates the majority of works of art on metal, ceramics, glass textiles, painting and sculpture throughout the Kingdom and the Islamic world.</p>
+            </div>
+        </div>
+   
+    <div class="col col-md-5 order-1 order-md-2 ">
+        <div class="img mt-5">
+            <img src="/static/image/RIf8G (1).jpeg" class="img-fluid rounded-5 w-40" width="100%" height="90%">
+        </div>
+    </div>   
+
+
+</div>
+
+
+
+{% endblock %}
+ 
