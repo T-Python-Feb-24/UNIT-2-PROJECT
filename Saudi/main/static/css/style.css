@@ -1,0 +1,24 @@
+* { 
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: "{%'images/background.jpg'%}";
+}
+.light_mode{
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/unit2-94190.appspot.com/o/background.jpg?alt=media&token=15f09fea-3e69-441f-92b9-00f5b750f515');
+  background-size: cover; /* Adjust background size */
+  background-repeat: no-repeat; /* Prevent background repetition */
+}
+
+.ramadan-jeddah{
+  background: #f7f7f7;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 3rem 3rem;
+  position: relative;
+}
+img {
+  height: 200px;
+  width: 150px;
+}
