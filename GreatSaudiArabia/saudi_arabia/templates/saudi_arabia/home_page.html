@@ -1,0 +1,173 @@
+{% extends 'saudi_arabia/base.html' %}
+{% load static %}
+
+{% block title %} Home {% endblock %}
+
+{% block hero %}
+<!--hero-->
+<section class="bg-cover bg-img hero-section ">
+    <div class="overlay h-overlay"></div>
+    <div class="container text-white px-0 ">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="">نمو متسارع</h1>
+                <p class="hero-p">برنامج تطوير الصناعة الوطنية والخدمات اللوجستية</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+{% block content %}
+<section >
+    <div class="container first-container">
+        <div class="row mt-5 align-items-center ">
+            <div class="col-12 col-lg-3 mb-3 mb-lg-0 d-flex py-4 justify-content-center">
+                <img src="{% static 'images/k.png' %}" style="border-radius: 10px; width: 100%; object-fit: cover;">   
+            </div>
+    
+            <div class="col-12 col-lg-3 mb-2 qoute">  
+                <p>
+                    <span style="font-size: 30px;">"</span>
+                    هدفي الأول أن تكون بلادنا نموذجاً
+                    ناجحاً ورائداً في العالم على كافة
+                    الأصعدة، وسأعمل معكم على
+                    تحقيق ذلك
+                    <span style="font-size: 30px;">"</span>
+                </p>
+                <h6>
+                    خادم الحرمين الشريفين
+                </h6>
+                <img src="{% static 'images/kname1.jpg' %}" style=" width: 70%; object-fit: cover;">   
+            </div>
+            <div class="col-12 col-lg-3 mb-1 mb-lg-0 d-flex py-4 justify-content-center">
+                <img src="{% static 'images/p.png'%}"
+                    style="border-radius: 10px; width: 100%; object-fit: cover;">
+            </div>
+            <div class="col-12 col-lg-3 mb-2 qoute">
+                <p>
+                    <span style="font-size: 30px;">"</span>
+                        بلادنا تمتلك قدرات استثماريّة ضخمة،
+                        وسنسعى إلى أن تكون محركاً
+                        لاقتصادنا ومورداً إضافياً لبلادنا 
+                    <span style="font-size: 30px;">"</span>
+                </p>
+                <h6>
+                    صاحب السوّ الملكيّ الأمير 
+                </h6>
+                <img src="{% static 'images/pname.png' %}" style=" width: 70%; object-fit: cover;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section >
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                <video class="w-100 shadow mb-5 rounded" controls>
+                    <source src="{% static 'videos/bg-video.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- <img class="w-100" src="{% static 'images/ndlp.jpg' %}" alt="logistic"> -->
+            </div>
+
+            <div class="col-12 col-lg-6">
+                <h2 class="title-h2">
+                    عن البرنامج
+                </h2>
+            <div class="break-small mb-2 mt-4"></div>
+                <p style="line-height: 2;">
+                    يسعى البرنامج إلى تحويل المملكة العربية السعودية إلى قوة صناعية رائدة ومنصة لوجستية عالمية عبر تحقيق
+                    التكامل بين قطاعات النمو الواعدة (الصناعة، والتعدين والطاقة، والخدمات اللوجستية) وتحفيز الاستثمار في
+                    هذه القطاعات ورفع مساهمة القطاع الخاص بهدف تحقيق التنوع الاقتصادي وخلق فرص عمل نوعية للكفاءات
+                    الوطنية الواعدة، وتحسين الموازين التجارية للمملكة وتعظيم مساهمة المحتوى المحلي. المستهدفات الرئيسية
+                    بحلول عام 2030
+                </p>
+            </div><!--col 2-->
+        </div><!--row 1-->
+        
+        <div class="row mt-3">   
+            <!-- counter -->
+            <div id="start-counting" class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten animated" data-wow-duration="300ms" style="visibility: visible; animation-duration: 300ms; animation-name: fadeInUp;">
+                <img src="{% static 'images/mining.png' %}" alt="mining" class="counting-icon">                 
+                <span id="anim-number-pizza" class="counter-number"></span>
+                <span class="timer counter alt-font appear counting-number" data-to="2272" data-speed="7000">2272</span>
+                <p class="counter-title">عدد الرخص التعدينية السارية</p>
+            </div>
+            <!-- end counter -->
+            <!-- counter -->
+            <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten animated" data-wow-duration="600ms" style="visibility: visible; animation-duration: 600ms; animation-name: fadeInUp;">
+                <img src="{% static 'images/factory.png' %}" alt="factory" class="counting-icon">                 
+                <span class="timer counter alt-font appear counting-number" data-to="818" data-speed="7000">818</span>
+                <span class="counter-title">عدد المصانع الجاهزة</span>
+            </div>
+            <!-- end counter -->
+            <!-- counter -->
+            <div class="col-md-3 col-sm-6 bottom-margin-small text-center counter-section wow fadeInUp xs-margin-bottom-ten animated" data-wow-duration="900ms" style="visibility: visible; animation-duration: 900ms; animation-name: fadeInUp;">
+                <img src="{% static 'images/logistics.png' %}" alt="logistics" class="counting-icon">                 
+                <span class="timer counter alt-font appear counting-number" data-to="20" data-speed="7000">20</span>
+                <span class="counter-title">عدد المنصات اللوجستية</span>
+            </div>
+            <!-- end counter -->
+            <!-- counter -->
+            <div class="col-md-3 col-sm-6 text-center counter-section wow fadeInUp animated" data-wow-duration="1200ms" style="visibility: visible; animation-duration: 1200ms; animation-name: fadeInUp;">
+                <img src="{% static 'images/manufacture.png' %}" alt="manufacture" class="counting-icon">                 
+                <span class="timer counter alt-font appear counting-number" data-to="10518" data-speed="7000">10518</span>
+                <span class="counter-title">إجمالي منشآت الصناعية</span>
+            </div>
+            <!-- end counter -->
+        </div> <!--row 2-->
+    </div>
+
+</section>
+
+
+
+<section >
+    <div class="mt-5 " style="display: flex; flex-direction: column; position: relative; justify-content: center; align-items: center;">
+        <h2 class="title-h2">قطاعات البرنامج</h2>
+        <div class="break-small"></div>
+    </div>
+    
+    <div class="wrapper">
+        <div class="container fourth-container">
+                <div for="c1" class="card">
+                    <a href="{% url 'saudi_arabia:energy_page' %}">
+                        <div class="row">
+                            <h4>قطاع الطاقة</h4>
+                        </div>
+                    </a>
+                </div>
+            <div for="c2" class="card">
+                <a href="{% url 'saudi_arabia:maining_page' %}">
+                    <div class="row">
+                        <h4>قطاع التعدين</h4>
+                    </div>
+                </a>
+            </div>
+            <div for="c3" class="card">
+                <div class="row">
+                    <a href="{% url 'saudi_arabia:industry_page' %}">
+                        <div class="row">
+                            <h4>قطاع الصناعة</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div for="c4" class="card">
+                <div class="row">
+                    <a href="{% url 'saudi_arabia:logistics_page' %}">
+                        <div class="row">
+                            <h4>قطاع الخدمات اللوجيستسية</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}

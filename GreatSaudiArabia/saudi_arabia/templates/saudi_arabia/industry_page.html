@@ -1,0 +1,224 @@
+{% extends 'saudi_arabia/base.html' %}
+{% load static %}
+
+{% block title %} Industry Sector {% endblock %}
+
+{% block hero %}
+<!--hero-->
+<section class="bg-cover i-bg-img hero-section sector-hero">
+    <div class="overlay i-overlay"></div>
+    <div class="container text-white px-0 ">
+        <div class="row">
+            <div class="col-12">
+                <h1>قطاع الصناعة</h1>
+                <p class="hero-p"></p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block content %}
+<section class="sector-first-section bg-l">
+    <div class="container">
+        <div class="row mt-4">   
+            <div class="row  d-flex justify-content-center">
+                <div class="col-lg-3 col-md-6 py-3">
+                    <div class="icon-box d-flex">
+                        <div class="icon-box-icon pe-3 pb-3 ">
+                            <img src="{% static 'images/industry-sector.png' %}" alt="">
+                        </div>
+                        <div class="icon-box-content">
+                            <h3 class="card-title text-uppercase text-dark">تطوير</h3>
+                            <p>الصناعات المرتبطة بالنفط والغاز</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 py-3">
+                    <div class="icon-box d-flex">
+                        <div class="icon-box-icon pe-3 pb-3">
+                            <img src="{% static 'images/industry-sector.png' %}" alt="">
+                        </div>
+                        <div class="icon-box-content">
+                            <h3 class="card-title text-dark">توطين</h3>
+                            <p> الصناعات الواعدة</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-3 col-md-6 py-3">
+                    <div class="icon-box d-flex">
+                        <div class="icon-box-icon pe-3 pb-3">
+                            <img src="{% static 'images/industry-sector.png' %}" alt="">
+                        </div>
+                        <div class="icon-box-content">
+                            <h3 class="card-title text-dark">إنشاء مناطق</h3>
+                            <p class="">خاصة وإعادة تأهيل المدن الاقتصادية</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-3 col-md-6 py-3 ">
+                    <div class="icon-box d-flex">
+                        <div class="icon-box-icon pe-3 pb-3">
+                            <img src="{% static 'images/industry-sector.png' %}" alt="">
+                        </div>
+
+                        <div class="icon-box-content">
+                            <h3 class="card-title text-dark">توطين</h3>
+                            <p >الصناعات العسكرية</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  
+<section>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                <h2 class="about-h2">
+                    عن قطاع  الصناعة
+                </h2>
+                
+                <div class="break-small mb-3 mt-4">  
+                </div>
+                <p style="line-height: 2;">
+                    يهدف البرنامج إلى تطوير قطاع الصناعة وتحفيزه بشكل شامل و من خلال 
+                    استراتيجية تكاملية ومبادرات تمكينية تسهم في :رفع كفاءة التصنيع , وخفض التكاليف,ورفع 
+                    التنافسية , والحماية من الإغراق والمنافسة غير العادلة ,ورفع كفاءة وجودة المنتجات 
+                    المحلية لتمكنيها من تغطية حصة رئيسية من الطلب المتنامي في السوق المحلي ,وتعزيز 
+                    الأمن الوطني , وتوفير الحد الأدنى من الأمن الغذائي والدوائي , ودعم الصادرات 
+                    للمنافسة في الأسواق الإقليمية والعالمية ,واستشراف واستغلال الاتجاهات 
+                    المستقبلية للقطاع ,ويركز القطاع على عدد من الصناعات الواعدة ,ومنها :(الصناعات العسكرية ,وصناعة السيارات ,والصناعات الغذائية والدوائية ,واللوازم الطبية ,وغيرها)
+                </p>
+                <div class="row mt-5 d-flex justify-content-between ">
+                
+        
+                    <!-- counter -->
+                    <div id="start-counting" class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten animated" data-wow-duration="300ms" style="visibility: visible; animation-duration: 300ms; animation-name: fadeInUp;">
+                        <img src="{% static 'images/factory.png' %}" alt="factory" class="counting-icon">                 
+                        <span class="counter-number"></span>
+                        <span class="timer counter alt-font appear counting-number" data-to="10518" data-speed="7000">10518</span>
+                        <p class="counter-title">منشأة صناعية قائمة وتحت الإنشاء</p>
+                    </div>
+                    <!-- end counter -->
+                    <!-- counter -->
+                    <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten animated" data-wow-duration="600ms" style="visibility: visible; animation-duration: 600ms; animation-name: fadeInUp;">
+                        <img src="{% static 'images/win.png' %}" alt="win" class="counting-icon">                 
+                        <span class="timer counter alt-font appear counting-number" data-to="1" data-speed="7000">1</span>
+                        <span class="counter-title">   عالميًا في إنتاج (MEG , MTBE)  </span>
+                    </div>
+                    <!-- end counter -->
+                    <!-- counter -->
+                    <div class="col-md-3 col-sm-6 bottom-margin-small text-center counter-section wow fadeInUp xs-margin-bottom-ten animated" data-wow-duration="900ms" style="visibility: visible; animation-duration: 900ms; animation-name: fadeInUp;">
+                        <img src="{% static 'images/fishing.png' %}" alt="fishing" class="counting-icon">                 
+                        <span class="timer counter alt-font appear counting-number" data-to="100" data-speed="7000">100</span>
+                        <span class="counter-title"> ألف طن سنويًا من الأسماك من خلال تقنيات الاستزراع</span>
+                    </div>
+                    <!-- end counter -->
+                
+                </div> <!--row 2-->
+            </div>
+
+
+            <div class="col-12 col-lg-6 mb-4 ">
+                <div class="d-flex justify-content-center mt-2 mb-2">
+                    <img src="{% static 'images/1.png' %}" style="border-radius: 10px; width: 60%; padding: 1px 1px; object-fit: cover;">
+                </div>
+                <div class="qoute">
+                    <p>
+                        <span style="font-size: 30px;">“</span>
+                        إطاق سمو ولي العهد للاستراتيجية الوطنية
+                        للصناعة يأتي بهدف تعزيز مكانة القطاع الصناعي
+                        في المملكة، للوصول إلى اقتصاد صناعي جاذب
+                        للاستثمار، يصدر المنتجات عالية التقنية وفق تطلعات
+                        ومستهدفات رؤية السعودية 2030
+                        <span style="font-size: 30px;">“</span>
+                    </p>
+                    <h6>
+                        معالي الأستاذ    
+                    </h6>
+                    <p>
+                        بندر بن إبراهيم الخريف  
+                    </p>
+                </div>
+            </div>
+        </div><!--row 1-->
+    </div>
+</section>
+
+<section>
+    <div class="mb-5 " style="display: flex; flex-direction: column; position: relative; justify-content: center; align-items: center;">
+        <h2 class="title-h2">أبرز المشاريع</h2>
+        <div class="break-small"></div>
+        
+    </div>
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <div class="stunning-card ">
+                    <img src="{% static 'images/i-card1.jpg' %}" alt="car" class="stunning-img" />
+                    <div class="stunning-card-body">
+                        <h1 class="stunning-card-title">
+                             شركة سير 
+                        </h1>
+                        <p class="stunning-card-sub-title">
+                                إنتاج سيارات سعودية 
+                        </p>
+                        <p class="stunning-card-info">
+                            تجذب ”سـير“
+
+                            استثمارات أجنبية مباشرة يصـل إسـهامها
+                             في الناتج المحلي الإجمالي على نحو مباشر إلى 30 مليار ريال ,
+                            كما تسهم في خلق 30 ألف وظيفة على نحو مباشـر
+                            وغير مباشر بحلول عام ،2034 وهو مايسهم في دعم
+                            الاقتصـاد الوطني
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="stunning-card">
+                    <img src="{% static 'images/i-card2.jpeg' %}" alt="industy" class="stunning-img"/>
+                    <div class="stunning-card-body">
+                        <h1 class="stunning-card-title">
+                                SAUDI EXIM  
+                        </h1>
+                        <p class="stunning-card-sub-title">
+                               بنك التصدير والاستيراد   
+                        </p>
+                        <p class="stunning-card-info">
+                            اعتمد بنك التصدير والاستيراد السعوديّ في عام
+                            2022 تسهيلات ائتمانيّة، لتعزيز الصادرات السعودية
+                            غير النفطيّة.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="stunning-card">
+                    <img src="{% static 'images/i-card3.jpeg' %}" alt="saudi" class="stunning-img"/>
+                    <div class="stunning-card-body">
+                        <h1 class="stunning-card-title">
+                            صنع في السعودية  
+                        </h1>
+                        <p class="stunning-card-sub-title">
+                               برنامج شركات  
+                        </p>
+                        <p class="stunning-card-info">
+                            يحفز برنامج "صنع في السعودية" الشركات المحلية على توسيع نطاق أعمالها، 
+                            والاستفادة من مزايا البرنامج لتسويق منتجاتها إلى عدد أكبر من العملاء،
+                             والتواصل مع المستهلكين المهتمين بالمنتجات والشركات السعودية
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
