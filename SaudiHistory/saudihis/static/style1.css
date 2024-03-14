@@ -1,15 +1,11 @@
 /*----------eachstate.html-------------*/
-.dark body{
-    background-image: url(/static/images/background3-dark.jpg);
-    background-color: rgb(210, 158, 102) ; /* Adjust opacity as needed */
 
-}
 body {
     /* Set background color */
   /* Light gray background */
     background-image: url(/static/images/background3.jpg);
     background-color: #DEC9B2 ; /* Adjust opacity as needed */
-    backdrop-filter: blur(10px); /* Adjust the blur radius */
+    backdrop-filter: blur(5px); /* Adjust the blur radius */
     /* Set background image 
     background-image: url('background-image.jpg'); /* Replace 'background-image.jpg' with the path to your image */
 
@@ -32,15 +28,15 @@ body {
 
 }
 
+
 header{
-    border-radius: 25px;
     position:sticky;
     top: 1px;
     border-radius: 25px;
     z-index: 1 ;   
 }
 .navbar{
-    border-radius: 25px;
+  font-size: 16px;
 
    
 }
@@ -67,16 +63,28 @@ header{
 .carousel-item {
   text-align: center;
 }*/
+.dark nav.navbar {
+  background-color: rgb(153, 125, 95) !important;
+}
 nav.navbar {
     background-color: rgb(222, 201, 178) !important;
+    font-size: 16px;
+
   }
   .navbar-nav {
+    padding-block: 15px;
     display: flex;
     align-items: center;
+    font-size: 16px;
+
   }
   
   .display-mode {
+    color: #ffffff;
     margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 4px;
   }
 .carousel-slide{
     position: absolute;
@@ -102,13 +110,6 @@ nav.navbar {
     object-fit: cover;
     object-position: center;
 }
-.main-box1{
-    border: 5px solid black;
-    width: 1200px;
-    height: 500px;
-    margin: 20px auto;
-    position: relative;
-}
 
 .main-box{
 
@@ -128,7 +129,17 @@ nav.navbar {
 
 }
 .dark .main-boxB{
+  border: 5px solid  rgb(153, 125, 95,0) !important;
+  ; /* Sets the border to transparent */
+  /*box-shadow: 0 0 20px rgba(215, 215, 215, 0.5);
+  /*background-image: url(/static/images/background1.jpg);
+  backdrop-filter: blur(10px); /* Adjust the blur radius */
 
+  width: 1500px;
+  height:fit-content;
+  margin: 20px auto;
+  position: relative;
+  z-index: -1;
 }
 .main-boxB{
     border: 5px solid rgba(222, 201, 178, 0); /* Sets the border to transparent */
@@ -143,26 +154,54 @@ nav.navbar {
     z-index: -1;
 }
 
+.dark .main-box1{
+  border: 5px solid  rgb(153, 125, 95) !important;
+  width: 1200px;
+  height: 500px;
 
+  margin: 50px auto;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(212, 209, 209, 0.705);
+}
 .main-box1{
 
     border: 5px solid rgb(255, 255, 255);
     width: 1200px;
     height: 500px;
+    border-radius: 25px;
     margin: 50px auto;
     position: relative;
     transition: transform 0.3s ease-in-out;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.dark .main-box1:hover ,.dark .main-box2:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(215, 215, 215, 0.5);
+  background-color: rgb(153, 125, 95) !important;
+  ;
 }
 .main-box1:hover ,.main-box2:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(215, 215, 215, 0.5);
     background-color: rgb(222, 201, 178);
 }
+.dark .main-box2{
+  border: 5px solid  rgb(153, 125, 95) !important;
+  width: 1200px;
+  height: 500px;
+  padding-left: 100px;
+  margin: 50px auto;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(253, 253, 253, 0.623);
+
+}
 .main-box2{
     border: 5px solid rgb(247, 247, 247);
     width: 1200px;
     height: 500px;
+    border-radius: 25px;
     padding-left: 100px;
     margin: 50px auto;
     position: relative;
@@ -170,8 +209,8 @@ nav.navbar {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
 }
-.center{
-    background-color: bisque;
+.ppp{
+  padding-top: 25px ;
 }
 
 .para1 {
@@ -181,6 +220,14 @@ nav.navbar {
     text-align: left;
     margin: 10px 0;
   }
+  .para2 {
+    font-family: Arial, sans-serif; /* Sets the font family */
+    font-size: 14px; /* Sets the font size */
+    font-weight: bold; /* Sets the font weight */
+    text-align: left;
+    margin: 10px 0;
+  }
+
 
 /*here is the card i made */
 .card{

@@ -21,30 +21,43 @@ body {
 
     /* Add other background properties as needed */
 }
+
 .main{
     margin: 50px; 
 }
 
 header{
-    border-radius: 25px;
     position:sticky;
+    font-size: 16px;
     top: 1px;
-    border-radius: 25px;
     z-index: 1 ;   
 }
 .navbar{
-    border-radius: 25px;
     background-color: rgb(222, 201, 178) !important;
+    font-size: 16px;
+
    
+}
+.dark nav.navbar {
+  background-color: rgb(153, 125, 95) !important;
 }
 nav.navbar {
   background-color: rgb(222, 201, 178) !important;
+  font-size: 16px;
+
 }
 .navbar-nav {
+  padding-block: 15px;
   display: flex;
   align-items: center;
+  font-size: 16px;
+
 }
 
+.dropdown-item{
+  font-size: 16px;
+
+}
 .display-mode {
   margin-left: auto;
 }
