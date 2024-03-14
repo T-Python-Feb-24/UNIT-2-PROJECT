@@ -1,0 +1,498 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %} <title>Abha</title>  {% endblock  %}
+
+{% block style %} 
+<style>
+
+	.masthead {
+		height: 50vh;
+		min-height: 400px;
+		background-image: url('/static/images/abhaa.jpg') ;
+		background-size: cover;
+		object-fit:cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		border-radius:30px;
+	}
+	
+	@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+	$main-green: #79dd09 !default;
+	$main-green-rgb-015: rgba(121, 221, 9, 0.1) !default;
+	$main-yellow: #bdbb49 !default;
+	$main-yellow-rgb-015: rgba(189, 187, 73, 0.1) !default;
+	$main-red: #bd150b !default;
+	$main-red-rgb-015: rgba(189, 21, 11, 0.1) !default;
+	$main-blue: #0076bd !default;
+	$main-blue-rgb-015: rgba(0, 118, 189, 0.1) !default;
+	
+	/* This pen */
+	body {
+	font-family: "Baloo 2", cursive;
+	font-size: 16px;
+	color: #ffffff;
+	text-rendering: optimizeLegibility;
+	font-weight: initial;
+	}
+	
+	.dark {
+	background-color: #4c4d4d;
+	}
+	
+	.light {
+	background-color: rgb(220, 220, 220);
+	}
+	
+	.dark .light{
+		background-color: #4c4d4d;
+	}
+
+	a, a:hover {
+	text-decoration: none;
+	transition: color 0.3s ease-in-out;
+	}
+	
+	#pageHeaderTitle {
+	margin: 2rem 0;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 2.5rem;
+	}
+	
+	/* Cards */
+	.postcard {
+	flex-wrap: wrap;
+	display: flex;
+	
+	box-shadow: 0 4px 21px -12px rgba(179, 162, 162, 0.66);
+	border-radius: 10px;
+	margin: 0 0 2rem 0;
+	overflow: hidden;
+	position: relative;
+	color: #ffffff;
+	
+	&.dark {
+		background-color: #18151f;
+	}
+	&.light {
+		background-color: #e1e5ea;
+	}
+	
+	.t-dark {
+		color: #18151f;
+	}
+	
+	a {
+	color: inherit;
+	}
+	
+	h1,	.h1 {
+		margin-bottom: 0.5rem;
+		font-weight: 500;
+		line-height: 1.2;
+	}
+	
+	.small {
+		font-size: 80%;
+	}
+	
+	.postcard__title {
+	font-size: 1.75rem;
+	}
+	
+	.postcard__img {
+	max-height: 180px;
+	width: 100%;
+	object-fit: cover;
+	position: relative;
+	}
+	
+	.postcard__img_link {
+	display: contents;
+	}
+	{% comment %}  الخط الي تحت العنوان حق الكاردز{% endcomment %}
+	.postcard__bar {
+	width: 50px;
+	height: 10px;
+	margin: 10px 0;
+	border-radius: 5px;
+	background-color: #d6c9c9;
+	transition: width 0.2s ease;
+	}
+	
+	.postcard__text {
+	padding: 1.5rem;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	}
+	
+	.postcard__preview-txt {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: justify;
+	height: 100%;
+	}
+	
+	.postcard__tagbox {
+	display: flex;
+	flex-flow: row wrap;
+	font-size: 14px;
+	margin: 20px 0 0 0;
+		padding: 0;
+	justify-content: center;
+	
+	{% comment %} الزر الي داخل الكاردز {% endcomment %}
+	.tag__item {
+	  display: inline-block;
+	  background: rgba(211, 209, 209, 0.4);
+	  border-radius: 3px;
+	  padding: 2.5px 10px;
+	  margin: 0 5px 5px 0;
+	  cursor: default;
+	  user-select: none;
+	  transition: background-color 0.3s;
+	
+	  &:hover {
+		background: rgba(83, 83, 83, 0.8);
+	  }
+	}
+	}
+	
+	{% comment %} التموج حق الكاردز {% endcomment %}
+	&:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(-70deg, #a57171, transparent 50%);
+	opacity: 1;
+	border-radius: 10px;
+	border: #18151f;
+	}
+	
+	&:hover .postcard__bar {
+	width: 100px;
+	}
+	}
+	
+	@media screen and (min-width: 769px) {
+	.postcard {
+	flex-wrap: inherit;
+	
+	.postcard__title {
+	  font-size: 2rem;
+	}
+	
+	.postcard__tagbox {
+	  justify-content: start;
+	}
+	
+	.postcard__img {
+	  max-width: 300px;
+	  max-height: 100%;
+	  transition: transform 0.3s ease;
+	}
+	
+	.postcard__text {
+	  padding: 3rem;
+	  width: 100%;
+	}
+	
+	.media.postcard__text:before {
+	  content: "";
+	  position: absolute;
+	  display: block;
+	  background: #18151f;
+	  top: -20%;
+	  height: 130%;
+	  width: 55px;
+	}
+	
+	&:hover .postcard__img {
+	  transform: scale(1.1);
+	}
+	
+	&:nth-child(2n+1) {
+	  flex-direction: row;
+	}
+	
+	&:nth-child(2n+0) {
+	  flex-direction: row-reverse;
+	}
+	
+	&:nth-child(2n+1) .postcard__text::before {
+	  left: -12px !important;
+	  transform: rotate(4deg);
+	}
+	
+	&:nth-child(2n+0) .postcard__text::before {
+	  right: -12px !important;
+	  transform: rotate(-4deg);
+	}
+	}
+	}
+	@media screen and (min-width: 1024px){
+		.postcard__text {
+	  padding: 2rem 3.5rem;
+	}
+		
+		.postcard__text:before {
+	  content: "";
+	  position: absolute;
+	  display: block;
+	  
+	  top: -20%;
+	  height: 130%;
+	  width: 55px;
+	}
+	
+	.postcard.dark {
+		.postcard__text:before {
+			background: #18151f;
+		}
+	}
+	.postcard.light {
+		.postcard__text:before {
+			background: #e1e5ea;
+		}
+	}
+	}
+	
+	/* COLORS */
+	.postcard .postcard__tagbox .green.play:hover {
+	background: $main-green;
+	color: black;
+	}
+	.green .postcard__title:hover {
+	color: $main-green;
+	}
+	.green .postcard__bar {
+	background-color: $main-green;
+	}
+	.green::before {
+	background-image: linear-gradient(
+		-30deg,
+		$main-green-rgb-015,
+		transparent 50%
+	);
+	}
+	.green:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, $main-green-rgb-015, transparent 50%);
+	}
+	
+	.postcard .postcard__tagbox .blue.play:hover {
+	background: $main-blue;
+	}
+	.blue .postcard__title:hover {
+	color: $main-blue;
+	}
+	.blue .postcard__bar {
+	background-color: $main-blue;
+	}
+	.blue::before {
+	background-image: linear-gradient(-30deg, $main-blue-rgb-015, transparent 50%);
+	}
+	.blue:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, $main-blue-rgb-015, transparent 50%);
+	}
+	
+	.postcard .postcard__tagbox .red.play:hover {
+	background: $main-red;
+	}
+	.red .postcard__title:hover {
+	color: $main-red;
+	}
+	.red .postcard__bar {
+	background-color: $main-red;
+	}
+	.red::before {
+	background-image: linear-gradient(-30deg, $main-red-rgb-015, transparent 50%);
+	}
+	.red:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, $main-red-rgb-015, transparent 50%);
+	}
+	
+	.postcard .postcard__tagbox .yellow.play:hover {
+	background: $main-yellow;
+	color: black;
+	}
+	.yellow .postcard__title:hover {
+	color: $main-yellow;
+	}
+	.yellow .postcard__bar {
+	background-color: $main-yellow;
+	}
+	.yellow::before {
+	background-image: linear-gradient(
+		-30deg,
+		$main-yellow-rgb-015,
+		transparent 50%
+	);
+	}
+	.yellow:nth-child(2n)::before {
+	background-image: linear-gradient(
+		30deg,
+		$main-yellow-rgb-015,
+		transparent 50%
+	);
+	}
+	
+	@media screen and (min-width: 769px) {
+	.green::before {
+		background-image: linear-gradient(
+			-80deg,
+			$main-green-rgb-015,
+			transparent 50%
+		);
+	}
+	.green:nth-child(2n)::before {
+		background-image: linear-gradient(
+			80deg,
+			$main-green-rgb-015,
+			transparent 50%
+		);
+	}
+	
+	.blue::before {
+		background-image: linear-gradient(
+			-80deg,
+			$main-blue-rgb-015,
+			transparent 50%
+		);
+	}
+	.blue:nth-child(2n)::before {
+		background-image: linear-gradient(80deg, $main-blue-rgb-015, transparent 50%);
+	}
+	
+	.red::before {
+		background-image: linear-gradient(-80deg, $main-red-rgb-015, transparent 50%);
+	}
+	.red:nth-child(2n)::before {
+		background-image: linear-gradient(80deg, $main-red-rgb-015, transparent 50%);
+	}
+	
+	.yellow::before {
+		background-image: linear-gradient(
+			-80deg,
+			$main-yellow-rgb-015,
+			transparent 50%
+		);
+	}
+	.yellow:nth-child(2n)::before {
+		background-image: linear-gradient(
+			80deg,
+			$main-yellow-rgb-015,
+			transparent 50%
+		);
+	}
+	}
+
+
+	.container h3{
+		font-size:xx-large;
+		
+	}
+	
+	.container p {
+		font-size: large;
+		margin-bottom: 10%;
+		margin-top: 2%;
+	}
+	.styled-header {
+		font-family:'Times New Roman', Times, serif;
+		font-size: 4rem;
+		color: #ffffff;
+		text-shadow: 3px 5px 2px rgba(0, 0, 0, 1);
+	}
+	
+	
+	
+</style>
+{% endblock  %}
+
+{% block content %}
+<header class="masthead">
+    <div class="container h-100 mt-3">
+      <div class="row h-100 align-items-center ">
+        <div class="col-12 text-start">
+          <h1 class="fw-light text-white styled-header">Abha</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<!--second-->
+
+  <div class="container">
+	<div class="row mt-5  "> 
+	  <div class="col-4">
+		<div class="d-flex flex-column gap-3 h-100 justify-content-start mt-3">
+		  <h3> Start discovering Abha with all your senses</h3>
+		</div>
+	  </div>
+	  <div class="col order-1 order-md-2">
+		<p> Nestled among the Sarawat Mountains, Abha in southwestern Saudi Arabia offers a
+			captivating retreat at 2,200 meters above sea level. Explore ancient castles and palaces,
+			 witness the vibrant Qatt Al Aseeri art, and savor traditional dishes amidst a rich cultural heritage.
+			 Abha's enchanting landscapes and historical charm promise an unforgettable experience.
+		</p>
+	  </div>
+	</div>
+  </div>
+
+  <!--third -->
+	
+<section class="light">
+	<div class="container py-2">
+		<div class="h1 text-center text-dark" id="pageHeaderTitle">attractions</div>
+		<article class="postcard light blue">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="{% static "/images/alnasab-district.webp" %}" /></a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title blue"><a href="#">Al Nasb district</a></h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">This neighbourhood is built on the bank of the valley and earned its name from the rocks that were placed underneath the buildings to protect them from the valley.The ancient mud-built buildings reflect the traditional style of construction, which remain till this modern age sustainable and durable even though the architecture have weathered hundreds of years. These buildings uniquely maintain the special identity of Aseer, rich with colors and antique inscriptions, and the infamous traditional Qatt Al Aseeri art. </div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item play blue">
+						<a href=""><i class="mr-2"></i>Location</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+		<article class="postcard light red">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src=" {% static "/images/Al-Dabab.jpg" %} " /></a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title red"><a href="#">Al-Dabab Walkway</a></h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">Spend some special time with the clouds and visit one of the absolutely most breathtaking destinations. When visiting Abha, you should not miss out on the chance of an overwhelming stroll around the walkway. You can discover the peaks of the mountains in the region throughout your walk through Al-Dabab Walkway, which is 7 km long and 14 m wide. This destination awaits you South West of Abha, particularly in Al-Dabab District, behind King AbdulAziz road, on the way to Dhila road.</div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item play red">
+						<a href=""><i class="mr-2"></i>Location</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+		<article class="postcard light green">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="{% static "/images/fatima-museum.webp" %}" alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title green"><a href="#">Fatimah’s Museum</a></h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">Fatimah’s Museum of Aseeri Woman’s Heritage introduces its visitors to the beauty of Al-Qatt Al-Aseeri art by shedding light on its authentic heritage through viewing clips in the museum’s hall, which is full of colors from the nature. The museum also offers its visitors the chance to own products adorned by Al-Qatt Al-Aseeri, ranging from houseware to rocks and painting of different sizes. </div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item play green">
+						<a href=""><i class="mr-2"></i>Location</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+	</div>
+</section>
+
+
+  {% endblock content %}
