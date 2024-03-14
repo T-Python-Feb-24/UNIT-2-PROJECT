@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %} The Red Sea  {% endblock %}
+
+{% block body %}
+    <div class="wrapper homepage_content">
+        <div>
+            <p  class="greating">Explor the most <br>Wonderful Islands of <br>The Red Sea.</p>
+            <a href="{% url 'main:island_view' %}" class="home_button">Explore</a>
+        </div>
+    </div>
+    <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+        <source src="gs://saudi-arabia-cc5df.appspot.com/VRS_Hero_Full_ENG.mp4" type="video/mp4">
+    </video>
+      
+{% endblock %}

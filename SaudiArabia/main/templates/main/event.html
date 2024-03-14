@@ -1,0 +1,38 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %} events {% endblock %}
+
+{% block body %}
+   <div class="wrapper eventpage_content">
+      <div class="card">
+         <img src="{% static 'images/pexels-across-wong-7008962.jpg' %}" class="card-img">
+         <div class="card-body">
+            <h1 class="card-title">ADVENTURE</h1>
+            <p class="card-sub-title">Experience new delights.</p>
+            <p class="card-info">The Red Sea offers a diverse array of seamless, personalized experiences, as varied as the scenery, authentic and enriching, and respectful of ancient cultures – all in a safe, secure, and crafted manner.</p>
+
+            <button class="card-btn">Book</button>
+         </div>
+      </div>
+      <div class="card">
+         <img src="{% static 'images/event2.jpeg' %}" class="card-img">
+         <div class="card-body">
+            <h1 class="card-title">CULTURE</h1>
+            <p class="card-sub-title">Get lost in the magic of Saudi</p>
+            <p class="card-info">The Red Sea is a place with a story to tell everyone willing to listen. Our region is crisscrossed with historic trading routes and the footprints of ancient civilizations.</p>
+
+            <button class="card-btn">Book</button>
+         </div>
+      </div>
+      <div class="card">
+         <img src="{% static 'images/event-3.jpg' %}" class="card-img">
+         <div class="card-body">
+            <h1 class="card-title">NATURE</h1>
+            <p class="card-sub-title">Untouched areas of natural beauty.</p>
+            <p class="card-info">Our destination is home to more than 90 pristine islands, dormant volcanoes, mountain canyons, and historical and cultural sites spanning 28,000 square kilometers. It includes the world's fourth-largest barrier reef system and lush mangrove forests.</p>
+
+            <button class="card-btn">Book</button>
+         </div>
+      </div>
+   </div>
+{% endblock %}
