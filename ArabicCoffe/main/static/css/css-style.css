@@ -8,15 +8,15 @@
 .content{
     position: fixed;
     bottom: 0;
-    background-color: rgba(4, 4, 4, 0.072);
-    color: #ffffff;
+    background-color: rgba(32, 32, 32, 0.052);
+    color: #000000;
     width: 100%;
     padding: -10px 0;
     text-align: center;
 }
 .content h1{
     font-size: 30px;
-    color: #fff;
+    color: #fefbfb;
     margin-bottom: 20px;
 }
 
@@ -46,7 +46,7 @@
 nav {
   width: 100%;
   box-sizing:border-box;
-  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #ffffff 10%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+  mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 10%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
   display: flex;
   justify-content: center;
   padding: 5px 0;
@@ -56,10 +56,10 @@ nav {
   z-index: 400;
   
 }
-
+ /* هذا الباك قرواند حق الناف بار */
 nav ul {
   text-align: center;
-  background: #00000000;
+  background: #5050509a;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
   width:100%;
 }
@@ -72,7 +72,7 @@ nav ul li a {
   padding: 18px;
   font-family: 'Kufam';
   text-transform:uppercase;
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 15px;
   text-decoration: none;
   display: block;
@@ -235,29 +235,40 @@ margin-right: 200px;
 
 /* الدارك والنايت*/
 .DarkMode * {
-  color:  rgb(0, 0, 0);
+  color: #fffdfd;
 }
 .DarkMode .rounded {
   background-color: #ffffff43;
 }
+.DarkMode{
+  background-color: #000000e5;
+}
 
-.dark {
+.dark .material-symbols-outlined{
   color: #000000;
 }
-.light {
+.light .material-symbols-outlined{
   color: #ffffff;
 }
 
 .DarkMode .content{
-  background-color: #ffffff41;
+  background-color: #00000088;
+}
+.DarkMode nav ul{
+  background-color: #00000088;
 }
 .DarkMode .content h1{
-  color: #000;
+  color: #ffffff;
 }
 .DarkMode .content button{
   color: #ccc;
   background-color: #000;
 }
+
+.DarkMode .properties-container h2{
+  color: white;
+}
+
 /* اخر صفحه المصادر */
 
 /* test */

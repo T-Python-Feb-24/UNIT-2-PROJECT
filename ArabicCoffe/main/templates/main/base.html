@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-<body {% if request.COOKIES.DarkMode == "True" %} class="DarkMode" {% endif %}>
+
            
 
     <title>{% block title %} {% endblock %}</title>
@@ -24,7 +24,7 @@
     {% endblock%}
 </head>
 
-<body dir="rtl">
+<body dir="rtl" {% if request.COOKIES.DarkMode == "True" %} class="DarkMode" {% endif %} >
     
     <nav>
         <ul class="contact">
