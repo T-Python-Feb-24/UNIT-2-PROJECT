@@ -1,0 +1,514 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %} <title>Riyadh</title>  {% endblock  %}
+
+{% block style %} 
+
+<style>
+
+	.masthead {
+		height: 50vh;
+		min-height: 400px;
+		background-image: url('/static/images/Riyadh.jpg') ;
+		background-size: cover;
+		object-fit:cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		border-radius:30px;
+	}
+	
+	@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+	$main-green: #79dd09 !default;
+	$main-green-rgb-015: rgba(121, 221, 9, 0.1) !default;
+	$main-yellow: #bdbb49 !default;
+	$main-yellow-rgb-015: rgba(189, 187, 73, 0.1) !default;
+	$main-red: #bd150b !default;
+	$main-red-rgb-015: rgba(189, 21, 11, 0.1) !default;
+	$main-blue: #0076bd !default;
+	$main-blue-rgb-015: rgba(0, 118, 189, 0.1) !default;
+	
+	/* This pen */
+	body {
+	font-family: "Baloo 2", cursive;
+	font-size: 16px;
+	color: #ffffff;
+	text-rendering: optimizeLegibility;
+	font-weight: initial;
+	}
+	
+	.dark {
+	background-color: #4c4d4d;
+	}
+	
+	.light {
+	background-color: rgb(220, 220, 220);
+	}
+	
+	.dark .light{
+		background-color: #4c4d4d;
+	}
+
+	a, a:hover {
+	text-decoration: none;
+	transition: color 0.3s ease-in-out;
+	}
+	
+
+	<!--  عنوان-->
+
+	#pageHeaderTitle {
+		margin: 2rem 0;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 2.5rem;
+
+	}
+
+	
+	/* Cards */
+	.postcard {
+	flex-wrap: wrap;
+	display: flex;
+	box-shadow: 0 4px 21px -12px rgba(179, 162, 162, 0.66);
+	border-radius: 10px;
+	margin: 0 0 2rem 0;
+	overflow: hidden;
+	position: relative;
+	color: #ffffff;
+	
+	&.dark {
+		background-color: #18151f;
+	}
+	&.light {
+		background-color: #e1e5ea;
+	}
+	
+	.t-dark {
+		color: #18151f;
+	}
+	
+	a {
+	color: inherit;
+	}
+	
+	h1,	.h1 {
+		margin-bottom: 0.5rem;
+		font-weight: 500;
+		line-height: 1.2;
+	}
+	
+	.small {
+		font-size: 80%;
+	}
+	
+	.postcard__title {
+	font-size: 1.75rem;
+	}
+	
+	.postcard__img {
+	max-height: 180px;
+	width: 100%;
+	object-fit: cover;
+	position: relative;
+	}
+	
+	.postcard__img_link {
+	display: contents;
+	}
+	{% comment %}  الخط الي تحت العنوان حق الكاردز{% endcomment %}
+	.postcard__bar {
+	width: 50px;
+	height: 10px;
+	margin: 10px 0;
+	border-radius: 5px;
+	background-color: #d6c9c9;
+	transition: width 0.2s ease;
+	}
+
+	
+	.postcard__text {
+	padding: 1.5rem;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	}
+	
+	.postcard__preview-txt {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: justify;
+	height: 100%;
+	}
+	
+	.postcard__tagbox {
+	display: flex;
+	flex-flow: row wrap;
+	font-size: 14px;
+	margin: 20px 0 0 0;
+		padding: 0;
+	justify-content: center;
+	
+	{% comment %} الزر الي داخل الكاردز {% endcomment %}
+	.tag__item {
+	  display: inline-block;
+	  background: rgba(211, 209, 209, 0.4);
+	  border-radius: 3px;
+	  padding: 2.5px 10px;
+	  margin: 0 5px 5px 0;
+	  cursor: default;
+	  user-select: none;
+	  transition: background-color 0.3s;
+	  &:hover {
+		background: rgba(83, 83, 83, 0.8);
+	  }
+	}
+	}
+	
+	{% comment %} التموج حق الكاردز {% endcomment %}
+	&:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(-70deg, #a57171, transparent 50%);
+	opacity: 1;
+	border-radius: 10px;
+	border: #18151f;
+	}
+	
+	.dark::before{
+		background: linear-gradient(-70deg, #757373, transparent 50%);
+	}
+
+	&:hover .postcard__bar {
+	width: 100px;
+	}
+	}
+	
+	@media screen and (min-width: 769px) {
+	.postcard {
+	flex-wrap: inherit;
+	
+	.postcard__title {
+	  font-size: 2rem;
+	}
+	
+	.postcard__tagbox {
+	  justify-content: start;
+	}
+	
+	.postcard__img {
+	  max-width: 300px;
+	  max-height: 100%;
+	  transition: transform 0.3s ease;
+	}
+	
+	.postcard__text {
+	  padding: 3rem;
+	  width: 100%;
+	}
+
+	
+	.media.postcard__text:before {
+	  content: "";
+	  position: absolute;
+	  display: block;
+	  background: #18151f;
+	  top: -20%;
+	  height: 130%;
+	  width: 55px;
+	}
+	
+	&:hover .postcard__img {
+	  transform: scale(1.1);
+	}
+	
+	&:nth-child(2n+1) {
+	  flex-direction: row;
+	}
+	
+	&:nth-child(2n+0) {
+	  flex-direction: row-reverse;
+	}
+	
+	&:nth-child(2n+1) .postcard__text::before {
+	  left: -12px !important;
+	  transform: rotate(4deg);
+	}
+	
+	&:nth-child(2n+0) .postcard__text::before {
+	  right: -12px !important;
+	  transform: rotate(-4deg);
+	}
+	}
+	}
+	@media screen and (min-width: 1024px){
+		.postcard__text {
+	  padding: 2rem 3.5rem;
+	}
+		
+		.postcard__text:before {
+	  content: "";
+	  position: absolute;
+	  display: block;
+	  
+	  top: -20%;
+	  height: 130%;
+	  width: 55px;
+	}
+	
+	.postcard.dark {
+		.postcard__text:before {
+			background: #18151f;
+		}
+	}
+	.postcard.light {
+		.postcard__text:before {
+			background: #e1e5ea;
+		}
+	}
+	}
+	
+	/* COLORS */
+	.postcard .postcard__tagbox .green.play:hover {
+	background: $main-green;
+	color: black;
+	}
+	.green .postcard__title:hover {
+	color: $main-green;
+	}
+	.green .postcard__bar {
+	background-color: $main-green;
+	}
+	.green::before {
+	background-image: linear-gradient(
+		-30deg,
+		$main-green-rgb-015,
+		transparent 50%
+	);
+	}
+	.green:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, $main-green-rgb-015, transparent 50%);
+	}
+	
+	.postcard .postcard__tagbox .blue.play:hover {
+	background: $main-blue;
+	}
+	.blue .postcard__title:hover {
+	color: $main-blue;
+	}
+	.blue .postcard__bar {
+	background-color: $main-blue;
+	}
+	.blue::before {
+	background-image: linear-gradient(-30deg, $main-blue-rgb-015, transparent 50%);
+	}
+	.blue:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, $main-blue-rgb-015, transparent 50%);
+	}
+	
+	.postcard .postcard__tagbox .red.play:hover {
+	background: $main-red;
+	}
+	.red .postcard__title:hover {
+	color: $main-red;
+	}
+	.red .postcard__bar {
+	background-color: $main-red;
+	}
+	.red::before {
+	background-image: linear-gradient(-30deg, $main-red-rgb-015, transparent 50%);
+	}
+	.red:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, $main-red-rgb-015, transparent 50%);
+	}
+	
+	.postcard .postcard__tagbox .yellow.play:hover {
+	background: $main-yellow;
+	color: black;
+	}
+	.yellow .postcard__title:hover {
+	color: $main-yellow;
+	}
+	.yellow .postcard__bar {
+	background-color: $main-yellow;
+	}
+	.yellow::before {
+	background-image: linear-gradient(
+		-30deg,
+		$main-yellow-rgb-015,
+		transparent 50%
+	);
+	}
+	.yellow:nth-child(2n)::before {
+	background-image: linear-gradient(
+		30deg,
+		$main-yellow-rgb-015,
+		transparent 50%
+	);
+	}
+	
+	@media screen and (min-width: 769px) {
+	.green::before {
+		background-image: linear-gradient(
+			-80deg,
+			$main-green-rgb-015,
+			transparent 50%
+		);
+	}
+	.green:nth-child(2n)::before {
+		background-image: linear-gradient(
+			80deg,
+			$main-green-rgb-015,
+			transparent 50%
+		);
+	}
+	
+	.blue::before {
+		background-image: linear-gradient(
+			-80deg,
+			$main-blue-rgb-015,
+			transparent 50%
+		);
+	}
+	.blue:nth-child(2n)::before {
+		background-image: linear-gradient(80deg, $main-blue-rgb-015, transparent 50%);
+	}
+	
+	.red::before {
+		background-image: linear-gradient(-80deg, $main-red-rgb-015, transparent 50%);
+	}
+	.red:nth-child(2n)::before {
+		background-image: linear-gradient(80deg, $main-red-rgb-015, transparent 50%);
+	}
+	
+	.yellow::before {
+		background-image: linear-gradient(
+			-80deg,
+			$main-yellow-rgb-015,
+			transparent 50%
+		);
+	}
+	.yellow:nth-child(2n)::before {
+		background-image: linear-gradient(
+			80deg,
+			$main-yellow-rgb-015,
+			transparent 50%
+		);
+	}
+	}
+
+	.container h3{
+		font-size:xx-large;
+		
+	}
+
+	.dark .container h3{
+		color:white;
+	}
+	
+	.container p {
+		font-size: large;
+		margin-bottom: 10%;
+		margin-top: 2%;
+	}
+
+	.styled-header {
+		font-family:'Times New Roman', Times, serif;
+		font-size: 4rem;
+		color: #ffffff;
+		text-shadow: 3px 5px 2px rgba(0, 0, 0, 1);
+	}
+	
+	
+</style>
+
+{% endblock  %}
+{% block content %}
+<header class="masthead">
+    <div class="container h-100 ">
+      <div class="row h-100 align-items-center ">
+        <div class="col-12 text-start">
+          <h1 class="fw-light text-white styled-header ">Riyadh</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<!-- SECOND-->
+ 
+	<div class="container">
+	<div class="row mt-5  mb-5"> 
+	  <div class="col-4">
+		<div class="d-flex flex-column gap-3 h-100 justify-content-start mt-3">
+		  <h3> Live the Modern Life to its Fullest</h3>
+		</div>
+	  </div>
+	  <div class="col order-1 order-md-2">
+		<p>In Riyadh, the birthplace of Saudi Arabia, history and modernity intertwine.
+			 Explore ancient palaces, bustling malls, and serene sand dunes. Indulge in international cuisines or savor authentic Saudi flavors. 
+			Cultural events and entertainment abound, offering endless excitement. Discover Riyadh, where tradition meets innovation.
+		</p>
+	  </div>
+	</div>
+  </div>
+
+
+  <!--third -->
+	
+<section class="light">
+	<div class="container py-2">
+		<div class="h1 text-center {% if request.COOKIES.mode == 'dark' %}text-white{% endif %}" id="pageHeaderTitle">ATTRACTIONS</div>
+			<article class="postcard light blue">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="{% static "/images/Diriyah.jpg" %}" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title blue"><a href="#">Diriyah (Ad-Dir'iyah)</a></h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">Diriyah is a historic town located on the outskirts of Riyadh and is the original home of the Saudi royal family. It is a UNESCO World Heritage Site known for its mud-brick architecture and historical significance. Diriyah played a crucial role in the early history of the Kingdom and is a key symbol of Saudi Arabia's cultural heritage.</div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item play blue">
+						<a href="https://www.google.com/maps/place/Diriyah/@24.7490984,46.5400172,13z/data=!3m1!4b1!4m6!3m5!1s0x3e2ee0fbc64eabeb:0x2ee9dd9e06719893!8m2!3d24.7481198!4d46.5363345!16zL20vMDJoN3Bu?entry=ttu" target="_blank"  ><i class="mr-2"></i>Location</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+		<article class="postcard light red">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src=" {% static "/images/edge-of-the-world.jpg" %} " />	
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title red"><a href="#">Edge of the World</a></h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">On the cliffs of Tuwaik Mountain with its distinguishing dry soil-free surface, you can enjoy the desert environment view with its arid features. You will notice samar trees and acacias spreading over the land of the valley, while ghodi trees and pole plants cover the majority of the high fixed sand dunes. The characteristics of the carved mountains with their intriguing sight tell the story of their long resistance to erosion and survival against time factors. Exploring the area, you may also discover some snails and marine life fossils spreading here and there indicating the fact that the area had once been a marine habitat. Finally, winter-time is so special at Edge of the World when the beautiful nature is accompanied by the cold weather and rainy season.</div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item play red">
+						<a href="https://www.google.com/maps?s=web&lqi=ChplZGdlIG9mIHRoZSB3b3JsZCBsb2NhdGlvbki2v_SZ-rWAgAhaLhAAEAEQAhADEAQYABgBGAIYAyIaZWRnZSBvZiB0aGUgd29ybGQgbG9jYXRpb26SAQtoaWtpbmdfYXJlYaoBYhABKh4iGmVkZ2Ugb2YgdGhlIHdvcmxkIGxvY2F0aW9uKAAyHhABIhonj_PjWo6SH8c-Yugz6mpqcsEhzlFQ8HjFazIeEAIiGmVkZ2Ugb2YgdGhlIHdvcmxkIGxvY2F0aW9u&phdesc=QzG04fCbyLA&vet=12ahUKEwi9gbWs7OyEAxVdhf0HHXolB9kQ1YkKegQISRAB..i&cs=1&um=1&ie=UTF-8&fb=1&gl=sa&sa=X&geocode=KcvdfbkrRSk-Mbm-W_m4F-K6&daddr=Sadus+13967" target="_blank"><i class=" mr-2"></i>Location</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+		<article class="postcard light green">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="{% static "/images/sky-bridge.jpg" %}" alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title green"><a href="#">Sky Bridge at Kingdom Center</a></h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">Getting to the Sky Bridge.Visitors can take an elevator to the 99th floor where the entrance to the Sky Bridge and the ticket counter are between “Mont Blanc” and “Carolina Herrera” stores. 
+					The tickets prices are 69 SR for adults and 23 SR for kids under 10 years.The highest mosque in the Kingdom.After living the experience of viewing Riyadh from above, head to the highest mosque in the Kingdom of Saudi Arabia, King Abdullah Mosque, on the 77th floor. Do not forget to treat yourself by shopping in the finest world-class and local stores in the Kingdom Center. </div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item play green">
+						<a href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDsyBggCEEUYPDIGCAMQRRg8MgYIBBBFGDzSAQczNDdqMGo3qAIAsAIA&um=1&ie=UTF-8&fb=1&gl=sa&sa=X&geocode=KXWZPLYs5y4-MQUrH2GxL5fS&daddr=Kingdom+Centre,+Al+Olaya,+Riyadh+12214" target="_blank"><i class="mr-2"></i>Location</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+	</div>
+</section>
+
+
+  {% endblock content %}
