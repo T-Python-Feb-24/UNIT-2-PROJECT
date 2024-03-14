@@ -23,7 +23,7 @@
 
 
 
-# Example : TOURISM-PROJECT
+# Example : Saudi football
 
 ## Using Django create a website for Tourism in Saudi Arabia . The project name is : Tourister
 
