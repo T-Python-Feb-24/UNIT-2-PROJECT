@@ -1,9 +1,14 @@
 from geopy.geocoders import OpenCage
 from geopy.distance import geodesic
 from datetime import timedelta
-from .api_keys import currency_api_key
-from .api_keys import distance_api_key
-from .api_keys import weather_api_key
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+currency_api_key = os.environ.get("currency_api_key")
+distance_api_key = os.environ.get("distance_api_key")
+weather_api_key = os.environ.get("weather_api_key")
 
 
 # distance method :
