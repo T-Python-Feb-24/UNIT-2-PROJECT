@@ -9,4 +9,6 @@ urlpatterns = [
     path('maining/', views.maining_page, name = 'maining_page'),
     path('industry/', views.industry_page, name = 'industry_page'),
     path('logistics/', views.logistics_page, name = 'logistics_page'),
+    path('mode/light/', views.light_mode, name='light_mode'),
+    path('mode/dark/', views.dark_mode, name='dark_mode'),
 ]

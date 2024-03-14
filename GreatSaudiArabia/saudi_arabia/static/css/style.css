@@ -50,10 +50,6 @@ a{
 }
 
 
-
-
-
-
 .bg-cover{
   background-position: center;
   background-repeat: no-repeat;
@@ -569,4 +565,42 @@ footer a{
     white 50%,
     white 100%
   );
+}
+
+
+.darkMode *{
+  color: white;
+
+}
+
+.darkMode{
+  background-color:#362845 ;
+}
+
+.darkMode .navbar-scrolled{
+  background-color:#362845 ;
+  box-shadow:rgba(252, 251, 251, 0.15);
+
+  
+}
+
+
+.darkMode .navbar-scrolled .icon-color{
+color: white;
+}
+
+.darkMode .navbar-scrolled a{
+color: white;
+
+}
+
+
+.darkMode .navbar-scrolled a:hover{
+color: rgb(225, 202, 249);
+
+}
+
+.darkMode .dropdown-menu{
+  background-color:#362845 ;
+
 }
