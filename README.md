@@ -29,36 +29,30 @@
 
 ### Your website has the following pages :
 
-#### "" : home page , with the following content:
-- Title of the page , with a catchy phrase about tourism in Saudi Arabia
-- A single wide image covering the page.
-- A paragraph about the tourism in Saudi Arabia in General.
-- A list of cities pages with links to them (the pages are listed down below).
+#### "" : welcome_view , with the following content:
+- welcoming the user with a phrase
+- then moves auto to a index.html page
 
 
-#### "city/Riyadh/"
-- Title of city with a catchy phrase
-- A Gallery of images (you can use a Carousel) for the city.
-- A short video about the city . (you can embed a youtube video , or use a video hosted on your website)
+#### "home/"
+- nav bar that have a dark and light mode
+- a button that navigate the user to the home page from every where
+- a page of the 4 saudi clubs that have invest it by the governance
+- 3 options below the nav bar that consist of pages about (football before, football after, football in the future)
 
-#### "city/Abha/"
-- Title of city with a catchy phrase.
-- Top Attractions in the city.
-- A brief about the city.
-- A Gallery of images (you can use a Carousel) for the city.
-- A short video about the city . (you can embed a youtube video , or use a video hosted on your website)
+#### "old/football/"
+- consist of cards that when its hover display info to the user about football before
 
-#### "city/Mekkah/"
-- Title of city with a catchy phrase.
-- Top Attractions in the city.
-- A brief about the city.
-- A Gallery of images (you can use a Carousel) for the city.
-- A short video about the city . (you can embed a youtube video , or use a video hosted on your website)
+#### "now/football/"
+- consist of videos about 4 starts players comes this season to saudi league
+- below it display to the user the fooball events that have been this season 
 
-#### "city/AlUla/"
-- Title of city with a catchy phrase.
-- Top Attractions in the city.
-- A brief about the city.
-- A Gallery of images (you can use a Carousel) for the city.
-- A short video about the city . (you can embed a youtube video , or use a video hosted on your website)
+#### "future/football/"
+- what saudi plans to improve its league and the structure of football in saudi arabia
+
+#### "saudi/clubs/"
+- its a page of the 4 big saudi clubs
+- button for showing next club and another for the previous
+- info displayed to the user
+
 
