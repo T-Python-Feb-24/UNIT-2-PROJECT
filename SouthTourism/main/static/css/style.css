@@ -117,20 +117,20 @@
 
 button {
     display: flex;
-    
+    justify-content: center;
     align-items: center;
     font-family: inherit;
     cursor: pointer;
     font-weight: 500;
     font-size: 18.5px;
     padding: 0.8em 1.5em 0.8em 0.9em;
-    color: white;
-    background: #281db4c9;
-     background: linear-gradient(to right, #0f0c29, #302b63, #24243e); 
+    color: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.57);
+     /* background: linear-gradient(to right, #0f0c29, #302b63, #24243e);  */
     border: none;
     letter-spacing: 0.05em;
     border-radius: 16px;
-    margin-left: 440px;
+    
   }
   
   button svg {
@@ -156,9 +156,11 @@ button {
     padding: 55px 9px;
 }
 .but{
+  display: flex;
  text-decoration: none;
- color: #ffffff;
+ color: #000000;
  padding: 10px;
+ justify-content: center;
 }
 .ui-switch {
     padding: 10px 20px;
