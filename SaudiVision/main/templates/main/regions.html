@@ -1,0 +1,83 @@
+{% extends 'main/base.html' %}
+{% block title%}Regions{% endblock %}
+{% load static %}
+
+{% block style %} <link rel="stylesheet" href="/static/styles/region.css"> {% endblock %}
+{% block content %} 
+{%  if "language" in request.COOKIES and request.COOKIES.language == "en" %}
+
+  <div class="container-content animation-2 w-100">
+    <div class="row neom">
+      <div class="col-lg-6 col-md-6" >
+        <img class="w-100" src="{% static 'images/Neom_City_Logo.svg' %}" alt="">
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <p>In 2017, His Royal Highness Prince Mohammed bin Salman bin Abdulaziz, Crown Prince and Prime Minister, launched the bold NEOM project led by the Public Investment Fund, to transform the desert into an innovative future city in the northwest of the Kingdom, powered 100% by renewable energy, to be a new model for sustainable life. Work and prosperity, enabling humanity to advance without compromising the health of the planet.
+          to know more:</p>  
+        <a href="{% url 'main:neom.html' %}">More</a>
+      
+      </div>
+   </div>
+   <div class="row neom">
+    <div class="col-lg-6 col-md-6" >
+      <img class="w-100" src="{% static 'images/Qiddiya_Logo.svg.png' %}" alt="">
+    </div>
+    <div class="col-lg-6 col-md-6">
+      <p>The Custodian of the Two Holy Mosques, King Salman bin Abdulaziz, inaugurated the Qiddiya project in 2018. To transform it into a global center for entertainment, sports and culture, the city is the first project implemented by Qiddiya Investment Company, the company that invented the “Power of Play” concept, and will welcome Saudi citizens, residents and tourists alike. The city hosts a number of international sports halls, concert and entertainment halls, sports and artistic academies, and a car racing circuit. It also allows visitors to engage in a variety of outdoor activities and adventures and contains entertainment cities, including Six Flags Entertainment City and a water park, which guarantee visitors distinctive games and experiences. to know more:</p>
+      <a href="{% url 'main:Qiddiya.html' %}">More</a>
+    
+    </div>
+ </div>
+ <div class="row neom">
+  <div class="col-lg-6 col-md-6" >
+    <img class="w-100" src="{% static 'images/roshn.png' %}" alt="">
+  </div>
+  <div class="col-lg-6 col-md-6">
+    <p>Roshen, which was launched in 2022, contributes to achieving the ambitious Saudi Vision 2030 goal of raising the percentage of Saudi citizens owning their homes to 70% by 2030, and makes positive and innovative contributions to the real estate and infrastructure sectors in the Kingdom, as it is one of the main projects of the Public Investment Fund, which focuses To improve the quality of life for all citizens.
+      to know more:</p>
+    <a href="#">More</a>
+  
+  </div>
+</div>
+  </div>
+  {% else %}
+  <div class="container-content  animation-2 w-100">
+    <div class="row neom">
+      <div class="col-lg-6 col-md-6" >
+        <img class="w-100" src="{% static 'images/Neom_City_Logo.svg' %}" alt="">
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <p class="arabic">في عام 2017 أطلق صاحب السمو الملكي الأمير محمد بن سلمان بن عبدالعزيز ولي العهد رئيس مجلس الوزراء مشروع نيوم الجريء الذي يقوده صندوق الاستثمارات العامة، ليحول الصحراء إلى مدينة مستقبلية مبتكرة في شمال غرب المملكة، تعمل بنسبة 100% بالطاقة المتجددة، لتكون نموذجًا جديدًا للحياة المستدامة والعمل والازدهار، حيث يمكن البشرية من التقدم دون المساس بصحة كوكب الأرض.
+          لمعرفة المزيد:</p>  
+        <a href="{% url 'main:neom.html' %}">من هنا</a>
+      
+      </div>
+   </div>
+   <div class="row neom">
+    <div class="col-lg-6 col-md-6" >
+      <img class="w-100" src="{% static 'images/Qiddiya_Logo.svg.png' %}" alt="">
+    </div>
+    <div class="col-lg-6 col-md-6">
+      <p class="arabic">افتتح خادم الحرمين الشريفين الملك سلمان بن عبد العزيز مشروع القدية عام 2018. لتحويلها إلى مركز عالمي للترفيه والرياضة والثقافة، وتعد المدينة أول مشروع تنفذه شركة القدية للاستثمار، الشركة التي اخترعت مفهوم "قوة اللعب"، وسوف يرحب بالمواطنين السعوديين والمقيمين والسياح على حد سواء. وتحتضن المدينة عدداً من الصالات الرياضية العالمية، وقاعات الحفلات والترفيه، والأكاديميات الرياضية والفنية، وحلبة سباق السيارات. كما تتيح للزوار ممارسة مجموعة متنوعة من الأنشطة والمغامرات الخارجية وتحتوي على مدن ترفيهية منها مدينة الأعلام الستة الترفيهية والحديقة المائية التي تضمن للزوار ألعاب وتجارب مميزة. لمعرفة المزيد:</p>
+      <a href="{% url 'main:Qiddiya.html' %}" class="arabic">من هنا</a>
+    
+    </div>
+ </div>
+ <div class="row neom">
+  <div class="col-lg-6 col-md-6" >
+    <img class="w-100" src="{% static 'images/roshn.png' %}" alt="">
+  </div>
+  <div class="col-lg-6 col-md-6">
+    <p class="arabic">تسهم روشن التي تم إطلاقها في عام 2022 في تحقيق هدف رؤية السعودية 2030 الطموح برفع نسبة امتلاك المواطنين السعوديين لمنازلهم إلى 70% بحلول عام 2030، وتقدم مساهمات إيجابية ومبتكرة لقطاعي العقارات والبنية التحتية في المملكة، حيث تعد أحد المشاريع الرئيسية لصندوق الاستثمارات العامة، التي تركز على تحسين نوعية الحياة لجميع المواطنين.
+      لمعرفة المزيد:</p>
+      <a href="#">من هنا</a>
+  
+  </div>
+</div>
+  </div>
+
+  {% endif %}
+{% endblock %}
+
+
+{% block footer %}{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if "language" in request.COOKIES and request.COOKIES.language == "ar" %}  
+
+
+    <div {% if "mode" in request.COOKIES and request.COOKIES.mode == "dark" %}class="container pt-5  bg-black p-2 text-white bg-opacity-50 rounded-5 mt-5 " {% else %} class="container pt-5  bg-white p-2 text-dark bg-opacity-75 rounded-5 mt-5" {%endif%} >
+        <div class="row">
+
+            <div class="wel_img col-12  col-md-6  col-sm-12 justify-content-center  align-items-center">
+                <img class="w-100" src="{% static 'images/welcome_photo.png' %}" alt="">
+
+            </div>
+            <div class="col col-md-6 order-1 order-md-2 col-sm-12   content ">
+                <h1>اهلا بك</h1>
+                <p class="arabic pe-3  ">
+                    مشاريع السعودية القادمة تمثل جزءًا أساسيًا من رؤية المملكة 2030، التي تمثل إستراتيجية شاملة لتحويل الاقتصاد السعودي وتحقيق التنمية المستدامة عبر تنويع الموارد وزيادة الاستثمار في عدة قطاعات حيوية. تهدف هذه المشاريع إلى تعزيز التنمية الاقتصادية وتحسين مستوى المعيشة للمواطنين والمواطنات، بالإضافة إلى توفير فرص عمل وتعزيز الابتكار والاستدامة.
+                    
+                    تتنوع مشاريع السعودية القادمة بين البنية التحتية والصناعة والطاقة والسياحة والتكنولوجيا، حيث تشمل إنشاء مدن جديدة ذكية، وتطوير البنية التحتية للنقل والطاقة، واستثمارات كبيرة في الطاقة المتجددة والنووية، وتحويل المدن الحالية إلى مراكز صديقة للبيئة، بالإضافة إلى تعزيز القطاع السياحي وتطوير القدرات البشرية وتعزيز الابتكار والريادة.
+                    
+                    هذه المشاريع ليست فقط تحديات اقتصادية، بل تعتبر فرصًا جديدة للشراكات الاستثمارية المحلية والدولية، وتعزيز التعاون الدولي وتبادل المعرفة والتكنولوجيا، مما يساهم في تحقيق الاستدامة البيئية والاقتصادية والاجتماعية.</p>
+                   <a class="start-button" href="{% url 'main:regions.html' %}">  ابدأ </a>
+                </div>
+                
+            </div>
+
+    </div>
+{% else %}
+   
+
+    <div  {% if "mode" in request.COOKIES and request.COOKIES.mode == "dark" %} class="container pt-5   bg-black p-2 text-white bg-opacity-50 rounded-5 mt-5"{%else%} class="container pt-5   bg-white p-2 text-dark bg-opacity-75 rounded-5 mt-5" {% endif%}>
+        <div class="row">
+
+            <div class="wel_img col-12  col-md-6  col-sm-12 justify-content-center align-items-center">
+                <img class="w-100" src="{% static 'images/welcome_photo.png' %}" alt="">
+
+            </div>
+            <div class="col col-md-6 order-1 order-md-2 col-sm-12 animation-1 content ">
+                <h1>Welcome</h1>
+                <p>Saudi Arabia's upcoming projects represent an essential part of the Kingdom's Vision 2030, which represents a comprehensive strategy to transform the Saudi economy and achieve sustainable development through diversifying resources and increasing investment in several vital sectors. These projects aim to promote economic development and improve the standard of living for male and female citizens, in addition to providing job opportunities and promoting innovation and sustainability. Saudi Arabia's upcoming projects vary between infrastructure, industry, energy, tourism and technology, as they include the establishment of new smart cities, the development of transportation and energy infrastructure, large investments in renewable and nuclear energy, and the transformation of existing cities into environmentally friendly centers, in addition to strengthening the tourism sector, developing human capabilities, and promoting innovation. And leadership. These projects are not only economic challenges, but are considered new opportunities for local and international investment partnerships, enhancing international cooperation and exchanging knowledge and technology, which contributes to achieving environmental, economic and social sustainability.</p>
+                <a class="start-button" href="{% url 'main:regions.html' %}">start</a>
+            </div>
+            
+        </div>
+
+    </div>
+{% endif %}
+{% endblock %}
+
+{% block footer %}{% endblock %}

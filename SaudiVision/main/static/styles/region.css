@@ -1,0 +1,74 @@
+ *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container-content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 320px;
+    row-gap: 30px;   
+    width: 100vh;
+    overflow-x: hidden;
+    
+}
+.neom a{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 10px 50px;
+    border-radius: 25px;
+    row-gap: 20px;
+}
+.container-content .neom{
+    border-radius: 30px;
+    
+    padding: 50px ;
+    margin-top: 50px;
+    width: 100vh;
+    align-items: center;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.723);
+    row-gap: 20px;
+    text-align: start;
+}
+
+.dark{
+    background-color: black;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+.dark .container-content .neom{
+    background-color: rgba(0, 0, 0, 0.371);
+    color: rgba(255, 253, 253, 0.85);
+    padding: 50px ;
+    margin-top: 50px;
+    width: 100vh;
+    align-items: center;
+    display: flex;
+    row-gap: 20px;
+    text-align: start;
+    border-radius: 30px;
+    line-height: 25px;
+}
+
+.container-content .neom img{
+   padding: 1vh;
+   
+}
+.dark .container-content .neom img{
+    padding: 1vh;
+    border-radius: 30px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.658), rgba(0, 64, 255, 0.469), rgba(255, 255, 255, 0.517), rgb(235, 233, 233));
+ }
+
+ .arabic{   
+    direction: rtl;
+    text-align: start;
+ }
