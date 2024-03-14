@@ -1,0 +1,67 @@
+{%extends "main/base.html"%}
+{% load static %}
+{%block title%}Destinations{% endblock %}
+
+{% block content %}
+  <div class="video-containers">
+
+    {% if "mode" in request.COOKIES and request.COOKIES.mode == "dark" %} 
+    <video src="https://firebasestorage.googleapis.com/v0/b/project2-669a7.appspot.com/o/production_id_4999945%20(2160p).mp4?alt=media&token=f7c05499-c53e-4cf3-8c9f-4bec90296a57" autoplay muted loop></video>
+    {% else %}
+    <video src="https://firebasestorage.googleapis.com/v0/b/project2-669a7.appspot.com/o/video(2160p).mp4?alt=media&token=8f06c8b4-63a1-411a-b80c-cb05e5b69312" autoplay muted loop></video>
+   
+    {% endif %}
+   
+
+ </div>  
+ <h1 class="bb">Regions</h1>
+  
+
+  <div class="destination-container">
+    
+                <div class="destination-card-ii">
+                    <img src="{% static 'images/homeback.jpeg' %}" class="card-img" alt="Asir">
+                    <div class="card-body">
+                        <h1 class="card-title">𝗡𝗮𝗷𝗿𝗮𝗻</h1>
+                        <p class="card-sub-title">Civilizations</p>
+                        <p class="card-info">famous for its historical and archeological sites that are rich with ancient inscriptions and writings.
+
+                        </p>
+                        <a href="{% url 'main:najran_view' %}" class="card-btn">Discover</a>
+                    </div>
+                    </div>
+                    <div class="destination-card-ii">
+                        <img src="{% static 'images/184127.avif' %}" class="card-img" alt="Asir">
+                        <div class="card-body">
+                            <h1 class="card-title-qq">𝐀𝐬𝐢𝐫</h1>
+                            <p class="card-sub-title">Civilizations</p>
+                            <p class="card-info">Ancient palaces and forts in Asir region have been restored to attract tourists to experience history in a modern setting.    
+
+                   
+                            </p>
+                            <a href="{% url 'main:asir_view' %}" class="card-btn">Discover</a>
+                        </div>
+                        </div>
+                        <div class="destination-card-ii">
+                            <img src="{% static 'images/att-8.jpg' %}" class="card-img" alt="Asir">
+                            <div class="card-body">
+                                <h1 class="card-title">𝐉𝐢𝐳𝐚𝐧</h1>
+                                <p class="card-sub-title">Civilizations</p>
+                                <p class="card-info">culture is distinguished by its unique blend of traditional and modern influences
+                                </p>
+                                <a href="{% url 'main:Jizan_view' %}" class="card-btn">Discover</a>
+                            </div>
+                            </div>
+                            <div class="destination-card-ii">
+                                <img src="{% static 'images/e5a3ee_0adba4f03dd84f77859ce99274be183d~mv2.webp' %}" class="card-img" alt="Asir">
+                                <div class="card-body">
+                                    <h1 class="card-title-qq">𝐀𝐥𝐁𝐚𝐡𝐚</h1>
+                                    <p class="card-sub-title">Civilizations</p>
+                                    <p class="card-info">culture is distinguished by its unique blend of traditional and modern influences.
+                                    </p>
+                                    
+                                    <a href="{% url 'main:baha_view' %}" class="card-btn">Discover</a>
+                                </div>
+                                </div>
+            </div>
+{% endblock %} 

@@ -1,0 +1,451 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    
+}
+
+
+.dark {
+  color: white;
+  background-color: rgb(120, 120, 120);
+}
+.video-containers{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: -100;
+}
+
+.video-containers video{
+    width: 100vw;
+} 
+
+ body {
+    min-height: 100vh; 
+    padding-bottom: 20vh;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    position: relative;
+    background-size: cover;
+    font-family: Verdana, sans-serif; 
+    margin: 0;
+    align-items: center;
+} 
+
+.region{
+  font-family: Verdana, sans-serif; 
+  font-size: medium;
+}
+
+
+
+.wrapper{
+  min-height: 100%;
+    padding: 24vh 10vw;
+    padding-bottom: 10vh;
+    background-size: cover;
+    width: 100%;  
+}
+ .homepage-content{
+    background-image: url('/static/images/your-guide-in-aseer-0530250000.jpg'); 
+    background-color: rgb(255, 255, 255);
+    min-height: 130vh; 
+    background-repeat: no-repeat;
+
+} 
+.aboutpage-content{
+  background-image: url('/static/images/your-guide-in-aseer-0530250000.jpg'); 
+   
+}
+.dark .aboutpage-content{
+  background-image: url('/static/images/e5a3ee_0adba4f03dd84f77859ce99274be183d~mv2.webp');
+}
+.dark .homepage-content {
+    background-image: url('/static/images/e5a3ee_0adba4f03dd84f77859ce99274be183d~mv2.webp');
+    
+}
+.destinationsPage {
+    z-index: -100;
+}
+
+
+.top-bar{
+     position: -webkit-sticky;
+     position: sticky;
+     top: 0;
+     background-color: #bca0a000;
+     z-index: 0px;
+     border-bottom: none;
+     margin-top: -100px;
+     padding: 0px 120px;
+}
+.dark .top-bar{
+    background-color: rgba(0, 0, 0, 0.593);;
+    color: #ffffff;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    
+}
+.nav-link{
+    color: #000000;
+}
+.dark .nav-link{
+    color: #ffffff;
+    
+}
+.dark .fs-4{
+    color: #ffffff;
+}
+.display-mode{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 3px;
+}
+
+ .sub-content ,h1{
+    font-family: "Playfair Display", serif;
+    font-size: 120px;
+    color: #ffffff;
+    padding: 70px 30px;
+    text-align: center;
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   
+} 
+
+
+button {
+    display: flex;
+    
+    align-items: center;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18.5px;
+    padding: 0.8em 1.5em 0.8em 0.9em;
+    color: white;
+    background: #281db4c9;
+     background: linear-gradient(to right, #0f0c29, #302b63, #24243e); 
+    border: none;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
+    margin-left: 440px;
+  }
+  
+  button svg {
+    margin-right: 3px;
+    transform: rotate(0deg);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  button span {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  button:hover svg {
+    transform: translateX(5px) rotate(90deg);
+  }
+  
+  button:hover span {
+    transform: translateX(7px);
+  }
+.container{
+    margin-top: -100px;
+    margin-bottom: 0;
+    padding: 55px 9px;
+}
+.but{
+ text-decoration: none;
+ color: #ffffff;
+ padding: 10px;
+}
+.ui-switch {
+    padding: 10px 20px;
+    /* switch */
+    --switch-bg: rgb(135, 150, 165);
+    --switch-width: 48px;
+    --switch-height: 20px;
+    /* circle */
+    --circle-diameter: 32px;
+    --circle-bg: rgb(0, 56, 146);
+    --circle-inset: calc((var(--circle-diameter) - var(--switch-height)) / 2);
+  }
+  
+  .ui-switch input {
+    display: none;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: var(--switch-width);
+    height: var(--switch-height);
+    background: var(--switch-bg);
+    border-radius: 999px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .slider .circle {
+    top: calc(var(--circle-inset) * -1);
+    left: 0;
+    width: var(--circle-diameter);
+    height: var(--circle-diameter);
+    position: absolute;
+    background: var(--circle-bg);
+    border-radius: inherit;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTkuMzA1IDEuNjY3VjMuNzVoMS4zODlWMS42NjdoLTEuMzl6bS00LjcwNyAxLjk1bC0uOTgyLjk4Mkw1LjA5IDYuMDcybC45ODItLjk4Mi0xLjQ3My0xLjQ3M3ptMTAuODAyIDBMMTMuOTI3IDUuMDlsLjk4Mi45ODIgMS40NzMtMS40NzMtLjk4Mi0uOTgyek0xMCA1LjEzOWE0Ljg3MiA0Ljg3MiAwIDAwLTQuODYyIDQuODZBNC44NzIgNC44NzIgMCAwMDEwIDE0Ljg2MiA0Ljg3MiA0Ljg3MiAwIDAwMTQuODYgMTAgNC44NzIgNC44NzIgMCAwMDEwIDUuMTM5em0wIDEuMzg5QTMuNDYyIDMuNDYyIDAgMDExMy40NzEgMTBhMy40NjIgMy40NjIgMCAwMS0zLjQ3MyAzLjQ3MkEzLjQ2MiAzLjQ2MiAwIDAxNi41MjcgMTAgMy40NjIgMy40NjIgMCAwMTEwIDYuNTI4ek0xLjY2NSA5LjMwNXYxLjM5aDIuMDgzdi0xLjM5SDEuNjY2em0xNC41ODMgMHYxLjM5aDIuMDg0di0xLjM5aC0yLjA4NHpNNS4wOSAxMy45MjhMMy42MTYgMTUuNGwuOTgyLjk4MiAxLjQ3My0xLjQ3My0uOTgyLS45ODJ6bTkuODIgMGwtLjk4Mi45ODIgMS40NzMgMS40NzMuOTgyLS45ODItMS40NzMtMS40NzN6TTkuMzA1IDE2LjI1djIuMDgzaDEuMzg5VjE2LjI1aC0xLjM5eiIgLz4KPC9zdmc+");
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    -o-transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+    ;
+  }
+  
+  .slider .circle::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: inherit;
+    -webkit-transition: all 500ms;
+    -o-transition: all 500ms;
+    transition: all 500ms;
+    opacity: 0;
+  }
+  
+
+  
+  .ui-switch input:checked+.slider .circle {
+    left: calc(100% - var(--circle-diameter));
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTQuMiAyLjVsLS43IDEuOC0xLjguNyAxLjguNy43IDEuOC42LTEuOEw2LjcgNWwtMS45LS43LS42LTEuOHptMTUgOC4zYTYuNyA2LjcgMCAxMS02LjYtNi42IDUuOCA1LjggMCAwMDYuNiA2LjZ6IiAvPgo8L3N2Zz4=");
+  }
+  
+  .ui-switch input:active+.slider .circle::before {
+    -webkit-transition: 0s;
+    -o-transition: 0s;
+    transition: 0s;
+    opacity: 1;
+    width: 0;
+    height: 0;
+  }
+  .card{
+    margin-top: 200px;
+  }
+.top-bar .display-mode .moon{
+        color: rgb(0, 0, 0);
+
+  }
+
+.dark .top-bar .display-mode .moon{
+    color: rgb(255, 255, 255);
+    
+}
+#ss{
+    font-size: medium;
+    color: #000000;
+}
+.bb{
+  box-shadow: none;
+  margin-top: 100px;
+  text-align: center;
+  color: #000000a5;
+}
+.dark .bb {
+  color: #ffffff84
+}
+.destination-container {
+  display: flex;
+  
+  justify-content: space-between;  
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 0px;
+ 
+}
+.destination-card-ii{
+  width: 350px;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden; 
+  display: flex;
+  justify-content: center;
+  border: 3px solid #ffffff00;
+  position: relative;
+  margin-top: 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  column-gap: 80px;
+}
+.card-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.card-body{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  position:absolute;
+  background: #1f3d4700;
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  color: #ffffff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 1.5s;
+
+}
+.destination-card-ii:hover .card-body{
+  right: 0;
+
+}
+.card-title{
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #000000;
+}
+
+.card-sub-title{
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 300;
+  padding-top: -20px;
+}
+.card-info{
+  font-size: 16px;
+  line-height: 25px;
+  margin: 40px 0;
+  font-weight: 400;
+  margin-top: -20px;
+}
+.card-title-qq{
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #ffffff;
+}
+.card-btn{
+  color: #ffffff;
+  background: #0f88c9;
+  padding: 10px 35px;
+  text-transform: capitalize;
+  outline: none;
+  font-weight: 300;
+  align-items: center;
+  margin-left: 50px;
+  width: 150px;
+  text-align: center;
+  border-radius: 16px;
+  text-decoration: none;
+}
+.about-us{
+  color: #ffffff;
+}
+.about-us .abouut{
+  text-align: center;
+  font-size: 90px;
+}
+.about-us .AS{
+  text-align: center;
+}
+.our-mission{
+  color: #ffffff;
+}
+.what-we-offer{
+  color: #ffffff;
+}
+.commitment{
+  color: #ffffff;
+}
+.why-choose-us{
+  color: #ffffff;
+}
+.about-south{
+  margin-bottom: 300px;
+}
+.contact-with {
+  margin-top: 200px; 
+  margin-bottom: 40px; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 70%; 
+}
+
+
+@media (max-width: 768px) {
+  .contact-with {
+      width: 95%; 
+      margin-top: 20px; 
+      margin-bottom: 20px; /
+  }
+}
+
+.container{
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+
+.row-flex {
+  margin-top: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -30px; 
+}
+
+.custom-border, .custom-border-l {
+  flex: 1; 
+
+  padding: 15px;
+
+  
+}
+
+.Najran-img, .Najran-img-2 {
+  width: 100%; 
+  height: auto;
+  border-radius: 10px; 
+  
+}
+
+.Najran-h {
+  font-size: 120px;
+  color: #000000;
+  text-align: center; 
+  margin: 20px 0; 
+  box-shadow: none;
+}
+
+
+@media (max-width: 768px) {
+  .row-flex {
+    flex-direction: column;
+  }
+  
+  .custom-border-l {
+    order: 1;
+  }
+  .custom-border {
+    order: 2;
+  }
+}
