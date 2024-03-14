@@ -1,33 +1,6 @@
 # UNIT-2-PROJECT
 
-## Using Django create a project about our beloved kingdom of your choosing. Examples :
-- Tourism in Saudi Arabia.
-- Culture & Heritage in Saudi Arabia.
-- Manufacturing & Industries in Saudi Arabia.
-- Agriculture in Saudi Arabia.
-- Science in Saudi Arabia.
-- History of Saudi Arabia.
-- etc.....
-
-
-# Minumum Requirements
-- Use Django.
-- Use templates & templates inheritance.
-- Use dynamic urls where applicable.
-- Use static files where applicable.
-- homepage + other 4 pages.
-- Coherent, uniform design .
-- Implement dark and light mode.
-- You can use a CSS library to style your website (such as Bootstrap or equivalent)
-- You can use a cdn or a cloud storage to host large files such as large videos (example: Goolge Firebase Cloud Storage: https://firebase.google.com/docs/storage)
-
-
-
-# Example : TOURISM-PROJECT
-
-## Using Django create a website for Tourism in Saudi Arabia . The project name is : Tourister
-
-### Your website has the following pages :
+Welcome to our website celebrating Saudi Arabia's rich culture and history! Immerse yourself in captivating tales, ancient sites, and vibrant traditions. Explore the enduring legacy of the Nabateans, majestic palaces, and traditional art forms. Join us on a journey through time and discover the cultural treasures that have shaped Saudi Arabia. Enjoy the experience and embrace the captivating heritage of this remarkable land.
 
 #### "" : home page , with the following content:
 - Title of the page , with a catchy phrase about tourism in Saudi Arabia
@@ -36,26 +9,26 @@
 - A list of cities pages with links to them (the pages are listed down below).
 
 
-#### "city/Riyadh/"
+#### "Central region/"
 - Title of city with a catchy phrase
 - A Gallery of images (you can use a Carousel) for the city.
 - A short video about the city . (you can embed a youtube video , or use a video hosted on your website)
 
-#### "city/Abha/"
+#### "East region"
 - Title of city with a catchy phrase.
 - Top Attractions in the city.
 - A brief about the city.
 - A Gallery of images (you can use a Carousel) for the city.
 - A short video about the city . (you can embed a youtube video , or use a video hosted on your website)
 
-#### "city/Mekkah/"
+#### "West region"
 - Title of city with a catchy phrase.
 - Top Attractions in the city.
 - A brief about the city.
 - A Gallery of images (you can use a Carousel) for the city.
 - A short video about the city . (you can embed a youtube video , or use a video hosted on your website)
 
-#### "city/AlUla/"
+#### "South region"
 - Title of city with a catchy phrase.
 - Top Attractions in the city.
 - A brief about the city.
