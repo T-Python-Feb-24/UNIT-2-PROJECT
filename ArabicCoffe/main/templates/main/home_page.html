@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+{% block title %} الرئيسية{% endblock %}
+{% load static %}
+
+  {% block content%}
+      
+      <!-- <div class="container">     -->
+       
+        <video autoplay muted loop id="myVideo">
+        <source src="/static/images/video.MP4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+        <div class="content">
+         <h1>عام القهوة<br>
+        السعودية 2022<br>
+    The Year of Saudi Coffee</h1> 
+  <a href="{% url 'main:contact_Basic'%}"><button> لمعرفة المزيد</button></a>
+        </div>
+      <!-- </div> -->
+      
+   
+{%endblock%}
+    
