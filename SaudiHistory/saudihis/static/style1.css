@@ -1,6 +1,6 @@
 /*----------eachstate.html-------------*/
 
-body {
+.light_mode {
     /* Set background color */
   /* Light gray background */
     background-image: url(/static/images/background3.jpg);
@@ -22,6 +22,11 @@ body {
     /*background: linear-gradient(to bottom, #f0f0f0, #ffffff);*/ /* Uncomment this line to add a gradient background */
 
     /* Add other background properties as needed */
+}
+.dark{
+  background-image: url(/static/images/background3-dark.jpg);
+  background-color: #DEC9B2 ; /* Adjust opacity as needed */
+  backdrop-filter: blur(5px); 
 }
 .main{
     margin: 50px; 

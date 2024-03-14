@@ -14,7 +14,7 @@
 
 
 </head>
-<body {% if "mode" in request.COOKIES and request.COOKIES.mode == "dark" %} class="dark" {% endif %}>
+<body {% if "mode" in request.COOKIES and request.COOKIES.mode == "dark" %} class="dark" {% else %} class="light_mode" {% endif %}>
 
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
